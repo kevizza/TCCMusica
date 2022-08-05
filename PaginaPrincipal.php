@@ -49,7 +49,16 @@ session_start();
 
                 </div>
             </div>
-            <div class="song-side"></div>
+            <div class="song-side">
+                <nav>
+                    <ul>
+                        <li>EXPLORAR <span></span></li>
+                        <li>MINHA BIBLIOTECA</li>
+                        <li>RÁDIO</li>
+                    </ul>
+                </nav>
+            </div>
+
             <div class="master-play">
                 <div class="wave">
                     <div class="wave1"></div>
@@ -60,6 +69,25 @@ session_start();
                 <h5>On My Way <br>
                     <div class="subtitle">Alan Walker</div>
                 </h5>
+                <div class="icon">
+                    <i class="bi bi-skip-start-fill"></i>
+                    <i class="bi bi-play-fill"></i>
+                    <i class="bi bi-skip-end-fill"></i>
+                </div>
+                <span id="currentStart">0:00</span>
+                <div class="bar">
+                    <input type="range" id="seek" min="0" value="0" max="100">
+                    <div class="bar2" id="bar2"></div>
+                    <div class="dot"></div>
+                </div>
+                <span id="currentEnd">0:00</span>
+
+                <div class="vol">
+                    <i class="bi bi-volume-down-fill"></i>
+                    <input type="range" id="vol" min="0" value="30" max="100">
+                    <div class="vol_bar"></div>
+                    <div class="dot" id="vol_dot"></div>
+                </div>
             </div>
             </div>
         </header>
