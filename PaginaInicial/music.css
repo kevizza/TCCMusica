@@ -27,7 +27,10 @@ a:link {
 
 
 body {
-    width: 100%;
+    width:100%;
+    margin: 0 auto;
+    min-width:600px;
+    max-width:2000px;
     height: 100vh;
     background-color: #0e010e;
     font-family: 'Poppins', sans-serif;
@@ -100,7 +103,7 @@ header .menu-side .playlist{
 }
 
 header .menu-side .playlist h4 {
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 400;
     padding-bottom: 15px;
     color: #504c4c;
@@ -140,6 +143,7 @@ header .menu-side .playlist h4 .bi {
 
 header .menu-side .playlist .active{
     color: #9d69b8;
+    text-decoration: none !important;
 }
 
 header .menu-side .playlist .active span{
@@ -164,16 +168,17 @@ header .menu-side .Mlist{
 }
 
 header .menu-side .Mlist h6{
-    font-size: 14px;
-    margin-left: 15px;
+    font-size: 17px;
+    margin-left: 20px;
+    margin-top: 20px;
     color: white;
 
 }
 header .menu-side .Mlist a .bi{
     position: absolute;
     right: 100px;
-    top: 234px;
-    font-size: 16px;
+    top: 309px;
+    font-size: 18px;
 }
 
 /* Baixo */
@@ -242,7 +247,8 @@ header .master-play .wave{
     padding-bottom: 5px;
     display: flex;
     align-items: flex-end;
-    margin-right: 10px;
+    margin-right: 20px;
+    margin-left: 10px;
 }
 
 
@@ -290,6 +296,7 @@ header .master-play .active2 .wave1:nth-child(3){
 header .master-play img{
     width: 35px;
     height: 35px;
+    margin-left: 20px;
 }
 header .master-play h5{
     width: 130px;
@@ -453,13 +460,13 @@ header .song-side nav ul li{
     position: relative;
     list-style-type: none;
     font-size: 20px;
-    color: #555; 
+    color: #fff; 
     margin-right: 25px ;
     cursor: pointer;
-    transition: .3s linear;
+    transition: .5s linear;
 }
 header .song-side nav ul li:hover{
-    color: #fff;
+    color: #732678;
 }
 header .song-side nav ul li:nth-child(1){
     color: #fff;
@@ -473,3 +480,43 @@ header .song-side nav ul li span{
     left: 0;
     border-radius: 20px;
 }
+
+#divBusca{
+    margin-left: 300px;
+    background-color:#13001d;
+    border:solid 2px #732678;
+    border-radius: 30px;
+    width: 400px;
+    height:32px;
+  }
+  
+  #txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left: 10px;
+    margin-left: 10px;
+    font-size:18px;
+    border:none;
+    height:28px;
+    width:266px;
+    color: #fff;
+  }
+  
+  #btnBusca{
+    margin-left: 0px;
+    border:none;
+    float:left;
+    height:28px;
+    border-radius:0 7px 7px 0;
+    width:90px;
+    font-weight:bold;
+    background:#732678;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  #divBusca .bi{
+    float:left;
+    color: white;
+    padding-left: 10px;
+  }

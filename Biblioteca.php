@@ -51,10 +51,10 @@ session_start();
                 </div>
             </div>
             <div class="song-side">
-                <!-- <nav>
+                <nav>
                     <ul>
-                        <li><a href="./PaginaPrincipal.php" style="text-decoration:none">EXPLORAR <span></span></a></li>
-                        <li><a href="./Biblioteca.php" style="text-decoration:none">MINHA BIBLIOTECA</a></li>
+                        <li><a href="./PaginaPrincipal.php" style="text-decoration:none">EXPLORAR </a></li>
+                        <li><a href="./Biblioteca.php" style="text-decoration:none">MINHA BIBLIOTECA<span></span></a></li>
                         <li><div id="divBusca">
                                 <i class="bi bi-search"></i>
                                 <input type="text" id="txtBusca" placeholder="Buscar..."/>
@@ -62,7 +62,7 @@ session_start();
                             </div>
                         </li>
                     </ul>
-                </nav> -->
+                </nav>
             </div>
 
             <div class="master-play">

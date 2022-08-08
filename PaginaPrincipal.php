@@ -14,6 +14,7 @@ session_start();
 <html lang="en">
     <title>Frecy</title>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./PaginaInicial/music.css">
@@ -26,13 +27,23 @@ session_start();
             <div class="menu-side">
                 <a href="./PaginaPrincipal.php"><img src="./Imgs/Logo_pagina_BW - Copy.webp" alt="" width="120px"></a>
                 <!-- <h1><a href="./PaginaPrincipal.php"><b>Frecy</b></a></h1> -->
+
+                
                 <div class="playlist">
-                    <h4 class="active"><span></span><i class="bi bi-music-note-list"></i></i>Home</h4>
-                    <h4><span></span><i class="bi bi-music-note-beamed"></i>Para Você</h4>
-                    <h4><span></span><i class="bi bi-music-note-beamed"></i>Explorar</h4>
+                    
+                    <a class="active" href="pagina.php">
+                        <i class="bi bi-house-door-fill"></i>
+                        <span></span>
+                        <h4>Home</h4>
+                    </a>
+
+
+                    <h4 class="active"><span></span><i class="bi bi-house-door-fill"></i>Home</h4>
+                    <h4 class="active"><span></span><i class="bi bi-heart-fill"></i>Para Você</h4>
+                    <h4 class="active"><span></span><i class="bi bi-search"></i>Explorar</h4>
                 </div>
 
-                <hr style="height:1px;text-align:right;width:260px;border-width:0;color:gray;background-color:gray">
+                <hr style="height:1px;text-align:right;width:400px;border-width:0;color:gray;background-color:white;margin-left:30px;margin-top:20px;margin-bottom:20px; ">
 
                 <div class="Mlist"><h6>Minhas Playlists</h6>
                     <a href="./CriarPlaylist.php"><i class="bi bi-plus-circle-dotted"></i></a></div>
@@ -52,9 +63,14 @@ session_start();
             <div class="song-side">
                 <nav>
                     <ul>
-                        <li>EXPLORAR <span></span></li>
-                        <li>MINHA BIBLIOTECA</li>
-                        <li>RÁDIO</li>
+                        <li><a href="./PaginaPrincipal.php" style="text-decoration:none">EXPLORAR <span></span></a></li>
+                        <li><a href="./Biblioteca.php" style="text-decoration:none">MINHA BIBLIOTECA</a></li>
+                        <li><div id="divBusca">
+                                <i class="bi bi-search"></i>
+                                <input type="text" id="txtBusca" placeholder="Buscar..."/>
+                                <button id="btnBusca">Buscar</button>
+                            </div>
+                        </li>
                     </ul>
                 </nav>
             </div>
