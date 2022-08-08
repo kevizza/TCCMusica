@@ -26,16 +26,9 @@ session_start();
         <header>
             <div class="menu-side">
                 <a href="./PaginaPrincipal.php"><img src="./Imgs/Logo_pagina_BW - Copy.webp" alt="" width="120px"></a>
-                <!-- <h1><a href="./PaginaPrincipal.php"><b>Frecy</b></a></h1> -->
 
                 
                 <div class="playlist">
-                    
-                    <a class="active" href="pagina.php">
-                        <i class="bi bi-house-door-fill"></i>
-                        <span></span>
-                        <h4>Home</h4>
-                    </a>
 
 
                     <h4 class="active"><span></span><i class="bi bi-house-door-fill"></i>Home</h4>
