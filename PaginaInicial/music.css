@@ -105,7 +105,7 @@ header .menu-side .playlist{
 header .menu-side .playlist h4 {
     font-size: 23px;
     font-weight: 400;
-    padding-bottom: 15px;
+    padding-bottom: 30px;
     color: #504c4c;
     cursor: pointer;
     display: flex;
@@ -143,10 +143,15 @@ header .menu-side .playlist h4 .bi {
 
 header .menu-side .playlist .active{
     color: #9d69b8;
-    text-decoration: none !important;
+}
+header .menu-side .playlist .active-ac{
+    color: white;
 }
 
 header .menu-side .playlist .active span{
+    display: none;
+}
+header .menu-side .playlist .active-ac span{
     display: none;
 }
 
@@ -154,6 +159,11 @@ header .menu-side .playlist .active .bi{
     display: flex;
     margin-right: 20px;
 }
+header .menu-side .playlist .active-ac .bi{
+    display: flex;
+    margin-right: 20px;
+}
+
 
 header .menu-side .menu-song{
     width: 100%;
@@ -170,14 +180,13 @@ header .menu-side .Mlist{
 header .menu-side .Mlist h6{
     font-size: 17px;
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
     color: white;
 
 }
 header .menu-side .Mlist a .bi{
-    position: absolute;
-    right: 100px;
-    top: 309px;
+    position: relative;
+    margin-left: 250px;
     font-size: 18px;
 }
 

@@ -31,7 +31,7 @@ session_start();
                 <div class="playlist">
 
 
-                    <h4 class="active"><span></span><i class="bi bi-house-door-fill"></i>Home</h4>
+                    <h4 class="active-ac"><span></span><i class="bi bi-house-door-fill"></i>Home</h4>
                     <h4 class="active"><span></span><i class="bi bi-heart-fill"></i>Para Você</h4>
                     <h4 class="active"><span></span><i class="bi bi-search"></i>Explorar</h4>
                 </div>

@@ -3,6 +3,14 @@
 <head>
 	<title>Frecy</title>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" type="image/png" href="Imgs/Logo_of.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bulma.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<meta name="viewport" content="width=device-width, initial-scale=1">	
 	<link rel="icon" type="image/png" href="./Paginas/LoginPage/images/icons/Logo_of.png"/>
 	<link rel="stylesheet" type="text/css" href="./Paginas/LoginPage/vendor/bootstrap/css/bootstrap.min.css">
@@ -20,36 +28,45 @@
 </head>
 <body>
 
-	 <!-- NavBar -->
-	 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="./index.html"><img src="./Imgs/Logo_of.png" alt="" class="logo" width="40px" ></a>
-        <button class="navbar-toggler" type="button" 
-		data-toggle="collapse" 
-		data-target="#navbarSupportedContent" 
-		aria-controls="navbarSupportedContent" 
-		aria-expanded="false" 
-		aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="./Login.php">Entrar <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./Registro.php">Registrar-se</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Ajuda</a>
-              </li>
-              <li class="nav-item2">
-                <a class="nav-link" href="#"><b>Premium</b></a>
-              </li>
-            </li>
-          </ul>
-        </div>
-      </nav>
+
+  <!-- NavBar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html"><img src="./Imgs/Logo_of.png" alt="" class="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="./Login.php">Entrar <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./Registro.php">Registrar-se</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link"></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link">|</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link"></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Ajuda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./Premium.php"><b>Premium</b></a>
+        </li>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
 	
 	<div class="limiter">
