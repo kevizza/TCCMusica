@@ -62,7 +62,8 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `senha` varchar(40) DEFAULT NULL,
   `email` varchar(110) DEFAULT NULL,
   `data_nasc` date DEFAULT NULL,
-  `is_admin` tinyint(1) NOT NULL,
+  `is_admin` enum('S','N'),
+  `imagem` blob,
   PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 

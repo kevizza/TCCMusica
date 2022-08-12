@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap");
 
+
+
 body {
   background-color: #f4f4f4;
 
@@ -56,7 +58,8 @@ div#container-fluid {
   color: white;
 }
 div#container-fluid .row{
-  align-items: center ;
+  display: flex;
+  align-items: center;
 }
 div#container-fluid h2{
   text-align: center;
@@ -65,10 +68,10 @@ div#container-fluid h2{
   font-size: 50px;
 }
 div#container-fluid p{
-  text-align: center;
+  align-items: center;
   color: #1e2321 ;
   padding-top: 70px;
-  padding-left: 200px;
+  padding-left: auto;
   font-size: 17px;
 }
 div#container-fluid p .bi{
@@ -97,6 +100,7 @@ div#container-fluid p#p-foot{
   display: flex;
   position: relative;
   color: #1e2321 ;
+  text-align: center;
   padding-left: 35%;
   font-size: 17px;
   color: blueviolet;

@@ -54,7 +54,7 @@
     </nav>
     <div class="container-fluid">
         <h1>SEJA PREMIUM, E CURTA SUAS MÚSICAS OFF-LINE!</h1>
-        <p>Depois, pague somente R$ 19,90/mês. Cancele quando quiser.</p>
+        <p>Depois, pague somente R$ 20,99/mês. Cancele quando quiser.</p>
     </div>
     <div class="container-fluid" id="container-fluid">
         <h2>PRA QUE SERVE O PREMIUM?</h2>
@@ -81,8 +81,8 @@
         <div class="package-container">
             <div class="packages">
                 <h1>Individual</h1>
-                <h2 class="text1">R$20.99</h2>
-                <h2 class="text2">R$230.99</h2>
+                <h2 class="text1">R$20,99</h2>
+                <h2 class="text2">R$230,99</h2>
                 <ul class="list">
                     <li class="first"><i class="bi bi-check-lg"></i>Ouça músicas sem anúncios</li>
                     <li><i class="bi bi-check-lg"></i>Baixar músicas</li>
@@ -90,12 +90,12 @@
                     <li><i class="bi bi-check-lg"></i>Faça um plano pré-pago ou uma assinatura</li>
                 </ul>
                 <a href="#" class="button button1" style="text-decoration: none;">Começar Agora</a>
-                <p>Sujeito a Termos e Condições. O mês grátis não está disponível para usuários que já experimentaram o Premium.</p>
+
             </div>
             <div class="packages">
                 <h1>Duo</h1>
-                <h2 class="text1">R$25.99</h2>
-                <h2 class="text2">R$280.99</h2>
+                <h2 class="text1">R$25,99</h2>
+                <h2 class="text2">R$280,99</h2>
                 <ul class="list">
                     <li class="first"><i class="bi bi-check-lg"></i>2 contas Premium para um casal que mora junto</li>
                     <li><i class="bi bi-check-lg"></i>Ouça sem anúncios, no modo offline e sob demanda</li>
@@ -103,13 +103,12 @@
                     <li><i class="bi bi-check-lg"></i>Premium Support</li>
                 </ul>
                 <a href="#" class="button button2" style="text-decoration: none;">Começar Agora</a>
-                <p>Sujeito a Termos e Condições. O mês grátis não está disponível para usuários que já experimentaram o Premium.</p>
             </div>
             
             <div class="packages">
                 <h1>Universitario</h1>
-                <h2 class="text1">R$15.99</h2>
-                <h2 class="text2">R$150.99</h2>
+                <h2 class="text1">R$15,99</h2>
+                <h2 class="text2">R$150,99</h2>
                 <ul class="list">
                     <li class="first"><i class="bi bi-check-lg"></i>Desconto especial para estudantes universitários que tenham direito à oferta</li>
                     <li><i class="bi bi-check-lg"></i>Ouça músicas sem anúncios</li>
@@ -117,7 +116,7 @@
                     <li><i class="bi bi-check-lg"></i>Escolha a música que quer ouvir</li>
                 </ul>
                 <a href="#" class="button button3" style="text-decoration: none;">Começar Agora</a>
-                <p>Oferta disponível somente para estudantes de instituições de ensino superior credenciadas. O mês grátis não está disponível para usuários que já experimentaram o Premium. Sujeito aos Termos e Condições da oferta do Spotify de desconto para universitários.</p>
+             
             </div>
         </div>
     </div>
