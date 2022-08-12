@@ -36,7 +36,7 @@ session_start();
                     <h4 class="active"><span></span><i class="bi bi-search"></i>Explorar</h4>
                 </div>
 
-                <hr style="height:1px;text-align:right;width:400px;border-width:0;color:gray;background-color:white;margin-left:30px;margin-top:20px;margin-bottom:20px; ">
+                <hr style="height:1px;width:400px;border-width:0;color:gray;background-color:white;margin-left:30px;margin-top:20px;margin-bottom:20px; ">
 
                 <div class="Mlist"><h6>Minhas Playlists</h6>
                     <a href="./CriarPlaylist.php"><i class="bi bi-plus-circle-dotted"></i></a></div>

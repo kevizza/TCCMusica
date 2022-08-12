@@ -3,7 +3,7 @@
 <head>
 	<title>Frecy</title>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="./style.css">
   <link rel="icon" type="image/png" href="Imgs/Logo_of.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bulma.min.css" />
@@ -23,6 +23,7 @@
 	<link rel="stylesheet" type="text/css" href="./Paginas/LoginPage/vendor/daterangepicker/daterangepicker.css">
 	<link rel="stylesheet" type="text/css" href="./Paginas/LoginPage/css/util.css">
 	<link rel="stylesheet" type="text/css" href="./Paginas/LoginPage/css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
@@ -43,7 +44,7 @@
           <a class="nav-link" href="./Login.php">Entrar <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./Registro.php">Registrar-se</a>
+          <a class="nav-link" href="./Registro.php">Inscreva-se</a>
         </li>
         <li class="nav-item active">
           <a class="nav-link"></a>
@@ -112,6 +113,52 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Site footer -->
+	<footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h6>Sobre</h6>
+          <p class="text-justify" style="color: gray;">Aplicativo de música desenvolvido para o Projeto de Trabalho de Conclusão de Curso, nesse
+            projeto, utilizamos as mais diferentes formas de linguagens e esperamos ter trazido um TCC de qualidade.
+          </p>
+        </div>
+
+
+        <div class="col-xs-6 col-md-3">
+          <h5>Empresa</h5>
+          <ul class="footer-links">
+            <li><a href="http://scanfcode.com/category/c-language/">Sobre</a></li>
+            <li><a href="http://scanfcode.com/category/front-end-development/">Participantes</a></li>
+            <li><a href="http://scanfcode.com/category/back-end-development/">Projetos</a></li>
+            <li><a href="http://scanfcode.com/category/java-programming-language/">Suporte</a></li>
+            <li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
+            <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text" style="color: gray;">Copyright &copy; 2017 All Rights Reserved by
+            <a href="#">Frecy</a>.
+          </p>
+        </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 	
 
 	<div id="dropDownSelect1"></div>
