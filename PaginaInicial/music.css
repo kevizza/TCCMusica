@@ -52,7 +52,7 @@ header {
     overflow: hidden;
 }
 
-header .song-side {
+header .menu-side {
     position: relative;
     width: 25%;
     height: 90%;
@@ -197,10 +197,12 @@ header .menu-side .Mlist h6{
     color: white;
 
 }
-header .menu-side .Mlist a .bi{
-    position: relative;
-    margin-left: 250px;
-    font-size: 18px;
+header .menu-side .Mlist a{
+    display: flex;
+    font-size: 15px;
+    color: white;
+    margin-left: 20px;
+    margin-top: 20px;
 }
 
 /* Baixo */
@@ -214,7 +216,7 @@ header .menu-side .menu-song h5{
 header .menu-side .menu-song li{
     list-style-type: none;
     position: relative;
-    padding: 5px 0px 5px 20px;
+    padding: 0px 0px 5px 10px;
     display: flex;
     align-items: center;
     margin-bottom: 10px;

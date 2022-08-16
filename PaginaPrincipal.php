@@ -26,20 +26,17 @@ session_start();
         <header>
             <div class="menu-side">
                 <a href="./PaginaPrincipal.php"><img src="./Imgs/Logo_pagina_BW - Copy.webp" alt="" width="120px"></a>
-
-                
+                <!-- <h1><a href="./PaginaPrincipal.php"><b>Frecy</b></a></h1> -->
                 <div class="playlist">
-
-
-                    <h4 class="active-ac"><span></span><i class="bi bi-house-door-fill"></i>Home</h4>
+                    <h4 class="active"><span></span><i class="bi bi-house-door-fill"></i>Home</h4>
                     <h4 class="active"><span></span><i class="bi bi-heart-fill"></i>Para Você</h4>
                     <h4 class="active"><span></span><i class="bi bi-search"></i>Explorar</h4>
                 </div>
 
-                <hr style="height:1px;width:400px;border-width:0;color:gray;background-color:white;margin-left:30px;margin-top:20px;margin-bottom:20px; ">
+                <hr style="height:1px;text-align:right;width:400px;border-width:0;color:gray;background-color:white;margin-left:30px;margin-top:20px;margin-bottom:20px; ">
 
                 <div class="Mlist"><h6>Minhas Playlists</h6>
-                    <a href="./CriarPlaylist.php"><i class="bi bi-plus-circle-dotted"></i></a></div>
+                    <a href="./CriarPlaylist.php" style="text-decoration:none">Criar Playlist</a></div>
 
 
                 <div class="menu-song">
@@ -56,7 +53,7 @@ session_start();
             <div class="song-side">
                 <nav>
                     <ul>
-                        <li><a href="./PaginaPrincipal.php" style="text-decoration:none">EXPLORAR <span></span></a></li>
+                        <li><a href="./PaginaPrincipal.php" style="text-decoration:none">EXPLORAR <span></span> </a></li>
                         <li><a href="./Biblioteca.php" style="text-decoration:none">MINHA BIBLIOTECA</a></li>
                         <li><div id="divBusca">
                                 <i class="bi bi-search"></i>

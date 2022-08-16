@@ -70,7 +70,8 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
-    background: url(./Imgs/fundo3.webp);
+    background: url(./Imgs/video1.gif);
+    background-size: 220vh;
     background-color: rgba(0, 0, 0, 0.4);
     background-blend-mode: color;
 }
