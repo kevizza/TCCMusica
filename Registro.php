@@ -12,6 +12,8 @@ if (isset($_POST['submit'])) {
 
 	$result = mysqli_query($conexao, "INSERT INTO usuarios(username,email,senha,data_nasc, is_admin) 
 	VALUES ('$username','$email','$senha','$date', 'N')");
+
+	header('Location: Login.php');
 }
 
 ?>
@@ -47,43 +49,73 @@ if (isset($_POST['submit'])) {
 
 <body>
 	<!-- NavBar -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<a class="navbar-brand" href="index.html"><img src="./Imgs/Logo_of.png" alt="" class="logo"></a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+  <!-- NavBar -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(0, 0, 0);background: rgb(0, 0, 0);">
+    <a class="navbar-brand" href="index.html"><img src="./Imgs/Logo_of.png" alt="" class="logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="./Login.php">Entrar <span class="sr-only">(current)</span></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link" href="./Registro.php">Inscreva-se</a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link"></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link">|</a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link"></a>
-				</li>
-				<li class="nav-item active">
-					<a class="nav-link"></a>
-				</li>
-				<li class="nav-item ">
-					<a class="nav-link" href="#">Ajuda</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="./Premium.php"><b>Premium</b></a>
-				</li>
-				</li>
-			</ul>
-		</div>
-	</nav>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link"></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link"></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link"></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link"></a>
+        </li>
+        
+        <li class="nav-item ">
+          <a class="nav-link" href="./Login.php">Entrar <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="./Registro.php">Inscreva-se<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link"></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link"></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link"></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link">|</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link"></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link"></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link"></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link"></a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link disabled">Ajuda</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link"></a>
+        </li>
 
+        <li class="nav-item ">
+          <a class="nav-link" href="./Premium.php"><b>Premium</b></a>
+        </li>
+        </li>
+      </ul>
+    </div>
+  </nav>
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">

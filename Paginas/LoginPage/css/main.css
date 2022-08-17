@@ -175,8 +175,8 @@ iframe {
   align-items: center;
   padding: 15px;
   background: black;
-  background: linear-gradient(20deg, rgba(96,9,121,1) 37%, rgba(255,0,191,1) 100%);
-  
+  background: url(/Imgs/fundo6.jpg);
+  background-size: 250vh;
 }
 
 .wrap-login100 {

@@ -36,7 +36,7 @@ session_start();
                 <hr style="height:1px;text-align:right;width:400px;border-width:0;color:gray;background-color:white;margin-left:30px;margin-top:20px;margin-bottom:20px; ">
 
                 <div class="Mlist"><h6>Minhas Playlists</h6>
-                    <a href="./CriarPlaylist.php"><i class="bi bi-plus-circle-dotted"></i></a></div>
+                    <a href="./CriarPlaylist.php" style="text-decoration:none">Criar Playlist</a></div>
 
 
                 <div class="menu-song">

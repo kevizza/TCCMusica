@@ -67,9 +67,6 @@ session_start();
 
             <div class="master-play">
                 <div class="wave">
-                    <div class="wave1"></div>
-                    <div class="wave1"></div>
-                    <div class="wave1"></div>
                 </div>
                 <img src="./Imgs/Logo_of.png" alt="">
                 <h5>On My Way <br>

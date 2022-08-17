@@ -57,24 +57,20 @@ CREATE TABLE IF NOT EXISTS `playlists` (
 
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
-  `ID` int(10) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) DEFAULT NULL,
+  `id_usuario` int(10) UNSIGNED ZEROFILL NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) DEFAULT NULL Unique,
   `senha` varchar(40) DEFAULT NULL,
-  `email` varchar(110) DEFAULT NULL,
+  `email` varchar(110) DEFAULT NULL Unique,
   `data_nasc` date DEFAULT NULL,
   `is_admin` enum('S','N'),
   `imagem` blob,
-  PRIMARY KEY (`ID`)
+  PRIMARY KEY (`id_usuario`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Extraindo dados da tabela `usuarios`
 --
 
-INSERT INTO `usuarios` (`ID`, `username`, `senha`, `email`, `data_nasc`, `is_admin`) VALUES
-(0000000001, 'kevin', 'kevin123', 'ionbr2005@gmail.com', '2012-07-11', 1),
-(0000000002, 'kevin', 'kevin123', 'ionbr2005@gmail.com', '2012-07-11', 1);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
