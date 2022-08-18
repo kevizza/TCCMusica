@@ -14,72 +14,24 @@
 </head>
 
 <body>
-  <!-- NavBar -->
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(0, 0, 0);background: rgb(0, 0, 0);">
-    <a class="navbar-brand" href="index.html"><img src="./Imgs/Logo_of.png" alt="" class="logo"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="./Login.php">Entrar <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="./Registro.php">Inscreva-se</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link">|</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link disabled">Ajuda</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-
-        <li class="nav-item active">
-          <a class="nav-link" href="./Premium.php"><b>Premium</b><span class="sr-only">(current)</span></a>
-        </li>
-        </li>
-      </ul>
+<header>
+  <nav>
+    <a class="logo" href="./index.html" style="text-decoration:none ;">
+      FRECY
+    </a>
+    <div class="mobile-menu">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+      <div class="line4"></div>
     </div>
+    <ul class="nav-list">
+      <li><a href="./Login.php" style="text-decoration:none ;">Entrar</a></li>
+      <li><a href="./Registro.php" style="text-decoration:none ;">Inscrever-se</a></li>
+      <li><a href="#Entrar" style="text-decoration:none ;">|</a></li>
+      <li><a href="#Entrar" style="text-decoration:none ;" class="active">Ajuda</a></li>
+      <li><a href="./Premium.php" style="text-decoration:none ;">Premium</a></li>
+    </ul>
   </nav>
 
   <div class="container" id="container-1">

@@ -4,7 +4,6 @@
 <head>
   <title>Frecy</title>
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="./style.css">
   <link rel="icon" type="image/png" href="Imgs/Logo_of.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bulma.min.css" />
@@ -24,79 +23,49 @@
   <link rel="stylesheet" type="text/css" href="./Paginas/LoginPage/css/util.css">
   <link rel="stylesheet" type="text/css" href="./Paginas/LoginPage/css/main.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
 
 <body>
 
+<?php
+function lembrarSenha($senha=NULL, $lem_senha=NULL)
+{
+  if(isset($_COOKIE['pass'])){
+          if(empty($lem_senha)){
+              unset($_COOKIE['pass']);
+          }
+      }else{
+          if(isset($lem_senha)){
+              setcookie("pass", $senha);
+          }
+      }
+    return true;
+}
+?>
 
-  <!-- NavBar -->
-  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(0, 0, 0);background: rgb(0, 0, 0);">
-    <a class="navbar-brand" href="index.html"><img src="./Imgs/Logo_of.png" alt="" class="logo"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="./Login.php">Entrar <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link" href="./Registro.php">Inscreva-se</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link">|</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link disabled">Ajuda</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link"></a>
-        </li>
-
-        <li class="nav-item ">
-          <a class="nav-link" href="./Premium.php"><b>Premium</b></a>
-        </li>
-        </li>
-      </ul>
+ 	<!-- NavBar -->
+   <header>
+  <nav>
+    <a class="logo" href="./index.html" style="text-decoration:none ;">
+      FRECY
+    </a>
+    <div class="mobile-menu">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+      <div class="line4"></div>
     </div>
+    <ul class="nav-list">
+      <li><a href="./Login.php" style="text-decoration:none ;">Entrar</a></li>
+      <li><a href="./Registro.php" style="text-decoration:none ;">Inscrever-se</a></li>
+      <li><a href="#Entrar" style="text-decoration:none ;">|</a></li>
+      <li><a href="#Entrar" style="text-decoration:none ;" class="active">Ajuda</a></li>
+      <li><a href="./Premium.php" style="text-decoration:none ;">Premium</a></li>
+    </ul>
   </nav>
+</header>
+
 
   <div class="limiter">
     <div class="container-login100">
@@ -118,6 +87,8 @@
             <input class="input100" type="password" name="pass" id="pass" placeholder="Senha" required>
             <!-- <span class="focus-input100" data-placeholder="Senha"></span> -->
           </div>
+            <input name="lem_senha" type="checkbox" value="lem_senha" <?php if(isset($_COOKIE['senha'])){ echo 'checked="checked"'; }; ?> />
+            <td > Salvar senha </td>
 
           <div class="container-login100-form-btn">
             <div class="wrap-login100-form-btn">
@@ -180,7 +151,6 @@
           <ul class="social-icons">
             <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
             <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
             <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
           </ul>
         </div>
@@ -200,7 +170,7 @@
   <script src="vendor/daterangepicker/daterangepicker.js"></script>
   <script src="vendor/countdowntime/countdowntime.js"></script>
   <script src="js/main.js"></script>
-
+  <script src="./mobile-navbar.js"></script>
 </body>
 
 </html>
