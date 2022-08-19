@@ -3,7 +3,6 @@
 <head>
   <link rel="stylesheet" href="./PremiumPage/style.css">
   <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="./style.css">
   <link rel="icon" type="image/png" href="Imgs/Logo_of.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bulma.min.css" />
@@ -26,10 +25,12 @@
       <div class="line4"></div>
     </div>
     <ul class="nav-list">
-      <li><a href="./Login.php" style="text-decoration:none ;">Entrar</a></li>
-      <li><a href="./Registro.php" style="text-decoration:none ;">Inscrever-se</a></li>
-      <li><a href="#Entrar" style="text-decoration:none ;">|</a></li>
-      <li><a href="#Entrar" style="text-decoration:none ;" class="active">Ajuda</a></li>
+      <li><a href="./Login.php" style="text-decoration:none ;color: #bfbfbf;">Entrar</a></li>
+      <li><a href="./Registro.php" style="text-decoration:none ;color: #bfbfbf;">Inscrever-se</a></li>
+      <li>    </li>
+				<li style="color:white ;">|</li>
+				<li>    </li>
+      <li><a href="#Entrar" style="text-decoration:none ;color: #bfbfbf;">Suporte</a></li>
       <li><a href="./Premium.php" style="text-decoration:none ;">Premium</a></li>
     </ul>
   </nav>
@@ -46,7 +47,7 @@
       </div>
     </div>
     <br>
-    <div class="row">
+    <div class="row" id="row2">
       <div class="col">
         <p><i class="bi bi-badge-ad-fill"></i>Sem publicidade</p>
       </div>

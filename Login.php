@@ -58,10 +58,12 @@ function lembrarSenha($senha=NULL, $lem_senha=NULL)
     </div>
     <ul class="nav-list">
       <li><a href="./Login.php" style="text-decoration:none ;">Entrar</a></li>
-      <li><a href="./Registro.php" style="text-decoration:none ;">Inscrever-se</a></li>
-      <li><a href="#Entrar" style="text-decoration:none ;">|</a></li>
-      <li><a href="#Entrar" style="text-decoration:none ;" class="active">Ajuda</a></li>
-      <li><a href="./Premium.php" style="text-decoration:none ;">Premium</a></li>
+      <li><a href="./Registro.php" style="text-decoration:none ;color: #bfbfbf;">Inscrever-se</a></li>
+      <li>    </li>
+				<li style="color:white ;">|</li>
+				<li>    </li>
+      <li><a href="#Entrar" style="text-decoration:none ;color: #bfbfbf;" >Suporte</a></li>
+      <li><a href="./Premium.php" style="text-decoration:none ;color: #bfbfbf;">Premium</a></li>
     </ul>
   </nav>
 </header>

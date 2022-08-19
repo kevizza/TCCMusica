@@ -1,12 +1,12 @@
 <?php
 
-    $dbHost = 'LocalHost';
-    $dbUsername = 'root';
-    $dbPassword = '145869';
-    $dbName = 'tccweb';
+$dbHost = 'LocalHost:3307';
+$username = 'root';
+$password = 'etecjau';
+$dbname = 'tccweb';
 
-    $mysqli = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
-    
+$conexao = new mysqli($dbHost, $username, $password, $dbname);
+
 
     // if($conexao->connect_errno)
     // {

@@ -266,7 +266,9 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: url(/Imgs/fundo2.jpg);
+  background: url(/Imgs/fundo10.jpg); 
+  backdrop-filter: opacity(0.7);
+  background-color: #000000;
   background-size: 250vh;
   
 }

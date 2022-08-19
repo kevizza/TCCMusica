@@ -9,7 +9,7 @@
 
         $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
 
-        $result = $mysqli->query($sql);
+        $result = $conexao->query($sql);
 
         $row = mysqli_num_rows($result);
 
