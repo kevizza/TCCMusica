@@ -16,7 +16,7 @@
         if(mysqli_num_rows($result) < 1){
             unset($_SESSION['email']);
             unset($_SESSION['senha']);
-            header('Location: Login.php');
+            header('Location: /Views/LoginPage/Login.php');
         }else
         {
             $_SESSION['email'] = $email;
@@ -25,7 +25,7 @@
         }
 	} else
     {
-        header('Location: Login.php');
+        header('Location: /Views/LoginPage/Login.php');
     }
     
     ?>
