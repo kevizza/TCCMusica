@@ -3,7 +3,11 @@
 
 if (isset($_POST['submit'])) {
 
-	include_once('config.php');
+	$caminho_bd = dirname(__FILE__, 3) . '/bd/config.php';
+
+	echo $caminho_bd;
+
+	include_once($caminho_bd);
 
 	$username = $_POST['username'];
 	$email = $_POST['email'];
@@ -14,7 +18,7 @@ if (isset($_POST['submit'])) {
 	$result = mysqli_query($conexao, "INSERT INTO usuarios(username,email,senha,data_nasc, is_admin) 
 	VALUES ('$username','$email','$senha','$date', 'N')");
 
-	header('Location: Login.php');
+	header('Location: /Views/LoginPage/Login.php');
 }
 
 
@@ -155,7 +159,7 @@ if (isset($_POST['submit'])) {
 							Já possui uma conta?
 						</span>
 
-						<a class="txt2" href="./Login.php">
+						<a class="txt2" href="/Views/LoginPage/Login.php">
 							Entrar
 						</a>
 					</div>
@@ -165,51 +169,31 @@ if (isset($_POST['submit'])) {
 	</div>
 
 	<!-- Site footer -->
-	<footer class="site-footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 col-md-6">
-					<h6>Sobre</h6>
-					<p class="text-justify" style="color: gray;">Aplicativo de música desenvolvido para o Projeto de Trabalho de Conclusão de Curso, nesse
-						projeto, utilizamos as mais diferentes formas de linguagens e esperamos ter trazido um TCC de qualidade.
-					</p>
-				</div>
+  <!-- Site footer -->
 
-
-				<div class="col-xs-6 col-md-3">
-					<h5>Empresa</h5>
-					<ul class="footer-links">
-						<li><a href="http://scanfcode.com/category/c-language/">Sobre</a></li>
-						<li><a href="http://scanfcode.com/category/front-end-development/">Participantes</a></li>
-						<li><a href="http://scanfcode.com/category/back-end-development/">Projetos</a></li>
-						<li><a href="http://scanfcode.com/category/java-programming-language/">Suporte</a></li>
-						<li><a href="http://scanfcode.com/contact/">Contact Us</a></li>
-						<li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
-					</ul>
-				</div>
-			</div>
-			<hr>
-		</div>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-sm-6 col-xs-12">
-					<p class="copyright-text" style="color: gray;">Copyright &copy; 2017 All Rights Reserved by
-						<a href="#">Frecy</a>.
-					</p>
-				</div>
-
-				<div class="col-md-4 col-sm-6 col-xs-12">
-					<ul class="social-icons">
-						<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-					</ul>
+  <div class="copyright-area">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-6 col-lg-6 text-center text-lg-left">
+						<div class="copyright-text">
+							<p>Copyright &copy; 2022, Todos os direitos reservados a <a
+									href="./index.html">Frecy</a></p>
+						</div>
+					</div>
+					<div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+						<div class="footer-menu">
+							<ul>
+								<li><a href="/index.html">Inicio</a></li>
+								<li><a href="#">Termos de Serviço</a></li>
+								<li><a href="#">Politicas de Privacidade</a></li>
+								<li><a href="#">Contato</a></li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</footer>
-
-	<div id="dropDownSelect1"></div>
 
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 	<script src="vendor/animsition/js/animsition.min.js"></script>

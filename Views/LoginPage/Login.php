@@ -55,7 +55,7 @@
   <div class="limiter">
     <div class="container-login100">
       <div class="wrap-login100">
-        <form class="login100-form validate-form" action="/Banco_Dados/validacao.php" method="POST">
+        <form class="login100-form validate-form" action="/bd/validacao.php" method="POST">
           <span class="login100-form-title p-b-26">
             LOGIN
           </span>
@@ -89,7 +89,7 @@
               Não tem uma conta?
             </span>
 
-            <a class="txt2" href="./Registro.php">
+            <a class="txt2" href="/Views/RegisterPage/Registro.php">
               Registrar-se
             </a>
           </div>
@@ -99,59 +99,7 @@
   </div>
 
   <!-- Site footer -->
-  <footer class="footer-section">
-		<div class="container">
-			<div class="footer-cta pt-5 pb-5">
-				<div class="row">
-					<div class="col-xl-4 col-md-4 mb-30">
-					</div>
-					<div class="col-xl-4 col-md-4 mb-30">
-					</div>
-					<div class="col-xl-4 col-md-4 mb-30">
 
-					</div>
-				</div>
-			</div>
-			<div class="footer-content pt-5 pb-5">
-				<div class="row">
-					<div class="col-xl-4 col-lg-4 mb-50">
-						<div class="footer-widget">
-							<div class="footer-logo">
-								<a href="index.html"><img src="./Imgs/Logo_pagina_BW.png" class="img-fluid"
-										alt="logo"></a>
-							</div>
-							<div class="footer-text">
-								<p>Aplicativo de música desenvolvido para o Projeto de
-									Trabalho de Conclusão de Curso, nesse
-									projeto, utilizamos as mais diferentes formas de linguagens e esperamos ter trazido um TCC de
-									qualidade.</p>
-							</div>
-							<div class="footer-social-icon">
-								<span>Siga nas Redes Sociais:</span>
-								<a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
-								<a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
-								<a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-						<div class="footer-widget">
-							<div class="footer-widget-heading">
-								<h3>Empresa</h3>
-							</div>
-							<ul>
-								<li><a href="#">Sobre</a></li>
-								<li><a href="#">Serviços</a></li>
-								<li><a href="#">Portifolio</a></li>
-								<li><a href="#">Contato</a></li>
-								<li><a href="#">Participantes</a></li>
-								<li><a href="#">Ultimas Noticias</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
 		<div class="copyright-area">
 			<div class="container">
 				<div class="row">
@@ -164,7 +112,7 @@
 					<div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
 						<div class="footer-menu">
 							<ul>
-								<li><a href="#">Inicio</a></li>
+								<li><a href="/index.html">Inicio</a></li>
 								<li><a href="#">Termos de Serviço</a></li>
 								<li><a href="#">Politicas de Privacidade</a></li>
 								<li><a href="#">Contato</a></li>

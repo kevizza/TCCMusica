@@ -103,7 +103,6 @@ header .menu-top #nav1 {
     width: 100%;
     display: flex;
     align-items: center;
-    border: solid 1px white;
     justify-content: space-between;
 }
 
