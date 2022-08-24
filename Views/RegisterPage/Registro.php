@@ -17,6 +17,18 @@ if (isset($_POST['submit'])) {
 	header('Location: Login.php');
 }
 
+
+// $id = $mysqli_query->LastInsertId();
+// $md5 = $md5($id);
+
+
+// $assunto = "Confirmação de Cadastro";
+// $link = "http://localhost:8000/".$md5;
+// $mensagem = "Clique aqui para confirmar o cadastro". $link;
+// $header = "from: Frecy";
+
+// mail($email, $assunto, $mensagem, $header);
+
 ?>
 
 <html>
@@ -31,17 +43,17 @@ if (isset($_POST['submit'])) {
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="./Paginas/RegisterPage/images/icons/Logo_of.png" />
-	<link rel="stylesheet" type="text/css" href="./Paginas/RegisterPage/vendor/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="./Paginas/RegisterPage/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="./Paginas/RegisterPage/fonts/iconic/css/material-design-iconic-font.min.css">
-	<link rel="stylesheet" type="text/css" href="./Paginas/RegisterPage/vendor/animate/animate.css">
-	<link rel="stylesheet" type="text/css" href="./Paginas/RegisterPage/vendor/css-hamburgers/hamburgers.min.css">
-	<link rel="stylesheet" type="text/css" href="./Paginas/RegisterPage/vendor/animsition/css/animsition.min.css">
-	<link rel="stylesheet" type="text/css" href="./Paginas/RegisterPage/vendor/select2/select2.min.css">
-	<link rel="stylesheet" type="text/css" href="./Paginas/RegisterPage/vendor/daterangepicker/daterangepicker.css">
-	<link rel="stylesheet" type="text/css" href="./Paginas/RegisterPage/css/util.css">
-	<link rel="stylesheet" type="text/css" href="./Paginas/RegisterPage/css/main.css">
+	<link rel="icon" type="image/png" href="./images/icons/Logo_of.png" />
+	<link rel="stylesheet" type="text/css" href="./vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="./vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="./vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="./vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="./vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="./vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="./css/util.css">
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 	
 
@@ -51,7 +63,7 @@ if (isset($_POST['submit'])) {
 	<!-- NavBar -->
 	<header>
   <nav>
-    <a class="logo" href="./index.html" style="text-decoration:none ;">
+    <a class="logo" href="/index.html" style="text-decoration:none ;">
       FRECY
     </a>
     <div class="mobile-menu">
@@ -61,13 +73,13 @@ if (isset($_POST['submit'])) {
       <div class="line4"></div>
     </div>
     <ul class="nav-list">
-      <li><a href="./Login.php" style="text-decoration:none ;color:gray;">Entrar</a></li>
+      <li><a href="/Views/LoginPage/Login.php" style="text-decoration:none ;color:gray;">Entrar</a></li>
       <li><a href="./Registro.php" style="text-decoration:none ;">Inscrever-se</a></li>
 	  <li>    </li>
 				<li style="color:white ;">|</li>
 				<li>    </li>
       <li><a href="#Entrar" style="text-decoration:none ;color:gray;" class="active">Suporte</a></li>
-      <li><a href="./Premium.php" style="text-decoration:none ;color:gray;">Premium</a></li>
+      <li><a href="/Views/PremiumPage/Premium.php" style="text-decoration:none ;color:gray;">Premium</a></li>
     </ul>
   </nav>
 </header>

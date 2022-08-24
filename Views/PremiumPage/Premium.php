@@ -1,9 +1,9 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="./PremiumPage/style.css">
+  <link rel="stylesheet" href="./style.css">
   <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="Imgs/Logo_of.png" />
+  <link rel="icon" type="image/png" href="/Imgs/Logo_of.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/bulma.min.css" />
   <link rel="stylesheet" type="text/css" href="css/login.css">
@@ -15,7 +15,7 @@
 <body>
 <header>
   <nav>
-    <a class="logo" href="./index.html" style="text-decoration:none ;">
+    <a class="logo" href="/index.html" style="text-decoration:none ;">
       FRECY
     </a>
     <div class="mobile-menu">
@@ -25,12 +25,12 @@
       <div class="line4"></div>
     </div>
     <ul class="nav-list">
-      <li><a href="./Login.php" style="text-decoration:none ;color: #bfbfbf;">Entrar</a></li>
-      <li><a href="./Registro.php" style="text-decoration:none ;color: #bfbfbf;">Inscrever-se</a></li>
+      <li><a href="/Views/LoginPage/Login.php" style="text-decoration:none ;color: #bfbfbf;">Entrar</a></li>
+      <li><a href="/Views/RegisterPage/Registro.php" style="text-decoration:none ;color: #bfbfbf;">Inscrever-se</a></li>
       <li>    </li>
 				<li style="color:white ;">|</li>
 				<li>    </li>
-      <li><a href="#Entrar" style="text-decoration:none ;color: #bfbfbf;">Suporte</a></li>
+      <li><a href="#" style="text-decoration:none ;color: #bfbfbf;">Suporte</a></li>
       <li><a href="./Premium.php" style="text-decoration:none ;">Premium</a></li>
     </ul>
   </nav>
@@ -87,7 +87,7 @@
           <li><i class="bi bi-check-lg"></i>Escolha a música que quer ouvir</li>
           <li><i class="bi bi-check-lg"></i>Faça um plano pré-pago ou uma assinatura</li>
         </ul>
-        <a href="#" class="button button1" style="text-decoration: none;">Começar Agora</a>
+        <a href="./cartao.php" class="button button1" style="text-decoration: none;">Começar Agora</a>
 
       </div>
       <div class="packages">
@@ -100,7 +100,7 @@
           <li><i class="bi bi-check-lg"></i>Faça um plano pré-pago ou uma assinatura</li>
           <li><i class="bi bi-check-lg"></i>Premium Support</li>
         </ul>
-        <a href="#" class="button button2" style="text-decoration: none;">Começar Agora</a>
+        <a href="./cartao.php" class="button button2" style="text-decoration: none;">Começar Agora</a>
       </div>
 
       <div class="packages">
@@ -113,7 +113,7 @@
           <li><i class="bi bi-check-lg"></i>Ouça em qualquer lugar — até no modo offline</li>
           <li><i class="bi bi-check-lg"></i>Escolha a música que quer ouvir</li>
         </ul>
-        <a href="#" class="button button3" style="text-decoration: none;">Começar Agora</a>
+        <a href="./cartao.php" class="button button3" style="text-decoration: none;">Começar Agora</a>
 
       </div>
     </div>

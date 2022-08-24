@@ -21,7 +21,7 @@
         {
             $_SESSION['email'] = $email;
             $_SESSION['senha'] = $senha;
-            header('Location: PaginaPrincipal.php');
+            header('Location: /Views/PaginaApp/AppPrincipal.php');
         }
 	} else
     {

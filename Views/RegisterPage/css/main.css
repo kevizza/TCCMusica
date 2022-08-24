@@ -39,10 +39,46 @@
 
 body, html {
 	height: 100%;
-	font-family: "Poppins-Regular", sans-serif;
+	font-family: Poppins-Regular, sans-serif;
 }
 
 /*---------------------------------------------*/
+/* NavBar */
+
+/* unvisited link */
+a:link {
+  color: white;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* selected link */
+a:active {
+  color: white;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #482650;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 
 header nav a{
   color: #fff;
@@ -54,10 +90,10 @@ a:hover{
   color: white;
 }
 .logo{
-  font-size: 24px;
+  font-size: 33px;
   text-transform: uppercase;
-  letter-spacing: 4px;
-
+  letter-spacing: 10px;
+  margin-top: 0px;
 }
 header nav{
   display: flex;
@@ -100,7 +136,7 @@ header nav{
     right: 0;
     width: 50vw;
     height: 92vh;
-    background: rgba(0, 0, 0, 0.829);
+    background: rgba(0, 0, 0, 1);
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -265,14 +301,16 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: black;
-  background: url(/Imgs/fundo6.jpg);
+  background: url(/Imgs/fundo10.jpg); 
+  backdrop-filter: opacity(0.7);
+  background-color: #000000;
   background-size: 250vh;
+  
 }
 
 .wrap-login100 {
   width: 390px;
-  background: #383838;
+  background: #0e0e0e;
   border-radius: 10px;
   overflow: hidden;
   padding: 77px 55px 33px 55px;
@@ -579,6 +617,7 @@ iframe {
   }
 }
 
+
 /* footer */
 
 
@@ -798,8 +837,4 @@ background-color:#ea4c89
   font-weight:600
 }
 }
-
-
-
-
 

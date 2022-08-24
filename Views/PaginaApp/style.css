@@ -1,0 +1,278 @@
+/*---------------------------------------------*/
+
+@font-face {
+    font-family: Poppins-Regular;
+    src: url('../fonts/poppins/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url('../fonts/poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('../fonts/poppins/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: Poppins-SemiBold;
+    src: url('../fonts/poppins/Poppins-SemiBold.ttf');
+}
+
+/*---------------------------------------------*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    font-family: "Poppins-Regular", sans-serif;
+    display: grid;
+    grid-template-areas:
+        "nav header header"
+        "nav section section"
+        "footer footer footer";
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    text-overflow: clip;
+}
+
+/*---------------------------------------------*/
+
+/* unvisited link */
+a:link {
+    color: white
+}
+
+/* visited link */
+a:visited {
+    color: white;
+}
+
+/* mouse over link */
+a:hover {
+    color: #1c0720;
+    transition: 2s;
+}
+
+#logoA:hover {
+    color: #b178bd;
+    transition: .3s linear;
+}
+
+/* selected link */
+a:active {
+    color: #732678;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #482650;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* menu  */
+header {
+    background: #0f0113;
+    grid-area: header;
+    height: 12vh;
+    width: 168vh;
+    border: solid 1px white;
+}
+
+header .menu-top #nav1 {
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: solid 1px white;
+    justify-content: space-between;
+}
+
+header .menu-top ul {
+    display: flex;
+}
+
+header .menu-top ul li {
+    position: relative;
+    list-style-type: none;
+    font-size: 3vh;
+    color: #fff;
+    margin-right: 5vh;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+header .menu-top ul li.active {
+    position: relative;
+    list-style-type: none;
+    font-size: 3vh;
+    color: #fff;
+    margin-right: 5vh;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+header .menu-top ul li.off {
+    position: relative;
+    list-style-type: none;
+    font-size: 3vh;
+    color: gray;
+    margin-right: 5vh;
+    cursor: pointer;
+    transition: .3s linear;
+}
+
+header .menu-top #nav1 ul li.off a {
+    color: gray;
+    transition: .3s linear;
+}
+
+header .menu-top #nav1 ul li a:hover {
+    color: #b178bd;
+    transition: .3s linear;
+}
+
+header .menu-top #nav1 ul li span {
+    position: absolute;
+    width: 100%;
+    height: 2.5px;
+    background: #9d69b8;
+    bottom: -5px;
+    left: 0;
+    border-radius: 20px;
+}
+
+header .menu-top #nav1  #divBusca{
+    margin-left: 10vh;
+    background-color:#13001d;
+    border-radius: 30px;
+    width: 60vh;
+    height:5vh;
+}
+header .menu-top #nav1  #divBusca #txtBusca{
+    float:left;
+    background-color:transparent;
+    padding-left: 2vh;
+    padding-top: 1vh;
+    margin-left: 1vh;
+    font-size: calc(2vh + 0.3vw);
+    border:none;
+    height:4vh;
+    width:50vh;
+    color: #fff;
+}
+header .menu-top #nav1  #divBusca .bi{
+    float:left;
+    color: white;
+    padding: 0.3vh 0px 0px 3vh; 
+} 
+header .menu-top #nav1  .user{
+    margin-top: -2vh;
+    margin-right: 5vh;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    cursor: pointer;
+} 
+header .menu-top #nav1 .user img{
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+} 
+
+
+
+
+
+/* lado esquerdo */
+
+#nav-side {
+    background: #1c0720;
+    grid-area: nav;
+    height: 90vh;
+    width: 40vh;
+    color: #fff;
+    overflow: hidden;
+    text-align: justify;
+}
+
+#nav-side .menu-side #logoA {
+    font-size: 6vh;
+    letter-spacing: 10px;
+    padding-left: 7vh;
+}
+
+#nav-side .menu-side .playlist a h4.off {
+    font-size: 4vh;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: gray;
+}
+
+#nav-side .menu-side .playlist a h4.off:hover {
+    color: #b178bd;
+    transition: .3s linear;
+}
+
+#nav-side .menu-side .playlist a h4.active {
+    font-size: 4vh;
+    margin-top: 20px;
+    margin-left: 20px;
+    color: #fff;
+}
+
+#nav-side .menu-side .Mlist {
+    padding-left: 18px;
+    margin: 0px 0px 20px 0px;
+}
+
+#nav-side .menu-side .Mlist a {
+    display: flex;
+    font-size: 3vh;
+    color: white;
+}
+
+#nav-side .menu-side .Mlist a:hover {
+    color: #b178bd;
+    transition: .3s linear;
+}
+
+#nav-side .menu-side .Mlist a i {
+    margin-right: 10px;
+    font-size: 5vh;
+}
+
+/* lado direito */
+
+section {
+    background: #0f0113;
+    grid-area: section;
+    height: 78vh;
+}
+
+/* emBaixo */
+
+footer {
+    background: #17011d;
+    grid-area: footer;
+    height: 10vh;
+}
