@@ -25,6 +25,7 @@ $logado = $_SESSION['email'];
 </head>
 
 <body>
+    <div id="CriarPlaylist"></div>
     <header>
         <div class="menu-top">
             <nav id="nav1">
@@ -75,7 +76,7 @@ $logado = $_SESSION['email'];
             <hr style="height:1px;width:25vh;color:white;margin-left:6vh;">
             <br>
             <div class="Mlist">
-                <a href="./CriarPlaylist.php" style="text-decoration:none">
+                <a href="./CriarPlaylist.php" style="text-decoration:none" id="btn_criarplaylist">
                     <i class="large material-icons">add_box</i>Criar Playlist
                 </a>
 
@@ -93,8 +94,28 @@ $logado = $_SESSION['email'];
     </nav>
 
     <section>
+        <div class="content">
+            <h1>Descubra novos Sons!</h1>
+            <p>
+                Com um pouco de curiosidade você poderá encontrar diversas musicas!
+            </p>
+        </div>
+        <div class="lancamentos">
+            <div class="h4">
+                <h4>Lançamentos</h4>
+                <div class="btn-s">
+                    <i id="left_scroll" class="bi bi-arrow-left-short"></i>
+                    <i id="right_scroll" class="bi bi-arrow-right-short"></i>
+                </div>
+            </div>
+            <div class="pop-songs">
+                <li class="songItems">
 
+                </li>
+            </div>
+        </div>
     </section>
+
     <footer>
         <div class="master-play">
             <img src="/Imgs/Logo_of.png" alt="">
@@ -129,6 +150,15 @@ $logado = $_SESSION['email'];
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $("#btn_criarplaylist").click(function(){
+            $("#CriarPlayList").load("CriarPlaylist.php");
+        });
+
+        </script>
+
+
 </body>
 
 </html>

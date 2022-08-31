@@ -3,7 +3,7 @@
 
 if (isset($_POST['submit'])) {
 
-	include_once('/Banco_Dados/config.php');
+	include_once('./config.php');
 
 	$username = $_POST['username'];
 	$email = $_POST['email'];

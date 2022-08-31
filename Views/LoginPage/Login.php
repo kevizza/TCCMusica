@@ -55,7 +55,7 @@
   <div class="limiter">
     <div class="container-login100">
       <div class="wrap-login100">
-        <form class="login100-form validate-form" action="/bd/validacao.php" method="POST">
+        <form class="login100-form validate-form" action="/validacao.php" method="POST">
           <span class="login100-form-title p-b-26">
             LOGIN
           </span>

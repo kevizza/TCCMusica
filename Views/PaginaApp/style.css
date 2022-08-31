@@ -95,7 +95,6 @@ header {
     grid-area: header;
     height: 12vh;
     width: 168vh;
-    border: solid 1px white;
 }
 
 header .menu-top #nav1 {
@@ -267,6 +266,61 @@ section {
     grid-area: section;
     height: 78vh;
 }
+section .content{
+    width: 90%;
+    height: 30%;
+    margin: auto;
+    padding-top: 28px;
+}
+section .content h1{
+    font-size: 6vh;
+    color: #fff;
+    font-weight: 600;
+}
+section .content p{
+    font-size: 2.5vh;
+    color: rgb(204, 204, 204);
+    font-weight: 600;
+}
+section .lancamentos{
+    width: 90%;
+    height: auto;
+    margin: auto;
+    border: 1px solid #fff;
+    margin-top: 28px;
+}
+section .lancamentos .h4{
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: space-between;
+}
+section .lancamentos .h4 .bi{
+    color: rgb(139, 139, 139);
+    cursor: pointer;
+    transition: .3s linear;
+}
+section .lancamentos .h4 .bi:hover{
+    color: #fff;
+}
+section .lancamentos .pop-songs{
+    width: 100%;
+    height: 150px;
+    margin-top: 15px;
+    display: flex;
+}
+section .lancamentos .pop-songs .songItems{
+    min-width: 100px;
+    height: 140px;
+    list-style-type: none;
+    margin-right: 10px;
+    transition: .3s linear;
+}
+section .lancamentos .pop-songs .songItems:hover{
+    background: #482650;
+}
+
+
 
 /* emBaixo */
 
@@ -275,13 +329,29 @@ footer {
     grid-area: footer;
     height: 10vh;
 }
+footer .master-play {
+  display: flex;
+  align-items: center;
+  padding:  0px 20px;
+}
 footer .master-play img{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     margin-left: 20px;
 }
 footer .master-play img{
     width: 50px;
     height: 50px;
     margin-left: 20px;
+}
+footer .master-play h5{
+  width: 130px;
+  font-size: 13px;
+  margin-left: 40px;
+  color: #fff;
+  line-height: 17px;
+}
+footer .master-play h5 .subtitle{
+  font-size: 11px;
+  color: #504c4c;
 }
