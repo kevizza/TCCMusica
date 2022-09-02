@@ -1,12 +1,11 @@
 <?php
-session_start();
-// print_r($_SESSION);
-if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)) {
-    unset($_SESSION['email']);
-    unset($_SESSION['senha']);
-    header('Location: Login.php');
-}
-$logado = $_SESSION['email'];
+// session_start();
+// if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)) {
+//     unset($_SESSION['email']);
+//     unset($_SESSION['senha']);
+//     header('Location: Login.php');
+// }
+// $logado = $_SESSION['email'];
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +24,6 @@ $logado = $_SESSION['email'];
 </head>
 
 <body>
-    <div id="CriarPlaylist"></div>
     <header>
         <div class="menu-top">
             <nav id="nav1">
@@ -45,10 +43,10 @@ $logado = $_SESSION['email'];
                             <input type="text" id="txtBusca" placeholder="Buscar..." />
                         </div>
                     </li>
-                </ul>
-                <div class="user">
+                    <div class="user">
                     <img src="/Imgs/Logo_of.png" alt="" title="a">
                 </div>
+                </ul>
             </nav>
         </div>
     </header>
@@ -64,7 +62,7 @@ $logado = $_SESSION['email'];
                 </a>
                 <a href="./PaginaPrincipal.php" style="text-decoration: none;">
                     <h4 class="off">
-                        <span></span><i class="large material-icons">library_music</i> Sua Biblioteca
+                        <span></span><i class="bi bi-large material-icons">library_music</i> Sua Biblioteca
                     </h4>
                 </a>
                 <a href="./PaginaPrincipal.php" style="text-decoration: none;">
@@ -151,12 +149,12 @@ $logado = $_SESSION['email'];
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
+    <!-- <script>
         $("#btn_criarplaylist").click(function(){
             $("#CriarPlayList").load("CriarPlaylist.php");
         });
 
-        </script>
+        </script> -->
 
 
 </body>

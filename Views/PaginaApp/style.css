@@ -183,12 +183,11 @@ header .menu-top #nav1  #divBusca .bi{
     color: white;
     padding: 0.3vh 0px 0px 3vh; 
 } 
-header .menu-top #nav1  .user{
-    margin-top: -2vh;
-    margin-right: 5vh;
-    width: 5vh;
-    height: 5vh;
-    border-radius: 50%;
+header .menu-top #nav1 .user{
+    margin-right: -30px;
+    width: 15px;
+    height: 15px;
+    border-radius: 10%;
     cursor: pointer;
 } 
 header .menu-top #nav1 .user img{
@@ -283,17 +282,22 @@ section .content p{
     font-weight: 600;
 }
 section .lancamentos{
-    width: 90%;
+    width: 150vh;
     height: auto;
     margin: auto;
-    border: 1px solid #fff;
+    /* border: 1px solid #fff; */
     margin-top: 28px;
+    margin-left: 40px;
 }
 section .lancamentos .h4{
+    font-size: calc(2vh + 0.3vw);
     display: flex;
     color: #fff;
     align-items: center;
     justify-content: space-between;
+}
+section .lancamentos .h4 h4{
+    font-size: calc(2vh + 0.3vw);
 }
 section .lancamentos .h4 .bi{
     color: rgb(139, 139, 139);
@@ -310,8 +314,8 @@ section .lancamentos .pop-songs{
     display: flex;
 }
 section .lancamentos .pop-songs .songItems{
-    min-width: 100px;
-    height: 140px;
+    min-width: 130px;
+    height: 150px;
     list-style-type: none;
     margin-right: 10px;
     transition: .3s linear;
@@ -332,7 +336,8 @@ footer {
 footer .master-play {
   display: flex;
   align-items: center;
-  padding:  0px 20px;
+  margin-top: 20px;
+  padding-left: 40px;
 }
 footer .master-play img{
     width: 30px;
@@ -346,12 +351,137 @@ footer .master-play img{
 }
 footer .master-play h5{
   width: 130px;
-  font-size: 13px;
+  font-size: 2vh;
   margin-left: 40px;
   color: #fff;
   line-height: 17px;
 }
 footer .master-play h5 .subtitle{
-  font-size: 11px;
+  font-size: 1.5vh;
   color: #504c4c;
+}
+footer .master-play .icon{
+    font-size: 3.5vh;
+    color: #fff;
+    margin: 0px 70px 0px 100px;
+
+}
+footer .master-play .icon .bi{
+    cursor: pointer;
+    outline: none;
+    transition: .3s linear;
+}
+footer .master-play .icon .bi:nth-child(2){
+    border: 1px solid rgba(178, 178, 197, 0.514);
+    border-radius: 70%;
+    padding: 2px 3px 0px 4px;
+    margin: 0px 3px;
+    transition: .3s linear;
+}
+header .master-play span {
+    color: #fff;
+    width: 32px;
+    font-size: 11px;
+    font-weight: 400;
+}
+header .master-play span #currentStart{
+    margin: 0px 0px 0px 20px;
+}
+header .master-play .bar{
+    position: relative;
+    width: 43%;
+    height: 2px;
+    background: rgb(105, 105, 170,.1);
+    margin: 0px 15px 0px 10px;
+}
+header .master-play .bar .bar2{
+    position: absolute;
+    background: #9d69b8;
+    width: 0%;
+    height: 100%;
+    top: 0;
+}
+header .master-play .bar .dot{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #9d69b8;
+    border-radius: 50%;
+    left: 0%;
+    top: -1px;
+    transition: 1s linear;
+}
+header .master-play .bar .dot::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #9d69b8;
+    border-radius: 50%;
+    left: -6px;
+    top: -6px;
+    box-shadow: inset 0px 0px 3px #732678;
+}
+header .master-play .bar input{
+    position: absolute;
+    width: 100%;
+    top: -6px;
+    left: 0;
+    cursor: pointer;
+    z-index: 99999999;
+    transition: 3s linear;
+    opacity: 0;
+}
+
+header .master-play .vol{
+    position: relative;
+    width: 100px;
+    height: 2px;
+    margin-left: 230px;
+    background: rgb(105, 105, 170,.1);
+}
+header .master-play .vol .bi{
+    position: absolute;
+    color: #fff;
+    font-size: 25px;
+    top: -17px;
+    left: -40px;
+}
+header .master-play .vol input{
+    position: absolute;
+    width: 100%;
+    top: -10px;
+    left: 0;
+    cursor: pointer;
+    z-index: 99999999;
+    transition: 3s linear;
+    opacity: 0;
+}
+header .master-play .vol .vol_bar{
+    position: absolute;
+    background: #9d69b8;
+    width: 0%;
+    height: 100%;
+    top: 0;
+}
+header .master-play .vol .dot{
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #9d69b8;
+    border-radius: 50%;
+    left: 0%;
+    top: -1px;
+    transition: 1s linear;
+}
+header .master-play .vol .dot::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #9d69b8;
+    border-radius: 50%;
+    left: -6px;
+    top: -6px;
+    box-shadow: inset 0px 0px 3px #732678;
 }

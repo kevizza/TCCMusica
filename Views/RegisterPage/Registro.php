@@ -3,7 +3,7 @@
 
 if (isset($_POST['submit'])) {
 
-	include_once('./config.php');
+	include('./config.php');
 
 	$username = $_POST['username'];
 	$email = $_POST['email'];
@@ -11,8 +11,8 @@ if (isset($_POST['submit'])) {
 	$date = $_POST['date'];
 
 
-	$result = mysqli_query($conexao, "INSERT INTO usuarios(username,email,senha,data_nasc, is_admin) 
-	VALUES ('$username','$email','$senha','$date', 'N')");
+	$result = mysqli_query($conexao, "INSERT INTO usuarios(username,email,senha,data_nasc,is_admin,imagem) 
+	VALUES ('$username','$email','$senha','$date', 'N', '/imgs/fotoperfilpre.png')");
 
 	header('Location: /View/LoginPage/Login.php');
 }
