@@ -82,12 +82,18 @@ a:active {
 
 ::-webkit-scrollbar-thumb {
     background: #482650;
-    border-radius: 20px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-corner{
+    background: black;
 }
 
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+
 
 /* menu  */
 header {
@@ -146,6 +152,7 @@ header .menu-top #nav1 ul li.off a {
 
 header .menu-top #nav1 ul li a:hover {
     color: #b178bd;
+    font-size: 3.5vh;
     transition: .3s linear;
 }
 
@@ -227,7 +234,8 @@ header .menu-top #nav1 .user img{
 
 #nav-side .menu-side .playlist a h4.off:hover {
     color: #b178bd;
-    transition: .3s linear;
+    transition: .5s linear;
+    font-size: 4.4vh;
 }
 
 #nav-side .menu-side .playlist a h4.active {
@@ -235,6 +243,10 @@ header .menu-top #nav1 .user img{
     margin-top: 20px;
     margin-left: 20px;
     color: #fff;
+    transition: .5s linear;
+}
+#nav-side .menu-side .playlist a h4.active:hover {
+    color: #b178bd;
 }
 
 #nav-side .menu-side .Mlist {
@@ -251,12 +263,14 @@ header .menu-top #nav1 .user img{
 #nav-side .menu-side .Mlist a:hover {
     color: #b178bd;
     transition: .3s linear;
+    
 }
 
 #nav-side .menu-side .Mlist a i {
     margin-right: 10px;
     font-size: 5vh;
 }
+
 
 /* lado direito */
 
@@ -322,6 +336,8 @@ section .lancamentos .pop-songs .songItems{
 }
 section .lancamentos .pop-songs .songItems:hover{
     background: #482650;
+    height: 170px;
+    min-width: 140px;
 }
 
 
@@ -336,23 +352,22 @@ footer {
 footer .master-play {
   display: flex;
   align-items: center;
-  margin-top: 20px;
-  padding-left: 40px;
+  width: 90%;
+  height: 100%;
+  margin-left: 30px;
+
 }
+
 footer .master-play img{
-    width: 30px;
-    height: 30px;
-    margin-left: 20px;
-}
-footer .master-play img{
-    width: 50px;
-    height: 50px;
+    width: 7vh;
+    height: 7vh;
     margin-left: 20px;
 }
 footer .master-play h5{
-  width: 130px;
+  width: 15vh;
   font-size: 2vh;
   margin-left: 40px;
+  margin-top: 10px;
   color: #fff;
   line-height: 17px;
 }
@@ -361,47 +376,54 @@ footer .master-play h5 .subtitle{
   color: #504c4c;
 }
 footer .master-play .icon{
-    font-size: 3.5vh;
+    font-size: 4.3vh;
     color: #fff;
-    margin: 0px 70px 0px 100px;
-
+    margin: 0px 90px 0px 20px;
+    transition: .3s linear;
+}
+footer .master-play .icon #play{
+    transition: .3s linear;
+}
+footer .master-play .icon #play:hover{
+    color: #732678;
+    font-size: 4.2vh;
+}
+footer .master-play .icon #skip{
+    transition: .3s linear;
+}
+footer .master-play .icon #skip:hover{
+    color: #732678;
+    font-size: 4.2vh;
 }
 footer .master-play .icon .bi{
     cursor: pointer;
     outline: none;
     transition: .3s linear;
 }
-footer .master-play .icon .bi:nth-child(2){
-    border: 1px solid rgba(178, 178, 197, 0.514);
-    border-radius: 70%;
-    padding: 2px 3px 0px 4px;
-    margin: 0px 3px;
-    transition: .3s linear;
-}
-header .master-play span {
+footer .master-play span {
     color: #fff;
     width: 32px;
     font-size: 11px;
     font-weight: 400;
 }
-header .master-play span #currentStart{
+footer .master-play span #currentStart{
     margin: 0px 0px 0px 20px;
 }
-header .master-play .bar{
+footer .master-play .bar{
     position: relative;
-    width: 43%;
-    height: 2px;
+    width: 30%;
+    height: 0.3vh;
     background: rgb(105, 105, 170,.1);
-    margin: 0px 15px 0px 10px;
+    margin: 0px 15px 0px 15px;
 }
-header .master-play .bar .bar2{
+footer .master-play .bar .bar2{
     position: absolute;
     background: #9d69b8;
     width: 0%;
     height: 100%;
     top: 0;
 }
-header .master-play .bar .dot{
+footer .master-play .bar .dot{
     position: absolute;
     width: 5px;
     height: 5px;
@@ -411,18 +433,18 @@ header .master-play .bar .dot{
     top: -1px;
     transition: 1s linear;
 }
-header .master-play .bar .dot::before{
+footer .master-play .bar .dot::before{
     content: '';
     position: absolute;
     width: 15px;
     height: 15px;
     border: 1px solid #9d69b8;
     border-radius: 50%;
-    left: -6px;
-    top: -6px;
+    left: -5px;
+    top: -5px;
     box-shadow: inset 0px 0px 3px #732678;
 }
-header .master-play .bar input{
+footer .master-play .bar input{
     position: absolute;
     width: 100%;
     top: -6px;
@@ -433,21 +455,21 @@ header .master-play .bar input{
     opacity: 0;
 }
 
-header .master-play .vol{
+footer .master-play .vol{
     position: relative;
     width: 100px;
     height: 2px;
-    margin-left: 230px;
+    margin-left: 100px;
     background: rgb(105, 105, 170,.1);
 }
-header .master-play .vol .bi{
+footer .master-play .vol .bi{
     position: absolute;
     color: #fff;
     font-size: 25px;
     top: -17px;
     left: -40px;
 }
-header .master-play .vol input{
+footer .master-play .vol input{
     position: absolute;
     width: 100%;
     top: -10px;
@@ -457,14 +479,14 @@ header .master-play .vol input{
     transition: 3s linear;
     opacity: 0;
 }
-header .master-play .vol .vol_bar{
+footer .master-play .vol .vol_bar{
     position: absolute;
     background: #9d69b8;
     width: 0%;
     height: 100%;
     top: 0;
 }
-header .master-play .vol .dot{
+footer .master-play .vol .dot{
     position: absolute;
     width: 5px;
     height: 5px;
@@ -474,14 +496,14 @@ header .master-play .vol .dot{
     top: -1px;
     transition: 1s linear;
 }
-header .master-play .vol .dot::before{
+footer .master-play .vol .dot::before{
     content: '';
     position: absolute;
     width: 15px;
     height: 15px;
     border: 1px solid #9d69b8;
     border-radius: 50%;
-    left: -6px;
-    top: -6px;
+    left: -5px;
+    top: -5px;
     box-shadow: inset 0px 0px 3px #732678;
 }

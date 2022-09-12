@@ -44,8 +44,8 @@
                         </div>
                     </li>
                     <div class="user">
-                    <img src="/Imgs/Logo_of.png" alt="" title="a">
-                </div>
+                        <img src="/Imgs/Logo_of.png" alt="" title="a">
+                    </div>
                 </ul>
             </nav>
         </div>
@@ -108,8 +108,38 @@
             </div>
             <div class="pop-songs">
                 <li class="songItems">
+                    <div class="img-song">
+                        <img src="/Imgs/a22.png" alt="">
+                    </div>
+                </li>
+                <li class="songItems">
 
                 </li>
+                <li class="songItems">
+
+                </li>
+                <li class="songItems">
+
+                </li>
+                <li class="songItems">
+
+                </li>
+                <li class="songItems">
+
+                </li>
+                <li class="songItems">
+
+                </li>
+                <li class="songItems">
+
+                </li>
+                <li class="songItems">
+
+                </li>
+                <li class="songItems">
+
+                </li>
+
             </div>
         </div>
     </section>
@@ -121,9 +151,9 @@
                 <div class="subtitle">Alan Walker</div>
             </h5>
             <div class="icon">
-                <i class="bi bi-skip-start-fill"></i>
-                <i class="bi bi-play-fill"></i>
-                <i class="bi bi-skip-end-fill"></i>
+                <i class="bi bi-skip-start-fill" id="skip"></i>
+                <i class="bi bi-play-fill" id="play"></i>
+                <i class="bi bi-skip-end-fill" id="skip"></i>
             </div>
             <span id="currentStart">0:00</span>
             <div class="bar">
