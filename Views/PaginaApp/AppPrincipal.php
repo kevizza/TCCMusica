@@ -57,17 +57,17 @@
             <div class="playlist">
                 <a href="./ PaginaPrincipal.php" style="text-decoration: none;">
                     <h4 class="active">
-                        <span></span><i class="bi bi-house-door-fill"></i> Home
+                        <span></span><i class="bi bi-house-door-fill"></i>  Home
                     </h4>
                 </a>
                 <a href="./PaginaPrincipal.php" style="text-decoration: none;">
                     <h4 class="off">
-                        <span></span><i class="bi bi-large material-icons">library_music</i> Sua Biblioteca
+                        <span></span><i class="bi bi-music-note-list"></i>  Sua Biblioteca
                     </h4>
                 </a>
                 <a href="./PaginaPrincipal.php" style="text-decoration: none;">
                     <h4 class="off">
-                        <span></span><i class="bi bi-search"></i> Explorar
+                        <span></span><i class="bi bi-search"></i>  Explorar
                     </h4>
             </div>
             <br>
