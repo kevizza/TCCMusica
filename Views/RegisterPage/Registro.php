@@ -113,7 +113,7 @@ if (isset($_POST['submit'])) {
 
 					<div class="wrap-input100 validate-input" data-validate="Insira a senha">
 						<span class="btn-show-pass">
-							<i class="zmdi zmdi-eye"></i>
+							<i class="zmdi zmdi-eye-off"></i>
 						</span>
 						<input class="input100" type="password" name="senha" id="senha" placeholder="Senha">
 						<span class="focus-input100"></span>
@@ -121,7 +121,7 @@ if (isset($_POST['submit'])) {
 
 					<div class="wrap-input100 validate-input" data-validate="Confirme a senha">
 						<span class="btn-show-pass">
-							<i class="zmdi zmdi-eye"></i>
+							<i class="zmdi zmdi-eye-off"></i>
 						</span>
 						<input class="input100" type="password" name="senha" id="senha" placeholder="Confirmar Senha">
 						<span class="focus-input100"></span>
@@ -155,7 +155,7 @@ if (isset($_POST['submit'])) {
 							Já possui uma conta?
 						</span>
 
-						<a class="txt2" href="./Login.php">
+						<a class="txt2" href="/Views/LoginPage/Login.php">
 							Entrar
 						</a>
 					</div>

@@ -98,7 +98,7 @@
                 Com um pouco de curiosidade você poderá encontrar diversas musicas!
             </p>
         </div>
-        <div class="lancamentos">
+        <div class="menu-songs">
             <div class="h4">
                 <h4>Lançamentos</h4>
                 <div class="btn-s">
@@ -108,12 +108,55 @@
             </div>
             <div class="pop-songs">
                 <li class="songItems">
+                <div class="img-song">
+                <img src="/Imgs/fotoperfilpre.png" alt="">
+                </div>
+                </li>
+                <li class="songItems">
+
+                </li>
+                <li class="songItems">
+
+                </li>
+                <li class="songItems">
+
+                </li>
+                <li class="songItems">
+
+                </li>
+                <li class="songItems">
+
+                </li>
+                <li class="songItems">
+
+                </li>
+                <li class="songItems">
+
+                </li>
+                <li class="songItems">
+
+                </li>
+                <li class="songItems">
+
+                </li>
+
+            </div>
+        </div>
+        <div class="menu-songs">
+            <div class="h4">
+                <h4>Em alta</h4>
+                <div class="btn-s">
+                    <i id="left_scroll" class="bi bi-arrow-left-short"></i>
+                    <i id="right_scroll" class="bi bi-arrow-right-short"></i>
+                </div>
+            </div>
+            <div class="pop-songs">
+                <li class="songItems">
                     <div class="img-song">
-                        <img src="/Imgs/a22.png" alt="">
+                        <img src="/Imgs/fotoperfilpre.png" alt="">
                     </div>
                 </li>
                 <li class="songItems">
-
                 </li>
                 <li class="songItems">
 
@@ -137,6 +180,48 @@
 
                 </li>
                 <li class="songItems">
+
+                </li>
+
+            </div>
+        </div>
+        <div class="menu-songs">
+            <div class="h4">
+                <h4>Artistas</h4>
+                <div class="btn-s">
+                    <i id="left_scroll" class="bi bi-arrow-left-short"></i>
+                    <i id="right_scroll" class="bi bi-arrow-right-short"></i>
+                </div>
+            </div>
+            <div class="pop-artistis">
+                <li class="artItems">
+                    <img src="/Imgs/fundo10.jpg" alt="">
+                </li>
+                <li class="artItems">
+                <img src="/Imgs/fundo2.jpg" alt="">
+                </li>
+                <li class="artItems">
+
+                </li>
+                <li class="artItems">
+
+                </li>
+                <li class="artItems">
+
+                </li>
+                <li class="artItems">
+
+                </li>
+                <li class="artItems">
+
+                </li>
+                <li class="artItems">
+
+                </li>
+                <li class="artItems">
+
+                </li>
+                <li class="artItems">
 
                 </li>
 

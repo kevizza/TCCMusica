@@ -168,7 +168,7 @@ header .menu-top #nav1 ul li span {
 
 header .menu-top #nav1  #divBusca{
     margin-left: 10vh;
-    background-color:#13001d;
+    background-color:#5600b928;
     border-radius: 30px;
     width: 60vh;
     height:5vh;
@@ -278,6 +278,7 @@ section {
     background: #0f0113;
     grid-area: section;
     height: 78vh;
+    overflow: auto;
 }
 section .content{
     width: 90%;
@@ -295,7 +296,7 @@ section .content p{
     color: rgb(204, 204, 204);
     font-weight: 600;
 }
-section .lancamentos{
+section .menu-songs{
     width: 150vh;
     height: auto;
     margin: auto;
@@ -303,41 +304,93 @@ section .lancamentos{
     margin-top: 28px;
     margin-left: 40px;
 }
-section .lancamentos .h4{
+section .menu-songs .h4{
     font-size: calc(2vh + 0.3vw);
     display: flex;
     color: #fff;
     align-items: center;
     justify-content: space-between;
 }
-section .lancamentos .h4 h4{
+section .menu-songs .h4 h4{
     font-size: calc(2vh + 0.3vw);
 }
-section .lancamentos .h4 .bi{
+section .menu-songs .h4 .bi{
     color: rgb(139, 139, 139);
     cursor: pointer;
     transition: .3s linear;
 }
-section .lancamentos .h4 .bi:hover{
+section .menu-songs .h4 .bi:hover{
     color: #fff;
 }
-section .lancamentos .pop-songs{
+section .menu-songs .pop-songs{
+    width: 100%;
+    height: 200px;
+    margin-top: 15px;
+    display: flex;
+}
+section .menu-songs .pop-songs .songItems{
+    width: 18vh;
+    height: 18vh;
+    list-style-type: none;
+    margin-right: 10px;
+    transition: .3s linear;
+    background: #1c0720;
+    overflow: hidden;
+}
+section .menu-songs .pop-songs .songItems:hover{
+    background: #482650;
+    width: 20vh;
+    height: 20vh;
+}
+
+
+section .menu-songs{
+    width: 150vh;
+    height: auto;
+    margin: auto;
+    /* border: 1px solid #fff; */
+    margin-top: 28px;
+    margin-left: 40px;
+    margin-bottom: 5vh;
+}
+section .menu-songs .h4{
+    font-size: calc(2vh + 0.3vw);
+    display: flex;
+    color: #fff;
+    align-items: center;
+    justify-content: space-between;
+}
+section .menu-songs .h4 h4{
+    font-size: calc(2vh + 0.3vw);
+}
+section .menu-songs .h4 .bi{
+    color: rgb(139, 139, 139);
+    cursor: pointer;
+    transition: .3s linear;
+}
+section .menu-songs .h4 .bi:hover{
+    color: #fff;
+}
+section .menu-songs .pop-artistis{
     width: 100%;
     height: 150px;
     margin-top: 15px;
     display: flex;
 }
-section .lancamentos .pop-songs .songItems{
-    min-width: 130px;
-    height: 150px;
+section .menu-songs .pop-artistis .artItems{
+    width: 13vh;
+    height: 13vh;
+    border-radius: 100%;
     list-style-type: none;
     margin-right: 10px;
     transition: .3s linear;
+    background: #1c0720;
+    overflow: hidden;
 }
-section .lancamentos .pop-songs .songItems:hover{
+section .menu-songs .pop-artistis .artItems:hover{
     background: #482650;
-    height: 170px;
-    min-width: 140px;
+    width: 15vh;
+    height: 15vh;
 }
 
 
@@ -352,16 +405,13 @@ footer {
 footer .master-play {
   display: flex;
   align-items: center;
-  width: 90%;
+  width: 100%;
   height: 100%;
-  margin-left: 30px;
-
+  justify-content: center;
 }
-
 footer .master-play img{
     width: 7vh;
     height: 7vh;
-    margin-left: 20px;
 }
 footer .master-play h5{
   width: 15vh;
