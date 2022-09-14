@@ -57,24 +57,24 @@
             <div class="playlist">
                 <a href="./ PaginaPrincipal.php" style="text-decoration: none;">
                     <h4 class="active">
-                        <span></span><i class="bi bi-house-door-fill"></i>  Home
+                        <span></span><i class="bi bi-house-door-fill"></i> Home
                     </h4>
                 </a>
                 <a href="./PaginaPrincipal.php" style="text-decoration: none;">
                     <h4 class="off">
-                        <span></span><i class="bi bi-music-note-list"></i>  Sua Biblioteca
+                        <span></span><i class="bi bi-music-note-list"></i> Sua Biblioteca
                     </h4>
                 </a>
                 <a href="./PaginaPrincipal.php" style="text-decoration: none;">
                     <h4 class="off">
-                        <span></span><i class="bi bi-search"></i>  Explorar
+                        <span></span><i class="bi bi-search"></i> Explorar
                     </h4>
             </div>
             <br>
             <hr style="height:1px;width:25vh;color:white;margin-left:6vh;">
             <br>
             <div class="Mlist">
-                <a href="./CriarPlaylist.php" style="text-decoration:none" id="btn_criarplaylist">
+                <a href="#" style="text-decoration:none"">
                     <i class="large material-icons">add_box</i>Criar Playlist
                 </a>
 
@@ -91,7 +91,7 @@
         </div>
     </nav>
 
-    <section>
+    <section id="1">
         <div class="content">
             <h1>Descubra novos Sons!</h1>
             <p>
@@ -108,9 +108,14 @@
             </div>
             <div class="pop-songs">
                 <li class="songItems">
-                <div class="img-song">
-                <img src="/Imgs/fotoperfilpre.png" alt="">
-                </div>
+                    <div class="img-song">
+                        <img src="/Imgs/capa_faded.png" alt="">
+                        <i class="bi bi-play-fill" id="1"></i>
+                    </div>
+                    <h5>Faded
+                        <br>
+                        <div class="subtitle">Alan Walker</div>
+                    </h5>
                 </li>
                 <li class="songItems">
 
@@ -151,10 +156,15 @@
                 </div>
             </div>
             <div class="pop-songs">
-                <li class="songItems">
+            <li class="songItems">
                     <div class="img-song">
-                        <img src="/Imgs/fotoperfilpre.png" alt="">
+                        <img src="/Imgs/capa_faded.png" alt="">
+                        <i class="bi bi-play-fill" id="1"></i>
                     </div>
+                    <h5>Faded
+                        <br>
+                        <div class="subtitle">Alan Walker</div>
+                    </h5>
                 </li>
                 <li class="songItems">
                 </li>
@@ -187,7 +197,7 @@
         </div>
         <div class="menu-songs">
             <div class="h4">
-                <h4>Artistas</h4>
+                <h4>Artistas Populares</h4>
                 <div class="btn-s">
                     <i id="left_scroll" class="bi bi-arrow-left-short"></i>
                     <i id="right_scroll" class="bi bi-arrow-right-short"></i>
@@ -195,10 +205,13 @@
             </div>
             <div class="pop-artistis">
                 <li class="artItems">
-                    <img src="/Imgs/fundo10.jpg" alt="">
+                    <div class="img-artist">
+                        <h6>VEJA MAIS</h6>
+                        <img src="/Imgs/theweekend.jpg" alt="">
+                    </div>
                 </li>
                 <li class="artItems">
-                <img src="/Imgs/fundo2.jpg" alt="">
+
                 </li>
                 <li class="artItems">
 
@@ -231,14 +244,14 @@
 
     <footer>
         <div class="master-play">
-            <img src="/Imgs/Logo_of.png" alt="">
-            <h5>On My Way <br>
+            <img src="/Imgs/capa_faded.png" alt="">
+            <h5>Faded <br>
                 <div class="subtitle">Alan Walker</div>
             </h5>
             <div class="icon">
-                <i class="bi bi-skip-start-fill" id="skip"></i>
-                <i class="bi bi-play-fill" id="play"></i>
-                <i class="bi bi-skip-end-fill" id="skip"></i>
+                <i class="bi bi-skip-start-fill" id="skip1"></i>
+                <i class="bi bi-play-fill" id="masterPlay"></i>
+                <i class="bi bi-skip-end-fill" id="skip2"></i>
             </div>
             <span id="currentStart">0:00</span>
             <div class="bar">
@@ -264,14 +277,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- <script>
-        $("#btn_criarplaylist").click(function(){
-            $("#CriarPlayList").load("CriarPlaylist.php");
-        });
-
-        </script> -->
-
-
+    <script src = "app.js"></script>
 </body>
 
 </html>

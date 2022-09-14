@@ -12,7 +12,7 @@ if (isset($_POST['submit'])) {
 
 
 	$result = mysqli_query($conexao, "INSERT INTO usuarios(username,email,senha,data_nasc,is_admin,imagem) 
-	VALUES ('$username','$email','$senha','$date', 'N', '/imgs/fotoperfilpre.png')");
+	VALUES ('$username','$email','$senha','$date', 'N'");
 
 	header('Location: /View/LoginPage/Login.php');
 }
