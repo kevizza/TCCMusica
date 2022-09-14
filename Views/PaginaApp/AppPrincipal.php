@@ -74,8 +74,8 @@
             <hr style="height:1px;width:25vh;color:white;margin-left:6vh;">
             <br>
             <div class="Mlist">
-                <a href="#" style="text-decoration:none"">
-                    <i class="large material-icons">add_box</i>Criar Playlist
+                <a href="#" style="text-decoration:none"" id=" criar_playlist">
+                    <i class=" large material-icons">add_box</i>Criar Playlist
                 </a>
 
                 <h1></h1>
@@ -91,7 +91,7 @@
         </div>
     </nav>
 
-    <section id="1">
+    <section id="section1">
         <div class="content">
             <h1>Descubra novos Sons!</h1>
             <p>
@@ -156,7 +156,7 @@
                 </div>
             </div>
             <div class="pop-songs">
-            <li class="songItems">
+                <li class="songItems">
                     <div class="img-song">
                         <img src="/Imgs/capa_faded.png" alt="">
                         <i class="bi bi-play-fill" id="1"></i>
@@ -242,6 +242,31 @@
         </div>
     </section>
 
+    <div id="criarplaylist">
+        <div class="formplaylist">
+            <h1>CRIAR PLAYLIST</h1>
+            <form class="playlist_form" action="AppPrincipal.php" method="POST">
+                <div class="wrap-input100 validate-input" data-validate="Campo Obrigatorio">
+                    <input class="input100" type="text" name="username" id="username" placeholder="Nome Da Playlist">
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="wrap-input100 validate-input" data-validate="Campo Obrigatorio">
+                    <textarea class="input100" type="textarea" name="username" id="username" placeholder="Descrição"></textarea>
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                        <div class="login100-form-bgbtn"></div>
+                        <button class="login100-form-btn" type="submit" name="submit" id="submit">
+                            Criar Playlist
+                        </button>
+                        <!-- <input type="submit" name="submit" id="submit"> -->
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <footer>
         <div class="master-play">
             <img src="/Imgs/capa_faded.png" alt="">
@@ -277,7 +302,22 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src = "app.js"></script>
+    <script src="app.js"></script>
+    <script>
+        var btn = document.querySelector("#criar_playlist");
+        btn.addEventListener("click", function() {
+            var div = document.querySelector("#section1");
+
+            if (div.style.display === "none") {
+                div.style.display = "block";
+                document.getElementById("criarplaylist").style.display = "block";
+            } else {
+                div.style.display = "none";
+                document.getElementById("criarplaylist").style.display = "block";
+            }
+
+        });
+    </script>
 </body>
 
 </html>
