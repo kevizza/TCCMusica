@@ -6,6 +6,20 @@
 //     header('Location: Login.php');
 // }
 // $logado = $_SESSION['email'];
+
+if (isset($_POST['submit'])) {
+
+    include('/Dev/Web/TccMusica/config.php');
+
+    $nome_playlist = $_POST['nome_playlist'];
+    $descricao = $_POST['descricao'];
+
+
+    $result = mysqli_query($conexao, "INSERT INTO playlists(nome_playlist,descricao) 
+	VALUES ('$nome_playlist','$descricao'");
+
+    header('Location: /View/LoginPage/Login.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -74,7 +88,7 @@
             <hr style="height:1px;width:25vh;color:white;margin-left:6vh;">
             <br>
             <div class="Mlist">
-                <a href="#" style="text-decoration:none"" id=" criar_playlist">
+                <a href="#" style="text-decoration:none" id="criar_playlist">
                     <i class=" large material-icons">add_box</i>Criar Playlist
                 </a>
 
@@ -91,181 +105,187 @@
         </div>
     </nav>
 
-    <section id="section1">
-        <div class="content">
-            <h1>Descubra novos Sons!</h1>
-            <p>
-                Com um pouco de curiosidade você poderá encontrar diversas musicas!
-            </p>
-        </div>
-        <div class="menu-songs">
-            <div class="h4">
-                <h4>Lançamentos</h4>
-                <div class="btn-s">
-                    <i id="left_scroll" class="bi bi-arrow-left-short"></i>
-                    <i id="right_scroll" class="bi bi-arrow-right-short"></i>
+    <section>
+        <div id="home">
+            <div id="content">
+                <h1>Descubra novos Sons!</h1>
+                <p>
+                    Com um pouco de curiosidade você poderá encontrar diversas musicas!
+                </p>
+            </div>
+            <div class="menu-songs">
+                <div class="h4">
+                    <h4>Lançamentos</h4>
+                    <div class="btn-s">
+                        <i id="left_scroll" class="bi bi-arrow-left-short"></i>
+                        <i id="right_scroll" class="bi bi-arrow-right-short"></i>
+                    </div>
+                </div>
+                <div class="pop-songs">
+                    <li class="songItems">
+                        <div class="img-song">
+                            <img src="/Imgs/capa_faded.png" alt="">
+                            <i class="bi bi-play-fill" id="1"></i>
+                        </div>
+                        <h5>Faded
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
+                    </li>
+                    <li class="songItems">
+
+                    </li>
+                    <li class="songItems">
+
+                    </li>
+                    <li class="songItems">
+
+                    </li>
+                    <li class="songItems">
+
+                    </li>
+                    <li class="songItems">
+
+                    </li>
+                    <li class="songItems">
+
+                    </li>
+                    <li class="songItems">
+
+                    </li>
+                    <li class="songItems">
+
+                    </li>
+                    <li class="songItems">
+
+                    </li>
+
                 </div>
             </div>
-            <div class="pop-songs">
-                <li class="songItems">
-                    <div class="img-song">
-                        <img src="/Imgs/capa_faded.png" alt="">
-                        <i class="bi bi-play-fill" id="1"></i>
+            <div class="menu-songs">
+                <div class="h4">
+                    <h4>Em alta</h4>
+                    <div class="btn-s">
+                        <i id="left_scroll" class="bi bi-arrow-left-short"></i>
+                        <i id="right_scroll" class="bi bi-arrow-right-short"></i>
                     </div>
-                    <h5>Faded
-                        <br>
-                        <div class="subtitle">Alan Walker</div>
-                    </h5>
-                </li>
-                <li class="songItems">
+                </div>
+                <div class="pop-songs">
+                    <li class="songItems">
+                        <div class="img-song">
+                            <img src="/Imgs/capa_faded.png" alt="">
+                            <i class="bi bi-play-fill" id="1"></i>
+                        </div>
+                        <h5>Faded
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
+                    </li>
+                    <li class="songItems">
+                    </li>
+                    <li class="songItems">
 
-                </li>
-                <li class="songItems">
+                    </li>
+                    <li class="songItems">
 
-                </li>
-                <li class="songItems">
+                    </li>
+                    <li class="songItems">
 
-                </li>
-                <li class="songItems">
+                    </li>
+                    <li class="songItems">
 
-                </li>
-                <li class="songItems">
+                    </li>
+                    <li class="songItems">
 
-                </li>
-                <li class="songItems">
+                    </li>
+                    <li class="songItems">
 
-                </li>
-                <li class="songItems">
+                    </li>
+                    <li class="songItems">
 
-                </li>
-                <li class="songItems">
+                    </li>
+                    <li class="songItems">
 
-                </li>
-                <li class="songItems">
+                    </li>
 
-                </li>
-
-            </div>
-        </div>
-        <div class="menu-songs">
-            <div class="h4">
-                <h4>Em alta</h4>
-                <div class="btn-s">
-                    <i id="left_scroll" class="bi bi-arrow-left-short"></i>
-                    <i id="right_scroll" class="bi bi-arrow-right-short"></i>
                 </div>
             </div>
-            <div class="pop-songs">
-                <li class="songItems">
-                    <div class="img-song">
-                        <img src="/Imgs/capa_faded.png" alt="">
-                        <i class="bi bi-play-fill" id="1"></i>
+            <div class="menu-songs">
+                <div class="h4">
+                    <h4>Artistas Populares</h4>
+                    <div class="btn-s">
+                        <i id="left_scroll" class="bi bi-arrow-left-short"></i>
+                        <i id="right_scroll" class="bi bi-arrow-right-short"></i>
                     </div>
-                    <h5>Faded
-                        <br>
-                        <div class="subtitle">Alan Walker</div>
-                    </h5>
-                </li>
-                <li class="songItems">
-                </li>
-                <li class="songItems">
+                </div>
+                <div class="pop-artistis">
+                    <li class="artItems">
+                        <div class="img-artist">
+                            <h6>VEJA MAIS</h6>
+                            <img src="/Imgs/theweekend.jpg" alt="">
+                        </div>
+                    </li>
+                    <li class="artItems">
 
-                </li>
-                <li class="songItems">
+                    </li>
+                    <li class="artItems">
 
-                </li>
-                <li class="songItems">
+                    </li>
+                    <li class="artItems">
 
-                </li>
-                <li class="songItems">
+                    </li>
+                    <li class="artItems">
 
-                </li>
-                <li class="songItems">
+                    </li>
+                    <li class="artItems">
 
-                </li>
-                <li class="songItems">
+                    </li>
+                    <li class="artItems">
 
-                </li>
-                <li class="songItems">
+                    </li>
+                    <li class="artItems">
 
-                </li>
-                <li class="songItems">
+                    </li>
+                    <li class="artItems">
 
-                </li>
+                    </li>
+                    <li class="artItems">
 
-            </div>
-        </div>
-        <div class="menu-songs">
-            <div class="h4">
-                <h4>Artistas Populares</h4>
-                <div class="btn-s">
-                    <i id="left_scroll" class="bi bi-arrow-left-short"></i>
-                    <i id="right_scroll" class="bi bi-arrow-right-short"></i>
+                    </li>
+
                 </div>
             </div>
-            <div class="pop-artistis">
-                <li class="artItems">
-                    <div class="img-artist">
-                        <h6>VEJA MAIS</h6>
-                        <img src="/Imgs/theweekend.jpg" alt="">
-                    </div>
-                </li>
-                <li class="artItems">
-
-                </li>
-                <li class="artItems">
-
-                </li>
-                <li class="artItems">
-
-                </li>
-                <li class="artItems">
-
-                </li>
-                <li class="artItems">
-
-                </li>
-                <li class="artItems">
-
-                </li>
-                <li class="artItems">
-
-                </li>
-                <li class="artItems">
-
-                </li>
-                <li class="artItems">
-
-                </li>
-
-            </div>
         </div>
+        </div>
+
+        <div id="criarplaylist" style="display: none;">
+            <div class="limiter">
+                <div class="container-login100">
+                    <div class="wrap-login100">
+                        <form class="login100-form validate-form" action="AppPrincipal.php" method="POST">
+                            <span class="login100-form-title p-b-26">
+                                CRIE UMA PLAYLIST
+                            </span>
+                            <div class="wrap-input100 validate-input" data-validate="Campo Obrigatorio">
+                                <input class="input100" type="text" name="username" id="username" placeholder="Nome">
+                            </div>
+                            <div class="wrap-input100 validate-input" data-validate="Campo Obrigatorio">
+                                <textarea class="input100" type="text" name="email" id="email" placeholder="Descrição"></textarea>
+                            </div>
+                            <div class="container-login100-form-btn">
+                                <div class="wrap-login100-form-btn">
+                                    <div class="login100-form-bgbtn"></div>
+                                    <button class="login100-form-btn" type="submit" name="submit" id="submit">
+                                        Criar
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
     </section>
 
-    <div id="criarplaylist">
-        <div class="formplaylist">
-            <h1>CRIAR PLAYLIST</h1>
-            <form class="playlist_form" action="AppPrincipal.php" method="POST">
-                <div class="wrap-input100 validate-input" data-validate="Campo Obrigatorio">
-                    <input class="input100" type="text" name="username" id="username" placeholder="Nome Da Playlist">
-                    <span class="focus-input100"></span>
-                </div>
-                <div class="wrap-input100 validate-input" data-validate="Campo Obrigatorio">
-                    <textarea class="input100" type="textarea" name="username" id="username" placeholder="Descrição"></textarea>
-                    <span class="focus-input100"></span>
-                </div>
-                <div class="container-login100-form-btn">
-                    <div class="wrap-login100-form-btn">
-                        <div class="login100-form-bgbtn"></div>
-                        <button class="login100-form-btn" type="submit" name="submit" id="submit">
-                            Criar Playlist
-                        </button>
-                        <!-- <input type="submit" name="submit" id="submit"> -->
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
 
     <footer>
         <div class="master-play">
@@ -306,11 +326,13 @@
     <script>
         var btn = document.querySelector("#criar_playlist");
         btn.addEventListener("click", function() {
-            var div = document.querySelector("#section1");
+            var div = document.querySelector("#home");
+            document.getElementById("criarplaylist").style.display = "none";
 
             if (div.style.display === "none") {
                 div.style.display = "block";
-                document.getElementById("criarplaylist").style.display = "block";
+                document.getElementById("criarplaylist").style.display = "none";
+                document.getElementById("").style.background = "";
             } else {
                 div.style.display = "none";
                 document.getElementById("criarplaylist").style.display = "block";
