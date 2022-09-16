@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
             <nav id="nav1">
                 <ul>
                     <li class="active">
-                        <a href="./PaginaPrincipal.php" style="text-decoration:none">EXPLORAR <span></span> </a>
+                        <a href="#" style="text-decoration:none">EXPLORAR <span></span> </a>
                     </li>
                     <li class="off">
                         <a href="./Biblioteca.php" style="text-decoration:none">MINHA BIBLIOTECA</a>
@@ -79,7 +79,7 @@ if (isset($_POST['submit'])) {
                         <span></span><i class="bi bi-music-note-list"></i> Sua Biblioteca
                     </h4>
                 </a>
-                <a href="./PaginaPrincipal.php" style="text-decoration: none;">
+                <a href="#" style="text-decoration: none;">
                     <h4 class="off">
                         <span></span><i class="bi bi-search"></i> Explorar
                     </h4>
@@ -124,6 +124,26 @@ if (isset($_POST['submit'])) {
                 <div class="pop-songs">
                     <li class="songItems">
                         <div class="img-song">
+                            <img src="/Imgs/musicas/banner/capa_faded.png" alt="">
+                            <i class="bi bi-play-fill" id="1"></i>
+                        </div>
+                        <h5>Faded
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
+                    </li>
+                    <li class="songItems">
+                    <div class="img-song">
+                            <img src="/Imgs/capa_faded.png" alt="">
+                            <i class="bi bi-play-fill" id="1"></i>
+                        </div>
+                        <h5>Faded
+                            <br>
+                            <div class="subtitle"></div>
+                        </h5>
+                    </li>
+                    <li class="songItems">
+                    <div class="img-song">
                             <img src="/Imgs/capa_faded.png" alt="">
                             <i class="bi bi-play-fill" id="1"></i>
                         </div>
@@ -133,31 +153,74 @@ if (isset($_POST['submit'])) {
                         </h5>
                     </li>
                     <li class="songItems">
-
+                    <div class="img-song">
+                            <img src="/Imgs/capa_faded.png" alt="">
+                            <i class="bi bi-play-fill" id="1"></i>
+                        </div>
+                        <h5>Faded
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
                     </li>
                     <li class="songItems">
-
+                    <div class="img-song">
+                            <img src="/Imgs/capa_faded.png" alt="">
+                            <i class="bi bi-play-fill" id="1"></i>
+                        </div>
+                        <h5>Faded
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
                     </li>
                     <li class="songItems">
-
+                    <div class="img-song">
+                            <img src="/Imgs/capa_faded.png" alt="">
+                            <i class="bi bi-play-fill" id="1"></i>
+                        </div>
+                        <h5>Faded
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
                     </li>
                     <li class="songItems">
-
+                    <div class="img-song">
+                            <img src="/Imgs/capa_faded.png" alt="">
+                            <i class="bi bi-play-fill" id="1"></i>
+                        </div>
+                        <h5>Faded
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
                     </li>
                     <li class="songItems">
-
+                    <div class="img-song">
+                            <img src="/Imgs/capa_faded.png" alt="">
+                            <i class="bi bi-play-fill" id="1"></i>
+                        </div>
+                        <h5>Faded
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
                     </li>
                     <li class="songItems">
-
+                    <div class="img-song">
+                            <img src="/Imgs/capa_faded.png" alt="">
+                            <i class="bi bi-play-fill" id="1"></i>
+                        </div>
+                        <h5>Faded
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
                     </li>
                     <li class="songItems">
-
-                    </li>
-                    <li class="songItems">
-
-                    </li>
-                    <li class="songItems">
-
+                    <div class="img-song">
+                            <img src="/Imgs/capa_faded.png" alt="">
+                            <i class="bi bi-play-fill" id="1"></i>
+                        </div>
+                        <h5>Faded
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
                     </li>
 
                 </div>
@@ -182,34 +245,99 @@ if (isset($_POST['submit'])) {
                         </h5>
                     </li>
                     <li class="songItems">
+                    <div class="img-song">
+                            <img src="/Imgs/capa_faded.png" alt="">
+                            <i class="bi bi-play-fill" id="1"></i>
+                        </div>
+                        <h5>Faded
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
                     </li>
                     <li class="songItems">
-
+                    <div class="img-song">
+                            <img src="/Imgs/capa_faded.png" alt="">
+                            <i class="bi bi-play-fill" id="1"></i>
+                        </div>
+                        <h5>Faded
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
                     </li>
                     <li class="songItems">
-
+                    <div class="img-song">
+                            <img src="/Imgs/capa_faded.png" alt="">
+                            <i class="bi bi-play-fill" id="1"></i>
+                        </div>
+                        <h5>Faded
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
                     </li>
                     <li class="songItems">
-
+                    <div class="img-song">
+                            <img src="/Imgs/capa_faded.png" alt="">
+                            <i class="bi bi-play-fill" id="1"></i>
+                        </div>
+                        <h5>Faded
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
                     </li>
                     <li class="songItems">
-
+                    <div class="img-song">
+                            <img src="/Imgs/capa_faded.png" alt="">
+                            <i class="bi bi-play-fill" id="1"></i>
+                        </div>
+                        <h5>Faded
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
                     </li>
                     <li class="songItems">
-
+                    <div class="img-song">
+                            <img src="/Imgs/capa_faded.png" alt="">
+                            <i class="bi bi-play-fill" id="1"></i>
+                        </div>
+                        <h5>Faded
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
                     </li>
                     <li class="songItems">
-
+                    <div class="img-song">
+                            <img src="/Imgs/capa_faded.png" alt="">
+                            <i class="bi bi-play-fill" id="1"></i>
+                        </div>
+                        <h5>Faded
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
                     </li>
                     <li class="songItems">
-
+                    <div class="img-song">
+                            <img src="/Imgs/capa_faded.png" alt="">
+                            <i class="bi bi-play-fill" id="1"></i>
+                        </div>
+                        <h5>Faded
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
                     </li>
                     <li class="songItems">
-
+                    <div class="img-song">
+                            <img src="/Imgs/capa_faded.png" alt="">
+                            <i class="bi bi-play-fill" id="1"></i>
+                        </div>
+                        <h5>Faded
+                            <br>
+                            <div class="subtitle">Alan Walker</div>
+                        </h5>
                     </li>
 
                 </div>
             </div>
+
             <div class="menu-songs">
                 <div class="h4">
                     <h4>Artistas Populares</h4>
@@ -221,36 +349,63 @@ if (isset($_POST['submit'])) {
                 <div class="pop-artistis">
                     <li class="artItems">
                         <div class="img-artist">
-                            <h6>VEJA MAIS</h6>
-                            <img src="/Imgs/theweekend.jpg" alt="">
+                            <h6>The Weekend</h6>
+                            <img src="/Imgs/musicas/artistas/theweekend.jpg" alt="">
                         </div>
                     </li>
                     <li class="artItems">
-
+                    <div class="img-artist">
+                            <h6>Imagine Dragons</h6>
+                            <img src="/Imgs/musicas/artistas/Imagine_dragons.jpg" alt="">
+                        </div>
                     </li>
                     <li class="artItems">
-
+                    <div class="img-artist">
+                            <h6>Harry Styles</h6>
+                            <img src="/Imgs/musicas/artistas/harrystyle.jpg" alt="">
+                        </div>
                     </li>
                     <li class="artItems">
-
+                    <div class="img-artist">
+                            <h6>Cold Play</h6>
+                            <img src="/Imgs/musicas/artistas/coldplay.jpg" alt="">
+                        </div>
                     </li>
                     <li class="artItems">
-
+                    <div class="img-artist">
+                            <h6>Post Malone</h6>
+                            <img src="/Imgs/musicas/artistas/postmalone.jpg" alt="">
+                        </div>
                     </li>
                     <li class="artItems">
-
+                    <div class="img-artist">
+                            <h6>Olivia Rodrigo</h6>
+                            <img src="/Imgs/musicas/artistas/Olivia rodrigo.jpg" alt="">
+                        </div>
                     </li>
                     <li class="artItems">
-
+                    <div class="img-artist">
+                            <h6>Justin Bieber</h6>
+                            <img src="/Imgs/musicas/artistas/justin.jpg" alt="">
+                        </div>
                     </li>
                     <li class="artItems">
-
+                    <div class="img-artist">
+                            <h6>Billie Elish</h6>
+                            <img src="/Imgs/musicas/artistas/BillieEilish.jpg" alt="">
+                        </div>
                     </li>
                     <li class="artItems">
-
+                    <div class="img-artist">
+                            <h6>Lil Nas X</h6>
+                            <img src="/Imgs/musicas/artistas/lilnas.jpg" alt="">
+                        </div>
                     </li>
                     <li class="artItems">
-
+                    <div class="img-artist">
+                            <h6>Bruno Mars</h6>
+                            <img src="/Imgs/musicas/artistas/Brunomars.jpg" alt="">
+                        </div>
                     </li>
 
                 </div>
@@ -272,14 +427,14 @@ if (isset($_POST['submit'])) {
                             <div class="wrap-input100 validate-input" data-validate="Campo Obrigatorio">
                                 <textarea class="input100" type="text" name="email" id="email" placeholder="Descrição"></textarea>
                             </div>
-                            <div class="container-login100-form-btn">
-                                <div class="wrap-login100-form-btn">
-                                    <div class="login100-form-bgbtn"></div>
-                                    <button class="login100-form-btn" type="submit" name="submit" id="submit">
+
+                                    <button class="criar-form-btn" type="submit" name="submit" id="submit">
                                         Criar
                                     </button>
-                                </div>
-                            </div>
+                                    <button class="voltar-form-btn" id="voltar">
+                                        Voltar
+                                    </button>
+
                         </form>
                     </div>
                 </div>
@@ -325,6 +480,23 @@ if (isset($_POST['submit'])) {
     <script src="app.js"></script>
     <script>
         var btn = document.querySelector("#criar_playlist");
+        btn.addEventListener("click", function() {
+            var div = document.querySelector("#home");
+            document.getElementById("criarplaylist").style.display = "none";
+
+            if (div.style.display === "none") {
+                div.style.display = "block";
+                document.getElementById("criarplaylist").style.display = "none";
+                document.getElementById("").style.background = "";
+            } else {
+                div.style.display = "none";
+                document.getElementById("criarplaylist").style.display = "block";
+            }
+
+        });
+    </script>
+        <script>
+        var btn = document.querySelector("#voltar");
         btn.addEventListener("click", function() {
             var div = document.querySelector("#home");
             document.getElementById("criarplaylist").style.display = "none";

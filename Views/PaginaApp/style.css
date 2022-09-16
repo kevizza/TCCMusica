@@ -62,7 +62,7 @@ a:hover {
 
 #logoA:hover {
     color: #b178bd;
-    transition: .3s linear;
+    transition: .7s ease;
 }
 
 /* selected link */
@@ -101,7 +101,13 @@ header {
     grid-area: header;
     height: 12vh;
     width: 168vh;
+    border-bottom: 1px solid rgb(65, 4, 83);
+    transition: .3s ease;
 }
+header:hover {
+    border-bottom: 3px solid rgb(65, 4, 83);
+}
+
 
 header .menu-top #nav1 {
     padding: 15px;
@@ -122,7 +128,7 @@ header .menu-top ul li {
     color: #fff;
     margin-right: 5vh;
     cursor: pointer;
-    transition: .3s linear;
+    transition: .7s ease;
 }
 
 header .menu-top ul li.active {
@@ -132,7 +138,7 @@ header .menu-top ul li.active {
     color: #fff;
     margin-right: 5vh;
     cursor: pointer;
-    transition: .3s linear;
+    transition: .7s ease;
 }
 
 header .menu-top ul li.off {
@@ -142,18 +148,18 @@ header .menu-top ul li.off {
     color: gray;
     margin-right: 5vh;
     cursor: pointer;
-    transition: .3s linear;
+    transition: .7s ease;
 }
 
 header .menu-top #nav1 ul li.off a {
     color: gray;
-    transition: .3s linear;
+    transition: .7s ease;
 }
 
 header .menu-top #nav1 ul li a:hover {
     color: #b178bd;
     font-size: 3.5vh;
-    transition: .3s linear;
+    transition: .7s ease;
 }
 
 header .menu-top #nav1 ul li span {
@@ -203,7 +209,7 @@ header .menu-top #nav1 .user img{
     width: 5vh;
     height: 5vh;
     border-radius: 50%;
-    transition: .3s linear;
+    transition: .7s ease;
 } 
 header .menu-top #nav1 .user img:hover{
     width: 4vh;
@@ -226,6 +232,11 @@ header .menu-top #nav1 .user img:hover{
     color: #fff;
     overflow: hidden;
     text-align: justify;
+    border-right: 1px solid rgb(65, 4, 83);
+    transition: .3s ease;
+}
+#nav-side:hover {
+    border-right: 3px solid rgb(65, 4, 83);
 }
 
 #nav-side .menu-side #logoA {
@@ -243,7 +254,7 @@ header .menu-top #nav1 .user img:hover{
 
 #nav-side .menu-side .playlist a h4.off:hover {
     color: #b178bd;
-    transition: .5s linear;
+    transition: .5s ease;
     font-size: 4.4vh;
 }
 
@@ -252,7 +263,7 @@ header .menu-top #nav1 .user img:hover{
     margin-top: 20px;
     margin-left: 20px;
     color: #fff;
-    transition: .5s linear;
+    transition: .5s ease;
 }
 #nav-side .menu-side .playlist a h4.active:hover {
     color: #b178bd;
@@ -271,7 +282,7 @@ header .menu-top #nav1 .user img:hover{
 
 #nav-side .menu-side .Mlist a:hover {
     color: #b178bd;
-    transition: .3s linear;
+    transition: .7s ease;
     
 }
 
@@ -326,7 +337,7 @@ section .menu-songs .h4 h4{
 section .menu-songs .h4 .bi{
     color: rgb(139, 139, 139);
     cursor: pointer;
-    transition: .3s linear;
+    transition: .7s ease;
 }
 section .menu-songs .h4 .bi:hover{
     color: #fff;
@@ -347,7 +358,7 @@ section .menu-songs .pop-songs .songItems{
     height: 22vh;
     list-style-type: none;
     margin-right: 1%;
-    transition: .3s linear;
+    transition: .7s ease;
     background: #1c0720;
     overflow: hidden;
     text-align: center;
@@ -376,7 +387,7 @@ section .menu-songs .pop-songs .songItems .img-song .bi{
     position: absolute;
     font-size: 5vh;
     cursor: pointer;
-    transition: .3s linear;
+    transition: .7s ease;
     opacity: 0;
 }
 section .menu-songs .pop-songs .songItems .img-song:hover .bi{
@@ -421,7 +432,7 @@ section .menu-songs .h4 h4{
 section .menu-songs .h4 .bi{
     color: rgb(139, 139, 139);
     cursor: pointer;
-    transition: .3s linear;
+    transition: .7s ease;
 }
 section .menu-songs .h4 .bi:hover{
     color: #fff;
@@ -444,21 +455,24 @@ section .menu-songs .pop-artistis .artItems{
     border-radius: 100%;
     list-style-type: none;
     margin-right: 10px;
-    transition: .3s linear;
+    transition: .7s ease;
     background: #1c0720;
     overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.253);
 }
 section .menu-songs .pop-artistis .artItems:hover{
     background: #482650;
     min-width: 20vh;
     height: 20vh;
+    border: 3px solid rgb(112, 23, 153);
 }
 section .menu-songs .pop-artistis .artItems h6{
     position: absolute;
-    font-size: 3vh;
+    font-size: calc(1vh + 1vw);
     cursor: pointer;
-    text-shadow: #0f0113;
-    transition: .5s linear;
+    text-align: center;
+    text-shadow: 0 0 15px #000, 0 0 30px #000, 0 0 40px #000, 0 0 40px #000, 0 0 50px #FFF;
+    transition: .5s ease;
     opacity: 0;
 }
 section .menu-songs .pop-artistis .artItems:hover h6{
@@ -477,6 +491,7 @@ section .menu-songs .pop-artistis .artItems .img-artist img{
     width: 100%;
     height: 100%;
     justify-content: center;
+    object-fit: cover;
 }
 
 
@@ -493,7 +508,8 @@ section .menu-songs .pop-artistis .artItems .img-artist img{
 input {
 	outline: none;
     border-radius: 20px;
-    transition: .3s linear;
+    transition: .7s ease;
+    border: none;
 }
 input::before {
 	outline: none;
@@ -503,30 +519,19 @@ input::before {
 
 textarea {
   outline: none;
+  border: none;
   border-radius: 10px;
-  transition: .3s linear;
+  transition: .7s ease;
 }
 textarea::before {
     outline: none;
     border-radius: 2px; 
-    
   }
   
 
 textarea:focus, input:focus {
   border-color: transparent !important;
 }
-/*---------------------------------------------*/
-button {
-	outline: none !important;
-	border: none;
-	background: transparent;
-}
-
-button:hover {
-	cursor: pointer;
-}
-
 /*//////////////////////////////////////////////////////////////////
 [ login ]*/
 
@@ -585,42 +590,7 @@ button:hover {
 
 /*------------------------------------------------------------------
 [ Button ]*/
-.container-login100-form-btn {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 13px;
-}
 
-.wrap-login100-form-btn {
-  width: 100%;
-  display: block;
-  position: relative;
-  z-index: 1;
-  border-radius: 25px;
-  overflow: hidden;
-  margin: 0 auto;
-}
-
-.login100-form-bgbtn {
-  position: absolute;
-  z-index: -1;
-  width: 300%;
-  height: 100%;
-  background: rgb(0,0,0);
-  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(96,9,121,1) 35%, rgba(255,0,191,1) 100%);
-  top: 0;
-  left: -100%;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
 
 .login100-form-btn {
   font-family: Poppins-Medium;
@@ -628,24 +598,12 @@ button:hover {
   color: #fff;
   line-height: 1.2;
   text-transform: uppercase;
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 20px;
   width: 100%;
   height: 50px;
 }
-
-.wrap-login100-form-btn:hover .login100-form-bgbtn {
-  left: 0;
-}
-
-
 /*------------------------------------------------------------------
 [ Responsive ]*/
 
@@ -678,7 +636,7 @@ footer .master-play img{
 footer .master-play h5{
   width: 15vh;
   font-size: 2vh;
-  margin-left: 5%;
+  margin-left: 2%;
   margin-right: 3%;
   margin-top: 1%;
   color: #fff;
@@ -693,24 +651,24 @@ footer .master-play .icon{
     font-size: 4.3vh;
     color: #fff;
     margin: 0px 90px 0px 20px;
-    transition: .3s linear;
+    transition: .7s ease;
 }
 footer .master-play .icon #masterPlay{
-    transition: .3s linear;
+    transition: .7s ease;
 }
 footer .master-play .icon #masterPlay:hover{
     color: #732678;
     font-size: 4.2vh;
 }
 footer .master-play .icon #skip1{
-    transition: .3s linear;
+    transition: .7s ease;
 }
 footer .master-play .icon #skip1:hover{
     color: #732678;
     font-size: 4.2vh;
 }
 footer .master-play .icon #skip2{
-    transition: .3s linear;
+    transition: .7s ease;
 }
 footer .master-play .icon #skip2:hover{
     color: #732678;
@@ -719,7 +677,7 @@ footer .master-play .icon #skip2:hover{
 footer .master-play .icon .bi{
     cursor: pointer;
     outline: none;
-    transition: .3s linear;
+    transition: .7s ease;
 }
 footer .master-play span {
     color: #fff;
@@ -752,7 +710,7 @@ footer .master-play .bar .dot{
     border-radius: 50%;
     left: 0%;
     top: -1px;
-    transition: 1s linear;
+    transition: 1s ease;
 }
 footer .master-play .bar .dot::before{
     content: '';
@@ -772,7 +730,7 @@ footer .master-play .bar input{
     left: 0;
     cursor: pointer;
     z-index: 99999999;
-    transition: 3s linear;
+    transition: 3s ease;
     opacity: 0;
 }
 
@@ -797,7 +755,7 @@ footer .master-play .vol input{
     left: 0;
     cursor: pointer;
     z-index: 99999999;
-    transition: 3s linear;
+    transition: 3s ease;
     opacity: 0;
 }
 footer .master-play .vol .vol_bar{
@@ -815,7 +773,7 @@ footer .master-play .vol .dot{
     border-radius: 50%;
     left: 0%;
     top: -1px;
-    transition: 1s linear;
+    transition: 1s ease;
 }
 footer .master-play .vol .dot::before{
     content: '';
