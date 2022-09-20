@@ -1,9 +1,7 @@
 <?php
-
+include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
 
 if (isset($_POST['submit'])) {
-
-	include('./config.php');
 
 	$username = $_POST['username'];
 	$email = $_POST['email'];
@@ -11,24 +9,13 @@ if (isset($_POST['submit'])) {
 	$date = $_POST['date'];
 
 
-	$result = mysqli_query($conexao, "INSERT INTO usuarios(username,email,senha,data_nasc,is_admin,imagem) 
-	VALUES ('$username','$email','$senha','$date', 'N'");
+	$result = mysqli_query($conexao, "INSERT INTO usuarios(username,email,senha,data_nasc, is_admin) 
+	VALUES ('$username','$email','$senha','$date', 'N')");
 
 	header('Location: /View/LoginPage/Login.php');
+} else {
+	
 }
-
-
-// $id = $mysqli_query->LastInsertId();
-// $md5 = $md5($id);
-
-
-// $assunto = "Confirmação de Cadastro";
-// $link = "http://localhost:8000/".$md5;
-// $mensagem = "Clique aqui para confirmar o cadastro". $link;
-// $header = "from: Frecy";
-
-// mail($email, $assunto, $mensagem, $header);
-
 ?>
 
 <html>
@@ -70,7 +57,6 @@ if (isset($_POST['submit'])) {
       <div class="line1"></div>
       <div class="line2"></div>
       <div class="line3"></div>
-      <div class="line4"></div>
     </div>
     <ul class="nav-list">
       <li><a href="/Views/LoginPage/Login.php" style="text-decoration:none ;color:gray;">Entrar</a></li>
@@ -123,12 +109,11 @@ if (isset($_POST['submit'])) {
 						<span class="btn-show-pass">
 							<i class="zmdi zmdi-eye-off"></i>
 						</span>
-						<input class="input100" type="password" name="senha" id="senha" placeholder="Confirmar Senha">
+						<input class="input100" type="password" name="senha" id="senhaconfirm" placeholder="Confirmar Senha">
 						<span class="focus-input100"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Campo Obrigatorio">
-						<span class="btn-show-pass">
 						</span>
 						<input class="input100" type="date" name="date" id="date" placeholder="Data Nascimento">
 						<span class="focus-input100"></span>
@@ -198,8 +183,11 @@ if (isset($_POST['submit'])) {
 	<script src="vendor/daterangepicker/moment.min.js"></script>
 	<script src="vendor/daterangepicker/daterangepicker.js"></script>
 	<script src="vendor/countdowntime/countdowntime.js"></script>
-	<script src="js/main.js"></script>
-	<script src="./mobile-navbar.js"></script>
+	<script src="/Views/RegisterPage/js/main.js"></script>
+	<script src="/mobile-navbar.js"></script>
+	<script>
+
+	</script>
 </body>
 
 </html>

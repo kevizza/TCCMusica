@@ -41,7 +41,7 @@ a:active {
 
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 1vh;
 }
 
 
@@ -69,17 +69,18 @@ header nav a {
   text-decoration: none;
   transition: 0.4s;
 }
-
 a:hover {
   opacity: 0.7;
-  
 }
 
 .logo {
-  font-size: 33px;
+  font-size: 4vh;
   text-transform: uppercase;
   letter-spacing: 10px;
-  margin-top: -10px;
+  font-family: "Poppins-Regular", sans-serif;
+}
+.logo:hover{
+  color: #d34999;
 }
 
 header nav {
@@ -89,20 +90,26 @@ header nav {
   justify-content: space-around;
   align-items: center;
   font-family: "Poppins-Regular", sans-serif;
-  background-color: rgba(0, 0, 0, 0.342);
+  background-color: rgba(0, 0, 0, 0.5);
   height: 8vh;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(8px);
+  transition: .7s ease;
 
 }
+header nav:hover{
+  background-color: rgba(0, 0, 0, 0.699);
+  height: 10vh;
+}
 
-.nav-list {
+header .nav-list {
   list-style: none;
   display: flex;
 }
 
-.nav-list li {
+header .nav-list li {
   letter-spacing: 3px;
-  margin-left: 30px;
+  font-size: 2vh;
+  margin-left: 3vh;
   margin-top: 13px;
   font-family: "Poppins-Regular", sans-serif;
 }
@@ -170,7 +177,7 @@ header nav {
 /* ShowCase */
 
 #showcase {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,12 +186,20 @@ header nav {
   background-size: 220vh;
   background-color: rgba(0, 0, 0, 0.4);
   background-blend-mode: color;
+  transition: .7s ease;
+}
+#showcase:hover {
+  height: 100vh;
 }
 
 #showcase .showcase-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 0 15px #000, 0 0 20px #000, 0 0 20px #000, 0 0 20px #000;
+  backdrop-filter: blur(6px);
+  width: 100%;
+  height: 60%;
 }
 
 #showcase .showcase-container h3 {
@@ -201,12 +216,13 @@ header nav {
 }
 
 #showcase .showcase-container h2 {
+  margin-top: 4vh;
   font-size: 10vh;
 }
 
 /* Unique  */
-.btn-primary {
-  background-color: white;
+#showcase .btn-primary {
+  background: black;
   color: white;
   text-transform: uppercase;
   padding: 15px 60px;
@@ -215,6 +231,14 @@ header nav {
   letter-spacing: 1px;
   font-weight: bold;
   cursor: pointer;
+  transition: .7s ease;
+  
+}
+#showcase .btn-primary:hover{
+  background: white;
+  color: black;
+  opacity: 1;
+  
 }
 
 .logo {
@@ -231,7 +255,7 @@ header nav {
 /* ShowCase 2*/
 
 #showcase2 {
-  height: 120vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,6 +263,10 @@ header nav {
   background: url(./Imgs/slide_1.jpg);
   background-size: 220vh;
   background-blend-mode: color;
+  transition: .7s ease;
+}
+#showcase2:hover {
+  height: 120vh;
 }
 
 #showcase2 .showcase-container2 {
@@ -268,7 +296,7 @@ header nav {
 /* ShowCase 3*/
 
 #showcase3 {
-  height: 120vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -276,6 +304,11 @@ header nav {
   background: url(./Imgs/funndo9.jpeg);
   background-size: 220vh;
   background-blend-mode: color;
+  transition: .7s ease;
+}
+#showcase3:hover {
+  height: 120vh;
+
 }
 
 #showcase3 .showcase-container3 {
@@ -298,10 +331,12 @@ header nav {
   text-shadow: 0.1em 0.1em 0.2em black
 }
 
+
 #showcase3 .showcase-container3 h2 {
   font-size: 10vh;
   text-shadow: 0.1em 0.1em 0.2em black
 }
+
 
 
 

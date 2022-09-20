@@ -73,7 +73,7 @@ a:active {
 
 
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 1vh;
 }
 
 ::-webkit-scrollbar-track {
@@ -234,6 +234,7 @@ header .menu-top #nav1 .user img:hover{
     text-align: justify;
     border-right: 1px solid rgb(65, 4, 83);
     transition: .3s ease;
+    overflow-y: scroll;
 }
 #nav-side:hover {
     border-right: 3px solid rgb(65, 4, 83);
@@ -271,7 +272,7 @@ header .menu-top #nav1 .user img:hover{
 
 #nav-side .menu-side .Mlist {
     padding-left: 18px;
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 0px 0px;
 }
 
 #nav-side .menu-side .Mlist a {
@@ -289,6 +290,19 @@ header .menu-top #nav1 .user img:hover{
 #nav-side .menu-side .Mlist a i {
     margin-right: 10px;
     font-size: 5vh;
+}
+
+#nav-side .playlists {
+    width: 100%;
+    height: 320px;
+    border: 1px solid #fff;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#nav-side .playlists li{
+    list-style-type: none;
+    padding: 5px 0px 5px 20px;
 }
 
 
@@ -316,6 +330,7 @@ section #content p{
     color: rgb(204, 204, 204);
     font-weight: 600;
 }
+
 section .menu-songs{
     width: 150vh;
     height: auto;

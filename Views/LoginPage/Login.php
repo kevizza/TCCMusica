@@ -37,7 +37,6 @@
       <div class="line1"></div>
       <div class="line2"></div>
       <div class="line3"></div>
-      <div class="line4"></div>
     </div>
     <ul class="nav-list">
       <li><a href="./Login.php" style="text-decoration:none ;">Entrar</a></li>
@@ -133,7 +132,7 @@
 	<script src="vendor/daterangepicker/daterangepicker.js"></script>
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 	<script src="js/main.js"></script>
-	<script src="./mobile-navbar.js"></script>
+	<script src="/mobile-navbar.js"></script>
 </body>
 
 </html>

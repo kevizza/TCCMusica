@@ -1,22 +1,21 @@
 <?php
-// session_start();
-// if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)) {
-//     unset($_SESSION['email']);
-//     unset($_SESSION['senha']);
-//     header('Location: Login.php');
-// }
-// $logado = $_SESSION['email'];
+session_start();
+if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)) {
+    unset($_SESSION['email']);
+    unset($_SESSION['senha']);
+    header('Location: Login.php');
+}
+$logado = $_SESSION['email'];
+include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
 
 if (isset($_POST['submit'])) {
-
-    include('/Dev/Web/TccMusica/config.php');
 
     $nome_playlist = $_POST['nome_playlist'];
     $descricao = $_POST['descricao'];
 
 
-    $result = mysqli_query($conexao, "INSERT INTO playlists(nome_playlist,descricao) 
-	VALUES ('$nome_playlist','$descricao'");
+    $result = mysqli_query($conexao, "INSERT INTO playlists (nome_playlist,descricao) 
+	VALUES ('$nome_playlist', '$descricao')");
 
     header('Location: /View/LoginPage/Login.php');
 }
@@ -99,8 +98,9 @@ if (isset($_POST['submit'])) {
             <br>
 
 
-            <div class="menu-song">
-
+            <div class="playlists">
+            
+ -->
             </div>
         </div>
     </nav>
@@ -422,10 +422,10 @@ if (isset($_POST['submit'])) {
                                 CRIE UMA PLAYLIST
                             </span>
                             <div class="wrap-input100 validate-input" data-validate="Campo Obrigatorio">
-                                <input class="input100" type="text" name="username" id="username" placeholder="Nome">
+                                <input class="input100" type="text" name="nome_playlist" id="nome_playlist" placeholder="Nome">
                             </div>
                             <div class="wrap-input100 validate-input" data-validate="Campo Obrigatorio">
-                                <textarea class="input100" type="text" name="email" id="email" placeholder="Descrição"></textarea>
+                                <textarea class="input100" type="text" name="descricao" id="descricao" placeholder="Descrição"></textarea>
                             </div>
 
                                     <button class="criar-form-btn" type="submit" name="submit" id="submit">
