@@ -45,7 +45,7 @@ if (isset($_POST['submit'])) {
                         <a href="#" style="text-decoration:none">EXPLORAR <span></span> </a>
                     </li>
                     <li class="off">
-                        <a href="./Biblioteca.php" style="text-decoration:none">MINHA BIBLIOTECA</a>
+                        <a href="" style="text-decoration:none" id="bibliotecabtn">MINHA BIBLIOTECA</a>
                     </li>
                     <li class="off">
                         <a href="./Biblioteca.php" style="text-decoration:none">RADIO</a>
@@ -439,6 +439,13 @@ if (isset($_POST['submit'])) {
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div id="bibliotecadiv" style="display: none;">
+            <div class="limiter">
+                a
+            </div>
+        </div>
     </section>
 
 
@@ -486,8 +493,7 @@ if (isset($_POST['submit'])) {
 
             if (div.style.display === "none") {
                 div.style.display = "block";
-                document.getElementById("criarplaylist").style.display = "none";
-                document.getElementById("").style.background = "";
+                document.getElementById("criarplaylist").style.display = "block";
             } else {
                 div.style.display = "none";
                 document.getElementById("criarplaylist").style.display = "block";
@@ -504,7 +510,6 @@ if (isset($_POST['submit'])) {
             if (div.style.display === "none") {
                 div.style.display = "block";
                 document.getElementById("criarplaylist").style.display = "none";
-                document.getElementById("").style.background = "";
             } else {
                 div.style.display = "none";
                 document.getElementById("criarplaylist").style.display = "block";
@@ -512,6 +517,23 @@ if (isset($_POST['submit'])) {
 
         });
     </script>
+        <!-- <script>
+        var btn = document.querySelector("#bibliotecabtn");
+        btn.addEventListener("click", function() {
+            var div = document.querySelector("#home");
+            document.getElementById("bibliotecadiv").style.display = "none";
+
+            if (div.style.display === "none") {
+                div.style.display = "block";
+                document.getElementById("#home").style.display = "block";
+                document.getElementById("bibliotecadiv").style.display = "none";
+            } else {
+                div.style.display = "none";
+                document.getElementById("bibliotecadiv").style.display = "block";
+            }
+
+        });
+    </script> -->
 </body>
 
 </html>
