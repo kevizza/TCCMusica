@@ -124,92 +124,92 @@ if (isset($_POST['submit'])) {
                 <div class="pop-songs">
                     <li class="songItems">
                         <div class="img-song">
-                            <img src="/Imgs/musicas/banner/capa_faded.png" alt="">
+                            <img src="/Imgs/musicas/banner/rockstar_postmalone.jpg" alt="">
                             <i class="bi bi-play-fill" id="1"></i>
                         </div>
-                        <h5>Faded
+                        <h5>Rockstar
                             <br>
-                            <div class="subtitle">Alan Walker</div>
+                            <div class="subtitle">Post Malone</div>
                         </h5>
                     </li>
                     <li class="songItems">
                     <div class="img-song">
-                            <img src="/Imgs/capa_faded.png" alt="">
+                            <img src="/Imgs/musicas/banner/Believer_Imagine_Dragons.jpg" alt="">
                             <i class="bi bi-play-fill" id="1"></i>
                         </div>
-                        <h5>Faded
+                        <h5>Beliver
                             <br>
-                            <div class="subtitle"></div>
+                            <div class="subtitle">Imagine Dragons</div>
                         </h5>
                     </li>
                     <li class="songItems">
                     <div class="img-song">
-                            <img src="/Imgs/capa_faded.png" alt="">
+                            <img src="/Imgs/musicas/banner/save_your_tears_the_weekend.jpg" alt="">
                             <i class="bi bi-play-fill" id="1"></i>
                         </div>
-                        <h5>Faded
+                        <h5>Save Yours Tears
                             <br>
-                            <div class="subtitle">Alan Walker</div>
+                            <div class="subtitle">The Weekend</div>
                         </h5>
                     </li>
                     <li class="songItems">
                     <div class="img-song">
-                            <img src="/Imgs/capa_faded.png" alt="">
+                            <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
                             <i class="bi bi-play-fill" id="1"></i>
                         </div>
-                        <h5>Faded
+                        <h5>As It Was
                             <br>
-                            <div class="subtitle">Alan Walker</div>
+                            <div class="subtitle">Harry Styles</div>
                         </h5>
                     </li>
                     <li class="songItems">
                     <div class="img-song">
-                            <img src="/Imgs/capa_faded.png" alt="">
+                            <img src="/Imgs/musicas/banner/paradise_coldplay.png" alt="">
                             <i class="bi bi-play-fill" id="1"></i>
                         </div>
-                        <h5>Faded
+                        <h5>Paradise
                             <br>
-                            <div class="subtitle">Alan Walker</div>
+                            <div class="subtitle">Cold Play</div>
                         </h5>
                     </li>
                     <li class="songItems">
                     <div class="img-song">
-                            <img src="/Imgs/capa_faded.png" alt="">
+                            <img src="/Imgs/musicas/banner/stay_theScore.jpg" alt="">
                             <i class="bi bi-play-fill" id="1"></i>
                         </div>
-                        <h5>Faded
+                        <h5>Stay
                             <br>
-                            <div class="subtitle">Alan Walker</div>
+                            <div class="subtitle">The Score</div>
                         </h5>
                     </li>
                     <li class="songItems">
                     <div class="img-song">
-                            <img src="/Imgs/capa_faded.png" alt="">
+                            <img src="/Imgs/musicas/banner/idfc_blackbear.webp" alt="">
                             <i class="bi bi-play-fill" id="1"></i>
                         </div>
-                        <h5>Faded
+                        <h5>idfc
                             <br>
-                            <div class="subtitle">Alan Walker</div>
+                            <div class="subtitle">blackbear</div>
                         </h5>
                     </li>
                     <li class="songItems">
                     <div class="img-song">
-                            <img src="/Imgs/capa_faded.png" alt="">
+                            <img src="/Imgs/musicas/banner/Twenty_One_Pilots_Ride.png" alt="">
                             <i class="bi bi-play-fill" id="1"></i>
                         </div>
-                        <h5>Faded
+                        <h5>Ride
                             <br>
-                            <div class="subtitle">Alan Walker</div>
+                            <div class="subtitle">Twenty One Pilots</div>
                         </h5>
                     </li>
                     <li class="songItems">
                     <div class="img-song">
-                            <img src="/Imgs/capa_faded.png" alt="">
+                            <img src="/Imgs/musicas/banner/Heaven_bruno_mars.jpg" alt="">
                             <i class="bi bi-play-fill" id="1"></i>
                         </div>
-                        <h5>Faded
+                        <h5>Locked Out Of Heaven
                             <br>
-                            <div class="subtitle">Alan Walker</div>
+                            <div class="subtitle">Bruno Mars</div>
                         </h5>
                     </li>
                     <li class="songItems">
@@ -236,42 +236,42 @@ if (isset($_POST['submit'])) {
                 <div class="pop-songs">
                     <li class="songItems">
                         <div class="img-song">
-                            <img src="/Imgs/capa_faded.png" alt="">
+                            <img src="/Imgs/musicas/banner/montero_lilnasx.jpeg" alt="">
                             <i class="bi bi-play-fill" id="1"></i>
                         </div>
-                        <h5>Faded
+                        <h5>Montero
                             <br>
-                            <div class="subtitle">Alan Walker</div>
+                            <div class="subtitle">Lin Nas X</div>
                         </h5>
                     </li>
                     <li class="songItems">
                     <div class="img-song">
-                            <img src="/Imgs/capa_faded.png" alt="">
+                            <img src="/Imgs/musicas/banner/i_aint_worried_one_republic.jpg" alt="">
                             <i class="bi bi-play-fill" id="1"></i>
                         </div>
-                        <h5>Faded
+                        <h5>I Aint´t Worried
                             <br>
-                            <div class="subtitle">Alan Walker</div>
+                            <div class="subtitle">One Republic</div>
                         </h5>
                     </li>
                     <li class="songItems">
                     <div class="img-song">
-                            <img src="/Imgs/capa_faded.png" alt="">
+                            <img src="/Imgs/musicas/banner/Bones_imagine_Dragons.webp" alt="">
                             <i class="bi bi-play-fill" id="1"></i>
                         </div>
-                        <h5>Faded
+                        <h5>Bones
                             <br>
-                            <div class="subtitle">Alan Walker</div>
+                            <div class="subtitle">Imagine Dragons</div>
                         </h5>
                     </li>
                     <li class="songItems">
                     <div class="img-song">
-                            <img src="/Imgs/capa_faded.png" alt="">
+                            <img src="/Imgs/musicas/banner/sweet_child.jpg" alt="">
                             <i class="bi bi-play-fill" id="1"></i>
                         </div>
-                        <h5>Faded
+                        <h5>Sweet Child O' Mine
                             <br>
-                            <div class="subtitle">Alan Walker</div>
+                            <div class="subtitle">Gun's N Roses</div>
                         </h5>
                     </li>
                     <li class="songItems">
@@ -493,7 +493,7 @@ if (isset($_POST['submit'])) {
 
             if (div.style.display === "none") {
                 div.style.display = "block";
-                document.getElementById("criarplaylist").style.display = "block";
+                document.getElementById("criarplaylist").style.display = "none";
             } else {
                 div.style.display = "none";
                 document.getElementById("criarplaylist").style.display = "block";
