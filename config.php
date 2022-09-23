@@ -1,8 +1,8 @@
 <?php
 
-$dbHost = 'LocalHost:3307';
+$dbHost = 'LocalHost';
 $username = 'root';
-$password = 'etecjau';
+$password = '145869';
 $dbname = 'tccweb';
 
 $conexao = new mysqli($dbHost, $username, $password, $dbname);

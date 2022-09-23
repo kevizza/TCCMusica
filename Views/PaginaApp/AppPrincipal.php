@@ -45,7 +45,7 @@ if (isset($_POST['submit'])) {
                         <a href="#" style="text-decoration:none">EXPLORAR <span></span> </a>
                     </li>
                     <li class="off">
-                        <a href="" style="text-decoration:none" id="bibliotecabtn">MINHA BIBLIOTECA</a>
+                        <a href="#" style="text-decoration:none" id="bibliotecabtn">MINHA BIBLIOTECA</a>
                     </li>
                     <li class="off">
                         <a href="./Biblioteca.php" style="text-decoration:none">RADIO</a>
@@ -99,8 +99,25 @@ if (isset($_POST['submit'])) {
 
 
             <div class="playlists">
-            
- -->
+                <h1>PlayLists:</h1>
+                <li class="songItem">
+                <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
+                <h5>
+                    Playlist Teste
+                </h5>
+                </li>
+                <li class="songItem">
+                <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
+                <h5>
+                    Playlist Teste
+                </h5>
+                </li>
+                <li class="songItem">
+                <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
+                <h5>
+                    Playlist Teste
+                </h5>
+                </li>
             </div>
         </div>
     </nav>
@@ -125,7 +142,7 @@ if (isset($_POST['submit'])) {
                     <li class="songItems">
                         <div class="img-song">
                             <img src="/Imgs/musicas/banner/rockstar_postmalone.jpg" alt="">
-                            <i class="bi bi-play-fill" id="1"></i>
+                            <i class="bi musicPlay bi-play-fill" id="1"></i>
                         </div>
                         <h5>Rockstar
                             <br>
@@ -135,7 +152,7 @@ if (isset($_POST['submit'])) {
                     <li class="songItems">
                     <div class="img-song">
                             <img src="/Imgs/musicas/banner/Believer_Imagine_Dragons.jpg" alt="">
-                            <i class="bi bi-play-fill" id="1"></i>
+                            <i class="bi musicPlay bi-play-fill" id="2"></i>
                         </div>
                         <h5>Beliver
                             <br>
@@ -145,7 +162,7 @@ if (isset($_POST['submit'])) {
                     <li class="songItems">
                     <div class="img-song">
                             <img src="/Imgs/musicas/banner/save_your_tears_the_weekend.jpg" alt="">
-                            <i class="bi bi-play-fill" id="1"></i>
+                            <i class="bi musicPlay bi-play-fill" id="3"></i>
                         </div>
                         <h5>Save Yours Tears
                             <br>
@@ -155,7 +172,7 @@ if (isset($_POST['submit'])) {
                     <li class="songItems">
                     <div class="img-song">
                             <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
-                            <i class="bi bi-play-fill" id="1"></i>
+                            <i class="bi musicPlay bi-play-fill" id="4"></i>
                         </div>
                         <h5>As It Was
                             <br>
@@ -165,7 +182,7 @@ if (isset($_POST['submit'])) {
                     <li class="songItems">
                     <div class="img-song">
                             <img src="/Imgs/musicas/banner/paradise_coldplay.png" alt="">
-                            <i class="bi bi-play-fill" id="1"></i>
+                            <i class="bi musicPlay bi-play-fill" id="5"></i>
                         </div>
                         <h5>Paradise
                             <br>
@@ -175,7 +192,7 @@ if (isset($_POST['submit'])) {
                     <li class="songItems">
                     <div class="img-song">
                             <img src="/Imgs/musicas/banner/stay_theScore.jpg" alt="">
-                            <i class="bi bi-play-fill" id="1"></i>
+                            <i class="bi musicPlay bi-play-fill" id="6"></i>
                         </div>
                         <h5>Stay
                             <br>
@@ -185,7 +202,7 @@ if (isset($_POST['submit'])) {
                     <li class="songItems">
                     <div class="img-song">
                             <img src="/Imgs/musicas/banner/idfc_blackbear.webp" alt="">
-                            <i class="bi bi-play-fill" id="1"></i>
+                            <i class="bi musicPlay bi-play-fill" id="7"></i>
                         </div>
                         <h5>idfc
                             <br>
@@ -195,7 +212,7 @@ if (isset($_POST['submit'])) {
                     <li class="songItems">
                     <div class="img-song">
                             <img src="/Imgs/musicas/banner/Twenty_One_Pilots_Ride.png" alt="">
-                            <i class="bi bi-play-fill" id="1"></i>
+                            <i class="bi musicPlay bi-play-fill" id="8"></i>
                         </div>
                         <h5>Ride
                             <br>
@@ -205,7 +222,7 @@ if (isset($_POST['submit'])) {
                     <li class="songItems">
                     <div class="img-song">
                             <img src="/Imgs/musicas/banner/Heaven_bruno_mars.jpg" alt="">
-                            <i class="bi bi-play-fill" id="1"></i>
+                            <i class="bi musicPlay bi-play-fill" id="9"></i>
                         </div>
                         <h5>Locked Out Of Heaven
                             <br>
@@ -215,7 +232,7 @@ if (isset($_POST['submit'])) {
                     <li class="songItems">
                     <div class="img-song">
                             <img src="/Imgs/capa_faded.png" alt="">
-                            <i class="bi bi-play-fill" id="1"></i>
+                            <i class="bi musicPlay bi-play-fill" id="10"></i>
                         </div>
                         <h5>Faded
                             <br>
@@ -237,7 +254,7 @@ if (isset($_POST['submit'])) {
                     <li class="songItems">
                         <div class="img-song">
                             <img src="/Imgs/musicas/banner/montero_lilnasx.jpeg" alt="">
-                            <i class="bi bi-play-fill" id="1"></i>
+                            <i class="bi musicPlay bi-play-fill" id="11"></i>
                         </div>
                         <h5>Montero
                             <br>
@@ -247,7 +264,7 @@ if (isset($_POST['submit'])) {
                     <li class="songItems">
                     <div class="img-song">
                             <img src="/Imgs/musicas/banner/i_aint_worried_one_republic.jpg" alt="">
-                            <i class="bi bi-play-fill" id="1"></i>
+                            <i class="bi musicPlay bi-play-fill" id="12"></i>
                         </div>
                         <h5>I Aint´t Worried
                             <br>
@@ -257,7 +274,7 @@ if (isset($_POST['submit'])) {
                     <li class="songItems">
                     <div class="img-song">
                             <img src="/Imgs/musicas/banner/Bones_imagine_Dragons.webp" alt="">
-                            <i class="bi bi-play-fill" id="1"></i>
+                            <i class="bi musicPlay bi-play-fill" id="13"></i>
                         </div>
                         <h5>Bones
                             <br>
@@ -267,7 +284,7 @@ if (isset($_POST['submit'])) {
                     <li class="songItems">
                     <div class="img-song">
                             <img src="/Imgs/musicas/banner/sweet_child.jpg" alt="">
-                            <i class="bi bi-play-fill" id="1"></i>
+                            <i class="bi musicPlay bi-play-fill" id="14"></i>
                         </div>
                         <h5>Sweet Child O' Mine
                             <br>
@@ -277,7 +294,7 @@ if (isset($_POST['submit'])) {
                     <li class="songItems">
                     <div class="img-song">
                             <img src="/Imgs/capa_faded.png" alt="">
-                            <i class="bi bi-play-fill" id="1"></i>
+                            <i class="bi musicPlay bi-play-fill" id="15"></i>
                         </div>
                         <h5>Faded
                             <br>
@@ -287,7 +304,7 @@ if (isset($_POST['submit'])) {
                     <li class="songItems">
                     <div class="img-song">
                             <img src="/Imgs/capa_faded.png" alt="">
-                            <i class="bi bi-play-fill" id="1"></i>
+                            <i class="bi musicPlay bi-play-fill" id="16"></i>
                         </div>
                         <h5>Faded
                             <br>
@@ -297,7 +314,7 @@ if (isset($_POST['submit'])) {
                     <li class="songItems">
                     <div class="img-song">
                             <img src="/Imgs/capa_faded.png" alt="">
-                            <i class="bi bi-play-fill" id="1"></i>
+                            <i class="bi musicPlay bi-play-fill" id="17"></i>
                         </div>
                         <h5>Faded
                             <br>
@@ -307,7 +324,7 @@ if (isset($_POST['submit'])) {
                     <li class="songItems">
                     <div class="img-song">
                             <img src="/Imgs/capa_faded.png" alt="">
-                            <i class="bi bi-play-fill" id="1"></i>
+                            <i class="bi musicPlay bi-play-fill" id="18"></i>
                         </div>
                         <h5>Faded
                             <br>
@@ -317,7 +334,7 @@ if (isset($_POST['submit'])) {
                     <li class="songItems">
                     <div class="img-song">
                             <img src="/Imgs/capa_faded.png" alt="">
-                            <i class="bi bi-play-fill" id="1"></i>
+                            <i class="bi musicPlay bi-play-fill" id="19"></i>
                         </div>
                         <h5>Faded
                             <br>
@@ -327,7 +344,7 @@ if (isset($_POST['submit'])) {
                     <li class="songItems">
                     <div class="img-song">
                             <img src="/Imgs/capa_faded.png" alt="">
-                            <i class="bi bi-play-fill" id="1"></i>
+                            <i class="bi musicPlay bi-play-fill" id="20"></i>
                         </div>
                         <h5>Faded
                             <br>
@@ -451,8 +468,8 @@ if (isset($_POST['submit'])) {
 
     <footer>
         <div class="master-play">
-            <img src="/Imgs/capa_faded.png" alt="">
-            <h5>Faded <br>
+            <img src="" id="poster_master_play">
+            <h5 id="title">Faded <br>
                 <div class="subtitle">Alan Walker</div>
             </h5>
             <div class="icon">
@@ -469,7 +486,7 @@ if (isset($_POST['submit'])) {
             <span id="currentEnd">0:00</span>
 
             <div class="vol">
-                <i class="bi bi-volume-down-fill"></i>
+                <i class="bi vol_icon bi-volume-down-fill"></i>
                 <input type="range" id="vol" min="0" value="30" max="100">
                 <div class="vol_bar"></div>
                 <div class="dot" id="vol_dot"></div>
@@ -484,7 +501,7 @@ if (isset($_POST['submit'])) {
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="app.js"></script>
+    <script src="/Views/PaginaApp/app.js"></script>
     <script>
         var btn = document.querySelector("#criar_playlist");
         btn.addEventListener("click", function() {
@@ -517,7 +534,7 @@ if (isset($_POST['submit'])) {
 
         });
     </script>
-        <!-- <script>
+        <script>
         var btn = document.querySelector("#bibliotecabtn");
         btn.addEventListener("click", function() {
             var div = document.querySelector("#home");
@@ -533,7 +550,7 @@ if (isset($_POST['submit'])) {
             }
 
         });
-    </script> -->
+    </script>
 </body>
 
 </html>

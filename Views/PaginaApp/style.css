@@ -295,15 +295,43 @@ header .menu-top #nav1 .user img:hover{
 #nav-side .playlists {
     width: 100%;
     height: 20%;
-    border: 1px solid #fff;
     overflow-y: auto;
     overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
 }
-
+#nav-side .playlists h1{
+    font-size: 3vh;
+    margin-bottom: 3vh;
+    margin-left: 20px;
+}
+#nav-side .playlists .songItem{
+    cursor: pointer;
+    transition: .7s ease;
+    padding: 10px;
+    margin-bottom: 1.4vh;
+}
+#nav-side .playlists .songItem:hover{
+    background: #561d5a;
+}
 #nav-side .playlists li{
     list-style-type: none;
     padding: 5px 0px 5px 20px;
+    display: flex;
+    align-items: center;
 }
+#nav-side .playlists li img{
+    width: 6vh;
+    height: 6vh;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+#nav-side .playlists li h5{
+    font-size: 2vh;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
 
 
 /* lado direito */
@@ -719,11 +747,12 @@ footer .master-play .bar .bar2{
     width: 0%;
     height: 100%;
     top: 0;
+    transition: 1s ease;
 }
 footer .master-play .bar .dot{
     position: absolute;
-    width: 5px;
-    height: 5px;
+    width: 0.8vh;
+    height: 0.8vh;
     background: #9d69b8;
     border-radius: 50%;
     left: 0%;
@@ -733,8 +762,8 @@ footer .master-play .bar .dot{
 footer .master-play .bar .dot::before{
     content: '';
     position: absolute;
-    width: 15px;
-    height: 15px;
+    width: 2.4vh;
+    height: 2.4vh;
     border: 1px solid #9d69b8;
     border-radius: 50%;
     left: -5px;
@@ -744,7 +773,7 @@ footer .master-play .bar .dot::before{
 footer .master-play .bar input{
     position: absolute;
     width: 100%;
-    top: -6px;
+    top: -5px;
     left: 0;
     cursor: pointer;
     z-index: 99999999;
@@ -762,14 +791,14 @@ footer .master-play .vol{
 footer .master-play .vol .bi{
     position: absolute;
     color: #fff;
-    font-size: 25px;
+    font-size: 4.2vh;
     top: -17px;
     left: -40px;
 }
 footer .master-play .vol input{
     position: absolute;
     width: 100%;
-    top: -10px;
+    top: -4px;
     left: 0;
     cursor: pointer;
     z-index: 99999999;
@@ -779,9 +808,10 @@ footer .master-play .vol input{
 footer .master-play .vol .vol_bar{
     position: absolute;
     background: #9d69b8;
-    width: 0%;
+    width: 0%;  
     height: 100%;
     top: 0;
+    transition: .1s ease;
 }
 footer .master-play .vol .dot{
     position: absolute;
