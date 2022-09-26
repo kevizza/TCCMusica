@@ -8,17 +8,15 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
 $logado = $_SESSION['email'];
 include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
 
-if (isset($_POST['submit'])) {
+// if (isset($_POST['submit'])) {
 
-    $nome_playlist = $_POST['nome_playlist'];
-    $descricao = $_POST['descricao'];
+//     $nome_playlist = $_POST['nome_playlist'];
+//     $descricao = $_POST['descricao'];
 
 
-    $result = mysqli_query($conexao, "INSERT INTO playlists (nome_playlist,descricao) 
-	VALUES ('$nome_playlist', '$descricao')");
-
-    header('Location: /View/LoginPage/Login.php');
-}
+//     $result = mysqli_query($conexao, "INSERT INTO playlists (nome_playlist,descricao) 
+// 	VALUES ('$nome_playlist', '$descricao')");
+// }
 ?>
 
 <!DOCTYPE html>

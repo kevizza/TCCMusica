@@ -30,22 +30,24 @@
   <!-- NavBar -->
   <header>
     <nav>
-      <a class="logo" href="/index.html" style="text-decoration:none ;">
-        FRECY
-      </a>
+    <div class="logodiv">
+			<a class="logo" href="/index.html" style="text-decoration:none;">
+			<h1>FRECY</h1>
+			</a>
+    </div>
       <div class="mobile-menu">
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
       </div>
       <ul class="nav-list">
-        <li><a href="./Login.php" style="text-decoration:none ;">Entrar</a></li>
-        <li><a href="/Views/RegisterPage/Registro.php" style="text-decoration:none ;color: #bfbfbf;">Inscrever-se</a></li>
+        <li><a href="./Login.php" class="active" style="text-decoration:none;"><h2>Entrar<h2></a></li>
+        <li><a href="/Views/RegisterPage/Registro.php" style="text-decoration:none ;color:#bfbfbf;"><h2>Inscrever-se</h2></a></li>
         <li> </li>
-        <li style="color:white ;">|</li>
+        <li style="color:white ;"><h2>|</h2></li>
         <li> </li>
-        <li><a href="#" style="text-decoration:none ;color: #bfbfbf;">Suporte</a></li>
-        <li><a href="/Views/PremiumPage/Premium.php" style="text-decoration:none ;color: #bfbfbf;">Premium</a></li>
+        <li><a href="#" style="text-decoration:none ;color: #bfbfbf;"><h2>Suporte</h2></a></li>
+        <li><a href="/Views/PremiumPage/Premium.php" style="text-decoration:none ;color: #bfbfbf;"><h2>Premium</h2></a></li>
       </ul>
     </nav>
   </header>
@@ -73,18 +75,16 @@
           </div>
           <!-- <input name="lem_senha" type="checkbox" value="lem_senha" 
           <?php if (isset($_COOKIE['senha'])) {
-          echo 'checked="checked"';
+            echo 'checked="checked"';
           }
           ?> />
           <td> Salvar senha </td> -->
-
-          <script src="https://accounts.google.com/gsi/client" async defer></script>
-          <div class="logingoogle"id="g_id_onload" 
-          data-client_id="534870765324-hhopjp4hk2i4thcn9v6fog8dgm0ceuke.apps.googleusercontent.com" 
-          data-login_uri="http://localhost:8000/Views/PaginaApp/AppPrincipal.php"
-          data-auto_prompt="false">
-          </div>
-          <div class="g_id_signin" data-type="standard" data-size="large" data-theme="outline" data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left">
+          <div class="login_google">
+            <script src="https://accounts.google.com/gsi/client" async defer></script>
+            <div class="logingoogle" id="g_id_onload" data-client_id="534870765324-hhopjp4hk2i4thcn9v6fog8dgm0ceuke.apps.googleusercontent.com" data-login_uri="http://localhost:8000/Views/PaginaApp/AppPrincipal.php" data-auto_prompt="false">
+            </div>
+            <div class="g_id_signin" data-type="standard" data-size="large" data-theme="dark" data-text="sign_in_with" data-shape="rectangular"data-logo_alignment="left">
+            </div>
           </div>
           <br>
           <div class="container-login100-form-btn">
