@@ -70,17 +70,20 @@ a:active {
 header nav a{
   color: #fff;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.7s;
 }
 a:hover{
   opacity: 0.7;
   color: white;
 }
-.logo{
-  font-size: 33px;
+.logo {
+  font-size: 5vh;
   text-transform: uppercase;
   letter-spacing: 10px;
   margin-top: 0px;
+}
+.logo:hover{
+  color: #d34999;
 }
 header nav{
   display: flex;
@@ -96,10 +99,12 @@ header nav{
   list-style: none;
   display: flex;
 }
-.nav-list li{
+header .nav-list li {
   letter-spacing: 3px;
-  margin-left: 30px;
+  font-size: 2.5vh;
+  margin-left: 3vh;
   margin-top: 13px;
+  font-family: "Poppins-Regular", sans-serif;
 }
 .mobile-menu{
   display: none;
@@ -180,7 +185,7 @@ div#container-1 p{
 
 
 div#container-2 {
-  min-height: 70vh;
+  min-height: 70%;
   max-height: 90%;
   margin-top: 0px;
   max-width: 100%;
@@ -227,70 +232,6 @@ div#container-2 p#p-foot{
   font-size: calc(1vh + 0.7vw); 
   color: blueviolet;
 }
-
-/* div#container-2 {
-  display: flex;
-  min-height: 70vh;
-  max-height: 90%;
-  margin-top: 0px;
-  max-width: 100%;
-  background: #f0f0f0;
-  color: white;
-}
-div#container-2 .row{
-  position: relative;
-  
-}
-div#container-2 #row2{
-  position: relative;
-  
-}
-div#container-2 h2{
-  color: #1e2321 ;
-  padding-top: 40px;
-  font-size: 50px;
-  font-size: calc(1vh + 3vw);
-}
-div#container-2 p{
-  color: #1e2321 ;
-  padding-top: 70px;
-  padding-left: 10%;
-  font-size: calc(1vh + 1vw);
-}
-div#col{
-
-  font-size: 20px;
-}
-div#container-2 p .bi{
-  display: flex;
-  font-size: calc(0.4vh + 1vw);
-}
-div#container-2 p .bi-vinyl-fill{
-  margin-left:20%;
-  padding-bottom: 20px;
-  font-size: calc(0.4em + 3vw);
-}
-div#container-2 p .bi-badge-ad-fill{
-  margin-left:0%;
-  padding-bottom: 20px;
-  font-size: calc(0.4em + 3vw);
-}
-div#container-2 p .bi-skip-forward-circle-fill{
-  margin-left:30%;
-  padding-bottom: 20px;
-  font-size: calc(0.4em + 3vw);
-}
-div#container-2 p#p-foot{
-  display: flex;
-  padding-left: 20px;
-  margin-top: 60vh;
-  color: #1e2321 ;
-  font-size: calc(1vh + 0.5vw); 
-  color: blueviolet;
-}
- */
-
-
 .container {
   width: 100%;
   margin-top: 10%;
@@ -298,7 +239,7 @@ div#container-2 p#p-foot{
 
 .packages {
   margin: 2%;
-  width: 320px;
+  width: 50vh;
   padding-bottom: 1.5em;
   height: 800px;
   background-color: #1e2321;
@@ -312,14 +253,12 @@ div#container-2 p#p-foot{
   color: #f4f4f4;
 }
 
-h1,
-h2 {
-  font-size: 2.2em;
-  
+.h1_plano{
+  font-size: 8vh;
 }
 
 .list li {
-  font-size: 1.9vh;
+  font-size: 2vh;
   list-style: none;
   border-bottom: 1px solid #f4f4f4;
   padding-inline-start: 0;
@@ -365,9 +304,17 @@ label {
   margin: 15px 15px;
   border-radius: 50px;
   color: #f4f4f4;
-  transition: all 0.3s ease 0s;
+  transition: all 0.7s ease 0s;
 }
-
+.button {
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 1.4em;
+  margin: 15px 15px;
+  border-radius: 50px;
+  color: #f4f4f4;
+  transition: all 0.7s ease 0s;
+}
 .button:hover {
   transform: scale(1.2);
 }

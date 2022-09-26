@@ -65,7 +65,7 @@
   </div>
   <div class="container">
     <div class="top">
-      <h1>ESCOLHA SEU PLANO PREMIUM</h1>
+      <h1 class="h1_plano">ESCOLHA SEU PLANO PREMIUM</h1>
       <div class="toggle-btn">
         <span style="margin: 0.8em;">Anual</span>
         <label class="switch">
@@ -144,7 +144,7 @@
 			</div>
 		</div>
 	</footer>
-  <script src="./PremiumPage/app.js"></script>
+  <script src="./app.js"></script>
 </body>
 
 </html>

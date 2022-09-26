@@ -91,7 +91,7 @@ header nav a:hover{
   color: white;
 }
 header .logo {
-  font-size: 4vh;
+  font-size: 5vh;
   text-transform: uppercase;
   letter-spacing: 10px;
   font-family: "Poppins-Regular", sans-serif;
@@ -350,6 +350,12 @@ iframe {
 }
 .login100-form-title i {
   font-size: 60px;
+}
+
+/* google login */
+
+.g_id_signin{
+  margin-left: 20%;
 }
 
 /*------------------------------------------------------------------
