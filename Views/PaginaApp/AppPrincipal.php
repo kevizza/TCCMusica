@@ -116,6 +116,18 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                     Playlist Teste
                 </h5>
                 </li>
+                <li class="songItem">
+                <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
+                <h5>
+                    Playlist Teste
+                </h5>
+                </li>
+                <li class="songItem">
+                <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
+                <h5>
+                    Playlist Teste
+                </h5>
+                </li>
             </div>
         </div>
     </nav>

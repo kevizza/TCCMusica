@@ -111,7 +111,6 @@ header .nav-list {
   margin-top: 1.4vh;
   justify-content: center;
   align-items: center;
-  border: 1px solid #fff;
 }
 header .nav-list li a{
   color:#bfbfbf;
@@ -126,6 +125,7 @@ header .nav-list li h2{
   font-size: 2.5vh;
   letter-spacing: 0.2vh;
   margin-left: 3vh;
+  margin-top: 10px;
   font-family: "Poppins-Regular", sans-serif;
 }
 .mobile-menu {
@@ -210,7 +210,6 @@ header .nav-list li h2{
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 15px #000, 0 0 20px #000, 0 0 20px #000, 0 0 20px #000;
   width: 100%;
   height: 60%;
 }
@@ -237,25 +236,21 @@ header .nav-list li h2{
 #showcase .btn {
   width: 40vh;
   height: 6vh;
-  border: 1px solid #fff;
 }
 #showcase .btn-primary {
   background: black;
   color: white;
   text-transform: uppercase;
-  padding: 15px 60px;
   border: none;
   border-radius: 30px;
   letter-spacing: 1px;
   width: 40vh;
   height: 6vh;
+  font-size: 2vh;
   font-weight: bold;
   cursor: pointer;
   transition: .7s ease;
   
-}
-#showcase .btn-primary h2{
-  font-size: 1vh;
 }
 #showcase .btn-primary:hover{
   background: white;

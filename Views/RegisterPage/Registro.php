@@ -1,5 +1,5 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
 if (isset($_POST['submit'])) {
 
@@ -14,7 +14,6 @@ if (isset($_POST['submit'])) {
 
 	header('Location: /Views/LoginPage/Login.php');
 } else {
-	
 }
 ?>
 
@@ -42,33 +41,33 @@ if (isset($_POST['submit'])) {
 	<link rel="stylesheet" type="text/css" href="./css/util.css">
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-	
+
 
 </head>
 
 <body>
 	<!-- NavBar -->
 	<header>
-  <nav>
-    <a class="logo" href="/index.html" style="text-decoration:none ;">
-      FRECY
-    </a>
-    <div class="mobile-menu">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
-    </div>
-    <ul class="nav-list">
-      <li><a href="/Views/LoginPage/Login.php" style="text-decoration:none ;color:gray;">Entrar</a></li>
-      <li><a href="./Registro.php" style="text-decoration:none ;">Inscrever-se</a></li>
-	  <li>    </li>
-				<li style="color:white ;">|</li>
-				<li>    </li>
-      <li><a href="#Entrar" style="text-decoration:none ;color:gray;" class="active">Suporte</a></li>
-      <li><a href="/Views/PremiumPage/Premium.php" style="text-decoration:none ;color:gray;">Premium</a></li>
-    </ul>
-  </nav>
-</header>
+		<nav>
+			<a class="logo" href="/index.html" style="text-decoration:none ;">
+				FRECY
+			</a>
+			<div class="mobile-menu">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+			<ul class="nav-list">
+				<li><a href="/Views/LoginPage/Login.php" style="text-decoration:none ;color:gray;"><h2>Entrar</h2></a></li>
+				<li><a href="./Registro.php" style="text-decoration:none ;"><h2>Inscrever-se</h2></a></li>
+				<li> </li>
+				<li style="color:white ;"><h2>|</h2></li>
+				<li> </li>
+				<li><a href="#Entrar" style="text-decoration:none ;color:gray;" class="active"><h2>Suporte</h2></a></li>
+				<li><a href="/Views/PremiumPage/Premium.php" style="text-decoration:none ;color:gray;"><h2>Premium</h2></a></li>
+			</ul>
+		</nav>
+	</header>
 
 
 
@@ -152,27 +151,26 @@ if (isset($_POST['submit'])) {
 	<!-- Site footer -->
 
 	<div class="copyright-area">
-			<div class="container">
-				<div class="row">
-					<div class="col-xl-6 col-lg-6 text-center text-lg-left">
-						<div class="copyright-text">
-							<p>Copyright &copy; 2022, Todos os direitos reservados a <a
-									href="./index.html">Frecy</a></p>
-						</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-6 col-lg-6 text-center text-lg-left">
+					<div class="copyright-text">
+						<p>Copyright &copy; 2022, Todos os direitos reservados a <a href="./index.html">Frecy</a></p>
 					</div>
-					<div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
-						<div class="footer-menu">
-							<ul>
-								<li><a href="/index.html">Inicio</a></li>
-								<li><a href="#">Termos de Serviço</a></li>
-								<li><a href="#">Politicas de Privacidade</a></li>
-								<li><a href="#">Contato</a></li>
-							</ul>
-						</div>
+				</div>
+				<div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+					<div class="footer-menu">
+						<ul>
+							<li><a href="/index.html">Inicio</a></li>
+							<li><a href="#">Termos de Serviço</a></li>
+							<li><a href="#">Politicas de Privacidade</a></li>
+							<li><a href="#">Contato</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
+	</div>
 	</footer>
 
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>

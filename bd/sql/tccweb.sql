@@ -1,12 +1,5 @@
--- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1:3306
--- Tempo de geração: 05-Ago-2022 às 18:29
--- Versão do servidor: 8.0.27
--- versão do PHP: 7.4.26
-
+Create database if not exists tccweb;
+use tccweb;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
