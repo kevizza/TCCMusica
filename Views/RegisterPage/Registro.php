@@ -13,7 +13,6 @@ if (isset($_POST['submit'])) {
 	VALUES ('$username','$email','$senha','$date', 'N')");
 
 	header('Location: /Views/LoginPage/Login.php');
-} else {
 }
 ?>
 

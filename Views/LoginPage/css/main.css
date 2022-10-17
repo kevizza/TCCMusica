@@ -90,7 +90,7 @@ header nav a:hover{
 .logo h1{
   font-size: 5vh;
   letter-spacing: 1vh;
-  font-family: "Poppins-Medium";
+  font-family: Poppins-Medium;
 }
 header .logo:hover{
   color: #d34999;

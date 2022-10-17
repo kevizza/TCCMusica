@@ -1,6 +1,7 @@
 <html>
 
 <head>
+<title>Garanta seu Premium - Frecy</title>
   <link rel="stylesheet" href="./style.css">
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" href="/Imgs/Logo_of.png" />
@@ -15,9 +16,11 @@
 <body>
 <header>
   <nav>
-    <a class="logo" href="/index.html" style="text-decoration:none ;">
-      FRECY
-    </a>
+  <div class="logodiv">
+			<a class="logo" href="/index.html" style="text-decoration:none;">
+			<h1>FRECY</h1>
+			</a>
+    </div>
     <div class="mobile-menu">
       <div class="line1"></div>
       <div class="line2"></div>
@@ -25,13 +28,13 @@
       <div class="line4"></div>
     </div>
     <ul class="nav-list">
-      <li><a href="/Views/LoginPage/Login.php" style="text-decoration:none ;color: #bfbfbf;">Entrar</a></li>
-      <li><a href="/Views/RegisterPage/Registro.php" style="text-decoration:none ;color: #bfbfbf;">Inscrever-se</a></li>
+      <li><a href="/Views/LoginPage/Login.php" style="text-decoration:none ;color: #bfbfbf;"><h2>Entrar</h2></a></li>
+      <li><a href="/Views/RegisterPage/Registro.php" style="text-decoration:none ;color: #bfbfbf;"><h2>Inscrever-se</h2></a></li>
       <li>    </li>
-				<li style="color:white ;">|</li>
+				<li style="color:white ;"><h2>|</h2></li>
 				<li>    </li>
-      <li><a href="#" style="text-decoration:none ;color: #bfbfbf;">Suporte</a></li>
-      <li><a href="./Premium.php" style="text-decoration:none ;">Premium</a></li>
+      <li><a href="#" style="text-decoration:none ;color: #bfbfbf;"><h2>Suporte</h2></a></li>
+      <li><a href="./Premium.php" style="text-decoration:none ; color: #fff;"><h2>Premium</h2></a></li>
     </ul>
   </nav>
 
@@ -120,20 +123,19 @@
   </div>
 
 <!-- Site footer -->
-
-<div class="copyright-area">
-			<div class="container">
+<div class="footer" style="height: 10vh; background: #151414;">
+			<div class="container" style="height: 8vh; background: #151414; padding-top: 3vh;">
 				<div class="row">
 					<div class="col-xl-6 col-lg-6 text-center text-lg-left">
 						<div class="copyright-text">
 							<p>Copyright &copy; 2022, Todos os direitos reservados a <a
-									href="./index.html">Frecy</a></p>
+									href="/index.html">Frecy</a></p>
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
 						<div class="footer-menu">
 							<ul>
-								<li><a href="/index.html">Inicio</a></li>
+								<li><a href="#">Inicio</a></li>
 								<li><a href="#">Termos de Serviço</a></li>
 								<li><a href="#">Politicas de Privacidade</a></li>
 								<li><a href="#">Contato</a></li>
@@ -141,8 +143,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
+        </div>
 	</footer>
   <script src="./app.js"></script>
 </body>

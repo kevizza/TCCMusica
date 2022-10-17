@@ -6,17 +6,18 @@ if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true
     header('Location: Login.php');
 }
 $logado = $_SESSION['email'];
-include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
+include_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
-// if (isset($_POST['submit'])) {
+if (isset($_POST['submit'])) {
 
-//     $nome_playlist = $_POST['nome_playlist'];
-//     $descricao = $_POST['descricao'];
+    $nome_playlist = $_POST['nome_playlist'];
+    $descricao = $_POST['descricao'];
+    $avatar_playlist = $_POST['avatar_playlist'];
 
 
-//     $result = mysqli_query($conexao, "INSERT INTO playlists (nome_playlist,descricao) 
-// 	VALUES ('$nome_playlist', '$descricao')");
-// }
+    $result = mysqli_query($conexao, "INSERT INTO playlists(nome_playlist,descricao,avatar_playlist) 
+	VALUES ('$nome_playlist', '$descricao', '$avatar_playlist')");
+}
 ?>
 
 <!DOCTYPE html>
@@ -40,13 +41,10 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
             <nav id="nav1">
                 <ul>
                     <li class="active">
-                        <a href="#" style="text-decoration:none">EXPLORAR <span></span> </a>
+                        <a href="#" style="text-decoration:none" id="explorarbtn">HOME <span id="span2"></span> </a>
                     </li>
                     <li class="off">
-                        <a href="#" style="text-decoration:none" id="bibliotecabtn">MINHA BIBLIOTECA</a>
-                    </li>
-                    <li class="off">
-                        <a href="./Biblioteca.php" style="text-decoration:none">RADIO</a>
+                        <a href="#" style="text-decoration:none" id="bibliotecabtn">SUA BIBLIOTECA</a>
                     </li>
                     <li>
                         <div id="divBusca">
@@ -66,20 +64,16 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
         <div class="menu-side">
             <a id="logoA" href="./AppPrincipal.php" style="text-decoration: none;">FRECY</a>
             <div class="playlist">
-                <a href="./ PaginaPrincipal.php" style="text-decoration: none;">
+                <a href="./ PaginaPrincipal.php" style="text-decoration: none;" id="explorarlado">
                     <h4 class="active">
                         <span></span><i class="bi bi-house-door-fill"></i> Home
                     </h4>
                 </a>
-                <a href="./PaginaPrincipal.php" style="text-decoration: none;">
+                <a href="#" style="text-decoration: none;" id="bibliotecalado">
                     <h4 class="off">
                         <span></span><i class="bi bi-music-note-list"></i> Sua Biblioteca
                     </h4>
                 </a>
-                <a href="#" style="text-decoration: none;">
-                    <h4 class="off">
-                        <span></span><i class="bi bi-search"></i> Explorar
-                    </h4>
             </div>
             <br>
             <hr style="height:1px;width:25vh;color:white;margin-left:6vh;">
@@ -98,35 +92,47 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
 
             <div class="playlists">
                 <h1>PlayLists:</h1>
+
+
                 <li class="songItem">
-                <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
-                <h5>
-                    Playlist Teste
-                </h5>
+                    <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
+                    <h5>
+                          <?php
+                        // $sql = "SELECT nome_playlist,descricao,avatar_playlist FROM playlists where id_playlist='2'";
+                        // $result = $conexao->query($sql);
+                        ?>
+                        <?php
+                        // while ($row = mysqli_fetch_array($result)) {
+                        //     print $row['nome_playlist'];
+                        // }
+                        ?>
+                    </h5>
+                </li>
+
+
+                <li class="songItem">
+                    <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
+                    <h5>
+ 
+                    </h5>
                 </li>
                 <li class="songItem">
-                <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
-                <h5>
-                    Playlist Teste
-                </h5>
+                    <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
+                    <h5>
+
+                    </h5>
                 </li>
                 <li class="songItem">
-                <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
-                <h5>
-                    Playlist Teste
-                </h5>
+                    <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
+                    <h5>
+
+                    </h5>
                 </li>
                 <li class="songItem">
-                <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
-                <h5>
-                    Playlist Teste
-                </h5>
-                </li>
-                <li class="songItem">
-                <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
-                <h5>
-                    Playlist Teste
-                </h5>
+                    <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
+                    <h5>
+
+                    </h5>
                 </li>
             </div>
         </div>
@@ -142,7 +148,7 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
             </div>
             <div class="menu-songs">
                 <div class="h4">
-                    <h4>Lançamentos</h4>
+                    <h3>Lançamentos</h3>
                     <div class="btn-s">
                         <i id="left_scroll" class="bi bi-arrow-left-short"></i>
                         <i id="right_scroll" class="bi bi-arrow-right-short"></i>
@@ -151,7 +157,7 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                 <div class="pop-songs">
                     <li class="songItems">
                         <div class="img-song">
-                            <img src="/Imgs/musicas/banner/rockstar_postmalone.jpg" alt="">
+                            <img src="/Imgs/musicas/banner/1.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="1"></i>
                         </div>
                         <h5>Rockstar
@@ -160,8 +166,8 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                         </h5>
                     </li>
                     <li class="songItems">
-                    <div class="img-song">
-                            <img src="/Imgs/musicas/banner/Believer_Imagine_Dragons.jpg" alt="">
+                        <div class="img-song">
+                            <img src="/Imgs/musicas/banner/2.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="2"></i>
                         </div>
                         <h5>Beliver
@@ -170,8 +176,8 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                         </h5>
                     </li>
                     <li class="songItems">
-                    <div class="img-song">
-                            <img src="/Imgs/musicas/banner/save_your_tears_the_weekend.jpg" alt="">
+                        <div class="img-song">
+                            <img src="/Imgs/musicas/banner/3.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="3"></i>
                         </div>
                         <h5>Save Yours Tears
@@ -180,8 +186,8 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                         </h5>
                     </li>
                     <li class="songItems">
-                    <div class="img-song">
-                            <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
+                        <div class="img-song">
+                            <img src="/Imgs/musicas/banner/4.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="4"></i>
                         </div>
                         <h5>As It Was
@@ -190,8 +196,8 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                         </h5>
                     </li>
                     <li class="songItems">
-                    <div class="img-song">
-                            <img src="/Imgs/musicas/banner/paradise_coldplay.png" alt="">
+                        <div class="img-song">
+                            <img src="/Imgs/musicas/banner/5.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="5"></i>
                         </div>
                         <h5>Paradise
@@ -200,8 +206,8 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                         </h5>
                     </li>
                     <li class="songItems">
-                    <div class="img-song">
-                            <img src="/Imgs/musicas/banner/stay_theScore.jpg" alt="">
+                        <div class="img-song">
+                            <img src="/Imgs/musicas/banner/6.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="6"></i>
                         </div>
                         <h5>Stay
@@ -210,8 +216,8 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                         </h5>
                     </li>
                     <li class="songItems">
-                    <div class="img-song">
-                            <img src="/Imgs/musicas/banner/idfc_blackbear.webp" alt="">
+                        <div class="img-song">
+                            <img src="/Imgs/musicas/banner/7.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="7"></i>
                         </div>
                         <h5>idfc
@@ -220,8 +226,8 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                         </h5>
                     </li>
                     <li class="songItems">
-                    <div class="img-song">
-                            <img src="/Imgs/musicas/banner/Twenty_One_Pilots_Ride.png" alt="">
+                        <div class="img-song">
+                            <img src="/Imgs/musicas/banner/8.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="8"></i>
                         </div>
                         <h5>Ride
@@ -230,8 +236,8 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                         </h5>
                     </li>
                     <li class="songItems">
-                    <div class="img-song">
-                            <img src="/Imgs/musicas/banner/Heaven_bruno_mars.jpg" alt="">
+                        <div class="img-song">
+                            <img src="/Imgs/musicas/banner/9.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="9"></i>
                         </div>
                         <h5>Locked Out Of Heaven
@@ -240,8 +246,8 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                         </h5>
                     </li>
                     <li class="songItems">
-                    <div class="img-song">
-                            <img src="/Imgs/capa_faded.png" alt="">
+                        <div class="img-song">
+                            <img src="/Imgs/10jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="10"></i>
                         </div>
                         <h5>Faded
@@ -254,7 +260,7 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
             </div>
             <div class="menu-songs">
                 <div class="h4">
-                    <h4>Em alta</h4>
+                    <h3>Em alta</h3>
                     <div class="btn-s">
                         <i id="left_scroll" class="bi bi-arrow-left-short"></i>
                         <i id="right_scroll" class="bi bi-arrow-right-short"></i>
@@ -263,7 +269,7 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                 <div class="pop-songs">
                     <li class="songItems">
                         <div class="img-song">
-                            <img src="/Imgs/musicas/banner/montero_lilnasx.jpeg" alt="">
+                            <img src="/Imgs/musicas/banner/11.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="11"></i>
                         </div>
                         <h5>Montero
@@ -272,18 +278,18 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                         </h5>
                     </li>
                     <li class="songItems">
-                    <div class="img-song">
-                            <img src="/Imgs/musicas/banner/i_aint_worried_one_republic.jpg" alt="">
+                        <div class="img-song">
+                            <img src="/Imgs/musicas/banner/12.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="12"></i>
                         </div>
-                        <h5>I Aint´t Worried
+                        <h5>I Aint Worried
                             <br>
                             <div class="subtitle">One Republic</div>
                         </h5>
                     </li>
                     <li class="songItems">
-                    <div class="img-song">
-                            <img src="/Imgs/musicas/banner/Bones_imagine_Dragons.webp" alt="">
+                        <div class="img-song">
+                            <img src="/Imgs/musicas/banner/13.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="13"></i>
                         </div>
                         <h5>Bones
@@ -292,8 +298,8 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                         </h5>
                     </li>
                     <li class="songItems">
-                    <div class="img-song">
-                            <img src="/Imgs/musicas/banner/sweet_child.jpg" alt="">
+                        <div class="img-song">
+                            <img src="/Imgs/musicas/banner/14.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="14"></i>
                         </div>
                         <h5>Sweet Child O' Mine
@@ -302,8 +308,8 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                         </h5>
                     </li>
                     <li class="songItems">
-                    <div class="img-song">
-                            <img src="/Imgs/capa_faded.png" alt="">
+                        <div class="img-song">
+                            <img src="/Imgs/15.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="15"></i>
                         </div>
                         <h5>Faded
@@ -312,7 +318,7 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                         </h5>
                     </li>
                     <li class="songItems">
-                    <div class="img-song">
+                        <div class="img-song">
                             <img src="/Imgs/capa_faded.png" alt="">
                             <i class="bi musicPlay bi-play-fill" id="16"></i>
                         </div>
@@ -322,7 +328,7 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                         </h5>
                     </li>
                     <li class="songItems">
-                    <div class="img-song">
+                        <div class="img-song">
                             <img src="/Imgs/capa_faded.png" alt="">
                             <i class="bi musicPlay bi-play-fill" id="17"></i>
                         </div>
@@ -332,7 +338,7 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                         </h5>
                     </li>
                     <li class="songItems">
-                    <div class="img-song">
+                        <div class="img-song">
                             <img src="/Imgs/capa_faded.png" alt="">
                             <i class="bi musicPlay bi-play-fill" id="18"></i>
                         </div>
@@ -342,7 +348,7 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                         </h5>
                     </li>
                     <li class="songItems">
-                    <div class="img-song">
+                        <div class="img-song">
                             <img src="/Imgs/capa_faded.png" alt="">
                             <i class="bi musicPlay bi-play-fill" id="19"></i>
                         </div>
@@ -352,7 +358,7 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                         </h5>
                     </li>
                     <li class="songItems">
-                    <div class="img-song">
+                        <div class="img-song">
                             <img src="/Imgs/capa_faded.png" alt="">
                             <i class="bi musicPlay bi-play-fill" id="20"></i>
                         </div>
@@ -367,7 +373,7 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
 
             <div class="menu-songs">
                 <div class="h4">
-                    <h4>Artistas Populares</h4>
+                    <h3>Artistas Populares</h3>
                     <div class="btn-s">
                         <i id="left_scroll" class="bi bi-arrow-left-short"></i>
                         <i id="right_scroll" class="bi bi-arrow-right-short"></i>
@@ -381,55 +387,55 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                         </div>
                     </li>
                     <li class="artItems">
-                    <div class="img-artist">
+                        <div class="img-artist">
                             <h6>Imagine Dragons</h6>
                             <img src="/Imgs/musicas/artistas/Imagine_dragons.jpg" alt="">
                         </div>
                     </li>
                     <li class="artItems">
-                    <div class="img-artist">
+                        <div class="img-artist">
                             <h6>Harry Styles</h6>
                             <img src="/Imgs/musicas/artistas/harrystyle.jpg" alt="">
                         </div>
                     </li>
                     <li class="artItems">
-                    <div class="img-artist">
+                        <div class="img-artist">
                             <h6>Cold Play</h6>
                             <img src="/Imgs/musicas/artistas/coldplay.jpg" alt="">
                         </div>
                     </li>
                     <li class="artItems">
-                    <div class="img-artist">
+                        <div class="img-artist">
                             <h6>Post Malone</h6>
                             <img src="/Imgs/musicas/artistas/postmalone.jpg" alt="">
                         </div>
                     </li>
                     <li class="artItems">
-                    <div class="img-artist">
+                        <div class="img-artist">
                             <h6>Olivia Rodrigo</h6>
                             <img src="/Imgs/musicas/artistas/Olivia rodrigo.jpg" alt="">
                         </div>
                     </li>
                     <li class="artItems">
-                    <div class="img-artist">
+                        <div class="img-artist">
                             <h6>Justin Bieber</h6>
                             <img src="/Imgs/musicas/artistas/justin.jpg" alt="">
                         </div>
                     </li>
                     <li class="artItems">
-                    <div class="img-artist">
+                        <div class="img-artist">
                             <h6>Billie Elish</h6>
                             <img src="/Imgs/musicas/artistas/BillieEilish.jpg" alt="">
                         </div>
                     </li>
                     <li class="artItems">
-                    <div class="img-artist">
+                        <div class="img-artist">
                             <h6>Lil Nas X</h6>
                             <img src="/Imgs/musicas/artistas/lilnas.jpg" alt="">
                         </div>
                     </li>
                     <li class="artItems">
-                    <div class="img-artist">
+                        <div class="img-artist">
                             <h6>Bruno Mars</h6>
                             <img src="/Imgs/musicas/artistas/Brunomars.jpg" alt="">
                         </div>
@@ -451,17 +457,21 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                             <div class="wrap-input100 validate-input" data-validate="Campo Obrigatorio">
                                 <input class="input100" type="text" name="nome_playlist" id="nome_playlist" placeholder="Nome">
                             </div>
-                            <div class="wrap-input100 validate-input" data-validate="Campo Obrigatorio">
-                                <textarea class="input100" type="text" name="descricao" id="descricao" placeholder="Descrição"></textarea>
+                            <div class="wrap-input100 validate-input">
+                                <textarea class="input100" type="text" name="descricao" id="descricao" placeholder="Descrição (opcional)"></textarea>
+                            </div>
+                            <div class="file">
+                                <input type="file" id="avatar_playlist" name="avatar_playlist" accept="image/png, image/jpeg">
                             </div>
 
-                                    <button class="criar-form-btn" type="submit" name="submit" id="submit">
-                                        Criar
-                                    </button>
-                                    <button class="voltar-form-btn" id="voltar">
-                                        Voltar
-                                    </button>
-
+                            <div id="buttons">
+                                <button class="criar-form-btn" type="submit" name="submit" id="sub">
+                                    Criar
+                                </button>
+                                <button class="voltar-form-btn" id="voltar">
+                                    Voltar
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -478,9 +488,9 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
 
     <footer>
         <div class="master-play">
-            <img src="" id="poster_master_play">
-            <h5 id="title">Faded <br>
-                <div class="subtitle">Alan Walker</div>
+            <img src="/Imgs/2754.png" id="poster_master_play">
+            <h5 id="title"><br>
+                <div class="subtitle"></div>
             </h5>
             <div class="icon">
                 <i class="bi bi-skip-start-fill" id="skip1"></i>
@@ -525,10 +535,24 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
                 div.style.display = "none";
                 document.getElementById("criarplaylist").style.display = "block";
             }
-
         });
     </script>
-        <script>
+    <script>
+        var btn = document.querySelector("#explorar");
+        btn.addEventListener("click", function() {
+            var div = document.querySelector("#home");
+            document.getElementById("criarplaylist").style.display = "none";
+
+            if (div.style.display === "none") {
+                div.style.display = "block";
+                document.getElementById("criarplaylist").style.display = "none";
+            } else {
+                div.style.display = "none";
+                document.getElementById("criarplaylist").style.display = "block";
+            }
+        });
+    </script>
+    <script>
         var btn = document.querySelector("#voltar");
         btn.addEventListener("click", function() {
             var div = document.querySelector("#home");
@@ -544,11 +568,21 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
 
         });
     </script>
-        <script>
+    <script>
         var btn = document.querySelector("#bibliotecabtn");
         btn.addEventListener("click", function() {
             var div = document.querySelector("#home");
             document.getElementById("bibliotecadiv").style.display = "none";
+            document.getElementById("span2").style.marginLeft = "0vh";
+            document.getElementById("bibliotecabtn").style.color = "gray";
+            document.getElementById("explorarbtn").style.color = "#fff";
+
+            if (document.getElementById("bibliotecadiv").style.display == "block") {
+                document.getElementById("bibliotecadiv").style.display = "none";
+                document.getElementById("bibliotecabtn").style.color = "#fff";
+                document.getElementById("span2").style.marginLeft = "23vh";
+                document.getElementById("explorarbtn").style.color = "gray";
+            }
 
             if (div.style.display === "none") {
                 div.style.display = "block";
@@ -557,6 +591,95 @@ include_once $_SERVER['DOCUMENT_ROOT']. '/config.php';
             } else {
                 div.style.display = "none";
                 document.getElementById("bibliotecadiv").style.display = "block";
+                document.getElementById("bibliotecabtn").style.color = "#fff";
+                document.getElementById("span2").style.marginLeft = "23vh";
+                document.getElementById("explorarbtn").style.color = "gray";
+            }
+
+        });
+    </script>
+
+    <script>
+        var btn = document.querySelector("#explorarbtn");
+        btn.addEventListener("click", function() {
+            var div = document.querySelector("#home");
+            document.getElementById("bibliotecabtn").style.color = "gray";
+            document.getElementById("explorarbtn").style.color = "#fff";
+            document.getElementById("span2").style.marginLeft = "0vh";
+
+            if (div.style.display === "block") {
+                div.style.display = "block";
+                document.getElementById("bibliotecadiv").style.display = "none";
+            }
+            if (div.style.display === "none") {
+                div.style.display = "block";
+                document.getElementById("#home").style.display = "block";
+                document.getElementById("bibliotecadiv").style.display = "none";
+                document.getElementById("criarplaylist").style.display = "none";
+                document.getElementById("bibliotecabtn").style.color = "#fff";
+                document.getElementById("explorarbtn").style.color = "gray";
+            }
+            if (div.style.display == "block") {
+                div.style.display = "none";
+                document.getElementById("bibliotecadiv").style.display = "block";
+                document.getElementById("bibliotecabtn").style.color = "gray";
+                document.getElementById("span2").style.marginLeft = "0vh"
+                document.getElementById("explorarbtn").style.color = "#fff";
+            }
+
+        });
+    </script>
+    <script>
+        var btn = document.querySelector("#bibliotecalado");
+        btn.addEventListener("click", function() {
+            var div = document.querySelector("#home");
+            document.getElementById("bibliotecadiv").style.display = "none";
+            document.getElementById("span2").style.marginLeft = "0vh";
+            document.getElementById("bibliotecabtn").style.color = "gray";
+            document.getElementById("explorarbtn").style.color = "#fff";
+            document.getElementById("bibliotecalado").style.color = "gray";
+
+            if (div.style.display === "none") {
+                div.style.display = "block";
+                document.getElementById("#home").style.display = "block";
+                document.getElementById("bibliotecadiv").style.display = "none";
+            } else {
+                div.style.display = "none";
+                document.getElementById("bibliotecadiv").style.display = "block";
+                document.getElementById("bibliotecabtn").style.color = "#fff";
+                document.getElementById("span2").style.marginLeft = "23vh";
+                document.getElementById("explorarbtn").style.color = "gray";
+                document.getElementById("bibliotecalado").style.color = "#fff";
+            }
+
+        });
+    </script>
+    <script>
+        var btn = document.querySelector("#explorarlado");
+        btn.addEventListener("click", function() {
+            var div = document.querySelector("#home");
+            document.getElementById("bibliotecabtn").style.color = "gray";
+            document.getElementById("explorarbtn").style.color = "#fff";
+            document.getElementById("span2").style.marginLeft = "0vh";
+
+            if (div.style.display === "block") {
+                div.style.display = "block";
+                document.getElementById("bibliotecadiv").style.display = "none";
+            }
+            if (div.style.display === "none") {
+                div.style.display = "block";
+                document.getElementById("#home").style.display = "block";
+                document.getElementById("bibliotecadiv").style.display = "none";
+                document.getElementById("criarplaylist").style.display = "none";
+                document.getElementById("bibliotecabtn").style.color = "gray";
+                document.getElementById("span2").style.marginLeft = "0vh"
+                document.getElementById("explorarbtn").style.color = "#fff";
+            }
+            if (div.style.display == "block") {
+                div.style.display = "none";
+                document.getElementById("bibliotecadiv").style.display = "block";
+                document.getElementById("bibliotecabtn").style.color = "#fff";
+                document.getElementById("explorarbtn").style.color = "gray";
             }
 
         });

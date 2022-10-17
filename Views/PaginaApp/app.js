@@ -1,101 +1,101 @@
-const music = new Audio('/Imgs/musicas/mp3/rockstar_postMalone.mp3');
+const music = new Audio('');
 
 const songs = [
     {
         id: '1',
         songName: `Rockstar <br>
         <div class="subtitle">Post Malone</div>`,
-        poster: "/Imgs/musicas/banner/rockstar_postmalone.jpg"
+        poster: "/Imgs/musicas/banner/1.jpg"
     },
     {
         id: '2',
         songName: `Beliver <br>
         <div class="subtitle">Imagine Dragons</div>`,
-        poster: "/Imgs/musicas/banner/Believer_Imagine_Dragons.jpg"
+        poster: "/Imgs/musicas/banner/2.jpg"
     },
     {
         id: '3',
         songName: `Save Yours Tears
         <br>
         <div class="subtitle">The Weekend</div>`,
-        poster: "/Imgs/musicas/banner/save_your_tears_the_weekend.jpg"
+        poster: "/Imgs/musicas/banner/3.jpg"
     },
     {
         id: '4',
         songName: `As It Was
         <br>
         <div class="subtitle">Harry Styles</div>`,
-        poster: "/Imgs/musicas/banner/as_it_was_Harry_styles.webp"
+        poster: "/Imgs/musicas/banner/4.jpg"
     },
     {
         id: '5',
         songName: `Paradise
         <br>
         <div class="subtitle">Cold Play</div>`,
-        poster: "/Imgs/musicas/banner/paradise_coldplay.png"
+        poster: "/Imgs/musicas/banner/5y.jpg"
     },
     {
         id: '6',
         songName: `Stay
         <br>
         <div class="subtitle">The Score</div>`,
-        poster: "/Imgs/musicas/banner/stay_theScore.jpg"
+        poster: "/Imgs/musicas/banner/6.jpg"
     },
     {
         id: '7',
         songName: `idfc
         <br>
         <div class="subtitle">blackbear</div>`,
-        poster: "/Imgs/musicas/banner/idfc_blackbear.webp"
+        poster: "/Imgs/musicas/banner/7.jpg"
     },
     {
         id: '8',
         songName: `Ride
         <br>
         <div class="subtitle">Twenty One Pilots</div>`,
-        poster: "/Imgs/musicas/banner/Twenty_One_Pilots_Ride.png"
+        poster: "/Imgs/musicas/banner/8.jpg"
     },
     {
         id: '9',
         songName: `Locked Out Of Heaven
         <br>
         <div class="subtitle">Bruno Mars</div>`,
-        poster: "/Imgs/musicas/banner/Heaven_bruno_mars.jpg"
+        poster: "/Imgs/musicas/banner/9.jpg"
     },
     {
         id: '10',
         songName: `Faded
         <br>
         <div class="subtitle">Alan Walker</div>`,
-        poster: "/Imgs/capa_faded.png"
+        poster: "/Imgs/10.png"
     },
     {
         id: '11',
         songName: `Montero
         <br>
         <div class="subtitle">Lin Nas X</div>`,
-        poster: "/Imgs/musicas/banner/montero_lilnasx.jpeg"
+        poster: "/Imgs/musicas/banner/11.jpg"
     },
     {
         id: '12',
-        songName: `I Aint´t Worried
+        songName: `I Aint Worried
         <br>
         <div class="subtitle">One Republic</div>`,
-        poster: "/Imgs/musicas/banner/i_aint_worried_one_republic.jpg"
+        poster: "/Imgs/musicas/banner/12.jpg"
     },
     {
         id: '13',
         songName: `Bones
         <br>
         <div class="subtitle">Imagine Dragons</div>`,
-        poster: "/Imgs/musicas/banner/Bones_imagine_Dragons.webp"
+        poster: "/Imgs/musicas/banner/13.jpg"
     },
     {
         id: '14',
         songName: `Sweet Child O' Mine
         <br>
         <div class="subtitle">Gun's N Roses</div>`,
-        poster: "/Imgs/musicas/banner/sweet_child.jpg"
+        poster: "/Imgs/musicas/banner/14.jpg"
     },
     {
         id: '15',
@@ -130,6 +130,11 @@ const songs = [
 
 ]
 
+// Array.from(document.getElementsByClassName('songItems')).forEach((element, i)=>{
+//     element.getElementsByTagName('img')[0].src = songs[i].poster;
+//     element.getElementsByTagName('h5')[0].innerHTML = songs[i].songName;
+// })
+
 let masterPlay = document.getElementById('masterPlay');
 
 masterPlay.addEventListener('click',()=>{
@@ -151,23 +156,24 @@ const makeAllPlays = () =>{
     })
 }
 
-const makeAllBackgrounds = () =>{
-    Array.from(document.getElementsByClassName('SongItems')).forEach((element)=>{
-            element.style.background = "rgb(120, 68, 124, 0)";
-    })
-}
+// const makeAllBackgrounds = () =>{
+//     Array.from(document.getElementsByClassName('songItems')).forEach((element)=>{
+//             element.style.background = "#4d1458";
+//     })
+// }
 
 let index = 0;
 let poster_master_play = document.getElementById('poster_master_play');
 let title = document.getElementById('title')
+
 Array.from(document.getElementsByClassName('musicPlay')).forEach((element)=>{
     element.addEventListener('click', (e)=>{
-        makeAllPlays();
         index = e.target.id;
+        makeAllPlays();
         e.target.classList.remove('bi-play-fill');
         e.target.classList.add('bi-pause-fill');
-        music.scr = `Imgs/musicas/mp3/${index}.mp3`;
-        poster_master_play.scr = 'Imgs/musicas/banner/${index}';
+        music.src = `/Imgs/musicas/mp3/${index}.mp3`;
+        poster_master_play.src = `/Imgs/musicas/banner/${index}.jpg`;
         music.play();
         let song_title = songs.filter((ele)=>{
             return ele.id == index;
@@ -220,11 +226,29 @@ music.addEventListener('timeupdate',()=>{
 })
 
 seek.addEventListener('change', ()=>{
-    music.currentTime =seek.value * music.duration/100;
+    music.currentTime = seek.value * music.duration/100;
 })
 music.addEventListener('ended', ()=> {
-    masterPlay.classList.add('bi-play-fill');
-            masterPlay.classList.remove('bi-pause-fill');
+    index -= 0;
+    index += 1;
+    if(index > Array.from(document.getElementsByClassName('songItem')).Length){
+        index = 1;
+    }
+    music.src = `/Imgs/musicas/mp3/${index}.mp3`;
+        poster_master_play.src = `/Imgs/musicas/banner/${index}.jpg`;
+        music.play();
+        let song_title = songs.filter((ele)=>{
+            return ele.id == index;
+        })
+
+        song_title.forEach(ele =>{
+            let{songName} = ele;
+            title.innerHTML = songName;
+        })
+        makeAllPlays()
+
+        document.getElementById(`${index}`).classList.add('bi-play-fill');
+        document.getElementById(`${index}`).classList.remove('bi-pause-fill');
 })
 
 let vol_icon = document.getElementById('vol_icon');
@@ -252,5 +276,64 @@ vol.addEventListener('change', ()=>{
     let vol_a = vol.value;
     vol_bar.style.width = `${vol_a}%`;
     vol_dot.style.left = `${vol_a}%`;
-    music.valume = vol_a/100;
+    music.volume = vol_a/100;
+})
+
+let back = document.getElementById('skip1')
+let next = document.getElementById('skip2')
+
+back.addEventListener('click', ()=> {
+    index -= 1;
+    if(index < 1){
+        index = Array.from(document.getElementsByClassName('songItem')).Length;
+    }
+    music.src = `/Imgs/musicas/mp3/${index}.mp3`;
+        poster_master_play.src = `/Imgs/musicas/banner/${index}.jpg`;
+        music.play();
+        let song_title = songs.filter((ele)=>{
+            return ele.id == index;
+        })
+
+        song_title.forEach(ele =>{
+            let{songName} = ele;
+            title.innerHTML = songName;
+        })
+        makeAllPlays()
+
+        document.getElementById(`${index}`).classList.remove('bi-play-fill');
+        document.getElementById(`${index}`).classList.add('bi-pause-fill');
+})
+
+next.addEventListener('click', ()=> {
+    index -= 0;
+    index += 1;
+    if(index > Array.from(document.getElementsByClassName('songItem')).Length){
+        index = 1;
+    }
+    music.src = `/Imgs/musicas/mp3/${index}.mp3`;
+        poster_master_play.src = `/Imgs/musicas/banner/${index}.jpg`;
+        music.play();
+        let song_title = songs.filter((ele)=>{
+            return ele.id == index;
+        })
+
+        song_title.forEach(ele =>{
+            let{songName} = ele;
+            title.innerHTML = songName;
+        })
+        makeAllPlays()
+
+        document.getElementById(`${index}`).classList.remove('bi-play-fill');
+        document.getElementById(`${index}`).classList.add('bi-pause-fill');
+})
+
+let left_scroll = document.getElementById('left_scroll');
+let right_scroll = document.getElementById('right_scroll');
+let pop_songs = document.getElementsByClassName('pop_songs')[0];
+
+left_scroll.addEventListener('click', ()=>{
+    pop_songs.scrollLeft -= 330;
+})
+right_scroll.addEventListener('click', ()=>{
+    pop_songs.scrollLeft += 330;
 })
