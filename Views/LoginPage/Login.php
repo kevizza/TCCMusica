@@ -62,7 +62,7 @@
           </span>
           <br>
           <div class="wrap-input100 validate-input" data-validate="email Invalido">
-            <input class="input100" type="text" name="email" id="email" placeholder="Email" required>
+            <input class="input100" type="text" name="login" id="login" placeholder="Email ou Usuário" required>
             <!-- <span class="focus-input100" data-placeholder="Email"></span> -->
           </div>
 
@@ -73,13 +73,9 @@
             <input class="input100" type="password" name="pass" id="pass" placeholder="Senha" required>
             <!-- <span class="focus-input100" data-placeholder="Senha"></span> -->
           </div>
-          <!-- <input name="lem_senha" type="checkbox" value="lem_senha" 
-          <?php if (isset($_COOKIE['senha'])) {
-            echo 'checked="checked"';
-          }
-          ?> />
-          <td> Salvar senha </td> -->
-          <div class="login_google">
+          <input name="lem_senha" type="checkbox" value="lem_senha"/> 
+          <a style="color: white;font-size: 1.8vh;margin-left:1vh;"> Lembrar de mim </a>
+          <div class="login_google" style="margin-top: 2vh;">
             <script src="https://accounts.google.com/gsi/client" async defer></script>
             <div class="logingoogle" id="g_id_onload" data-client_id="534870765324-hhopjp4hk2i4thcn9v6fog8dgm0ceuke.apps.googleusercontent.com" data-login_uri="http://localhost:8000/Views/PaginaApp/AppPrincipal.php" data-auto_prompt="false">
             </div>

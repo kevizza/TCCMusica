@@ -348,6 +348,7 @@ header .menu-top #nav1 .user img:hover {
     height: 6vh;
     margin-left: 10px;
     border-radius: 10px;
+    object-fit: fill;
 }
 
 #nav-side .playlists li h5 {

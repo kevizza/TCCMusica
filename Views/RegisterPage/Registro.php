@@ -7,10 +7,11 @@ if (isset($_POST['submit'])) {
 	$email = $_POST['email'];
 	$senha = $_POST['senha'];
 	$date = $_POST['date'];
+	$nome_completo = $_POST['nome_completo'];
 
 
-	$result = mysqli_query($conexao, "INSERT INTO usuarios(username,email,senha,data_nasc, is_admin) 
-	VALUES ('$username','$email','$senha','$date', 'N')");
+	$result = mysqli_query($conexao, "INSERT INTO usuarios(username,email,senha,data_nasc,nome_completo, is_admin)
+	VALUES ('$username','$email','$senha','$date','$nome_completo', 'N')");
 
 	header('Location: /Views/LoginPage/Login.php');
 }
@@ -77,21 +78,16 @@ if (isset($_POST['submit'])) {
 					<span class="login100-form-title p-b-26">
 						REGISTRO
 					</span>
-					<!-- <div class="notification is-sucess">
-						<p>Seu cadastro foi efetuado</p>
-						<p>Faça login informando o seu usuario e senha <a href="Login.html">AQUI</a></p>
-					</div>
-					<div class="notification is-info">
-						<p>O Usuario escolhido já existe. Informe outro.</p>
-					</div> -->
-
 					<div class="wrap-input100 validate-input" data-validate="Campo Obrigatorio">
-						<input class="input100" type="text" name="username" id="username" placeholder="Username">
+						<input class="input100" type="text" name="username" id="username" placeholder="Username" maxlength="30">
 						<span class="focus-input100"></span>
 					</div>
-
 					<div class="wrap-input100 validate-input" data-validate="Campo Obrigatorio">
-						<input class="input100" type="text" name="email" id="email" placeholder="Email">
+						<input class="input100" type="text" name="nome_completo" id="nome_completo" placeholder="Nome Completo" maxlength="50">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate="Campo Obrigatorio">
+						<input class="input100" type="text" name="email" id="email" placeholder="Email" maxlength="200">
 						<span class="focus-input100"></span>
 					</div>
 
@@ -99,7 +95,7 @@ if (isset($_POST['submit'])) {
 						<span class="btn-show-pass">
 							<i class="zmdi zmdi-eye-off"></i>
 						</span>
-						<input class="input100" type="password" name="senha" id="senha" placeholder="Senha">
+						<input class="input100" type="password" name="senha" id="senha" placeholder="Senha" maxlength="50">
 						<span class="focus-input100"></span>
 					</div>
 
@@ -107,7 +103,7 @@ if (isset($_POST['submit'])) {
 						<span class="btn-show-pass">
 							<i class="zmdi zmdi-eye-off"></i>
 						</span>
-						<input class="input100" type="password" name="senha" id="senhaconfirm" placeholder="Confirmar Senha">
+						<input class="input100" type="password" name="senha" id="senhaconfirm" placeholder="Confirmar Senha" maxlength="50">
 						<span class="focus-input100"></span>
 					</div>
 

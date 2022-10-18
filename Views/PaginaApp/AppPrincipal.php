@@ -1,22 +1,24 @@
 <?php
 session_start();
-if ((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true)) {
-    unset($_SESSION['email']);
+if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {
+    unset($_SESSION['login']);
     unset($_SESSION['senha']);
     header('Location: Login.php');
 }
-$logado = $_SESSION['email'];
+$logado = $_SESSION['login'];
 include_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
 if (isset($_POST['submit'])) {
 
     $nome_playlist = $_POST['nome_playlist'];
     $descricao = $_POST['descricao'];
-    $avatar_playlist = $_POST['avatar_playlist'];
+    $imagem_playlist = $_POST['imagem_playlist'];
 
+    if(isset($_FILES['imagem_playlist'])) $imagem_playlist = addslashes(file_get_contents($_FILES["imagem_playlist"]["tmp_name"]));
+    else $imagem_playlist = "/Imgs/playlistdeafult.jpg";
 
-    $result = mysqli_query($conexao, "INSERT INTO playlists(nome_playlist,descricao,avatar_playlist) 
-	VALUES ('$nome_playlist', '$descricao', '$avatar_playlist')");
+    $result = mysqli_query($conexao, "INSERT INTO playlists(nome_playlist,descricao,imagem_playlist) 
+	VALUES ('$nome_playlist', '$descricao', '$imagem_playlist')");
 }
 ?>
 
@@ -64,13 +66,13 @@ if (isset($_POST['submit'])) {
         <div class="menu-side">
             <a id="logoA" href="./AppPrincipal.php" style="text-decoration: none;">FRECY</a>
             <div class="playlist">
-                <a href="./ PaginaPrincipal.php" style="text-decoration: none;" id="explorarlado">
-                    <h4 class="active">
+                <a href="#" style="text-decoration: none;" id="explorarlado">
+                    <h4 class="active" id="explorarh4">
                         <span></span><i class="bi bi-house-door-fill"></i> Home
                     </h4>
                 </a>
-                <a href="#" style="text-decoration: none;" id="bibliotecalado">
-                    <h4 class="off">
+                <a href="#" style="text-decoration: none;" id="bibliotecalado" style="color:white;">
+                    <h4 class="off" id="bibliotecah4">
                         <span></span><i class="bi bi-music-note-list"></i> Sua Biblioteca
                     </h4>
                 </a>
@@ -91,30 +93,25 @@ if (isset($_POST['submit'])) {
 
 
             <div class="playlists">
-                <h1>PlayLists:</h1>
-
+                <h1>Suas PlayLists:</h1>
 
                 <li class="songItem">
-                    <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
-                    <h5>
-                          <?php
-                        // $sql = "SELECT nome_playlist,descricao,avatar_playlist FROM playlists where id_playlist='2'";
+                <?php
+                        // $sql = "SELECT nome_playlist,descricao,avatar_playlist FROM playlists where id_playlist='1'";
                         // $result = $conexao->query($sql);
                         ?>
-                        <?php
+                    <img src="<?php echo $imagem_playlist ?>" />
+                    <!-- <h5>
+                    <?php
+                        // $sql = "SELECT nome_playlist,descricao,avatar_playlist FROM playlists where id_playlist='1'";
+                        // $result = $conexao->query($sql);
+                        ?>
+                    <?php
                         // while ($row = mysqli_fetch_array($result)) {
                         //     print $row['nome_playlist'];
                         // }
                         ?>
-                    </h5>
-                </li>
-
-
-                <li class="songItem">
-                    <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
-                    <h5>
- 
-                    </h5>
+                    </h5> -->
                 </li>
                 <li class="songItem">
                     <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
@@ -461,7 +458,7 @@ if (isset($_POST['submit'])) {
                                 <textarea class="input100" type="text" name="descricao" id="descricao" placeholder="Descrição (opcional)"></textarea>
                             </div>
                             <div class="file">
-                                <input type="file" id="avatar_playlist" name="avatar_playlist" accept="image/png, image/jpeg">
+                                <input type="file" id="imagem_playlist" name="imagem_playlist" accept="image/png, image/jpeg">
                             </div>
 
                             <div id="buttons">
@@ -580,20 +577,29 @@ if (isset($_POST['submit'])) {
             if (document.getElementById("bibliotecadiv").style.display == "block") {
                 document.getElementById("bibliotecadiv").style.display = "none";
                 document.getElementById("bibliotecabtn").style.color = "#fff";
-                document.getElementById("span2").style.marginLeft = "23vh";
+                document.getElementById("span2").style.marginLeft = "0vh";
                 document.getElementById("explorarbtn").style.color = "gray";
+                document.getElementById('bibliotecah4').classList.remove('active');
+                document.getElementById('bibliotecah4').classList.add('off');
+                document.getElementById('explorarh4').classList.remove('off');
+                document.getElementById('explorarh4').classList.add('active');
             }
 
             if (div.style.display === "none") {
                 div.style.display = "block";
                 document.getElementById("#home").style.display = "block";
+                document.getElementById("span2").style.marginLeft = "0vh";
                 document.getElementById("bibliotecadiv").style.display = "none";
             } else {
                 div.style.display = "none";
                 document.getElementById("bibliotecadiv").style.display = "block";
                 document.getElementById("bibliotecabtn").style.color = "#fff";
-                document.getElementById("span2").style.marginLeft = "23vh";
+                document.getElementById("span2").style.marginLeft = "20vh";
                 document.getElementById("explorarbtn").style.color = "gray";
+                document.getElementById('bibliotecah4').classList.remove('off');
+                document.getElementById('bibliotecah4').classList.add('active');
+                document.getElementById('explorarh4').classList.remove('active');
+                document.getElementById('explorarh4').classList.add('off');
             }
 
         });
@@ -607,10 +613,10 @@ if (isset($_POST['submit'])) {
             document.getElementById("explorarbtn").style.color = "#fff";
             document.getElementById("span2").style.marginLeft = "0vh";
 
-            if (div.style.display === "block") {
-                div.style.display = "block";
-                document.getElementById("bibliotecadiv").style.display = "none";
-            }
+            // if (div.style.display === "block") {
+            //     div.style.display = "block";
+            //     document.getElementById("bibliotecadiv").style.display = "none";
+            // }
             if (div.style.display === "none") {
                 div.style.display = "block";
                 document.getElementById("#home").style.display = "block";
@@ -618,6 +624,10 @@ if (isset($_POST['submit'])) {
                 document.getElementById("criarplaylist").style.display = "none";
                 document.getElementById("bibliotecabtn").style.color = "#fff";
                 document.getElementById("explorarbtn").style.color = "gray";
+                document.getElementById('bibliotecah4').classList.remove('active');
+                document.getElementById('bibliotecah4').classList.add('off');
+                document.getElementById('explorarh4').classList.remove('off');
+                document.getElementById('explorarh4').classList.add('active');
             }
             if (div.style.display == "block") {
                 div.style.display = "none";
@@ -625,10 +635,15 @@ if (isset($_POST['submit'])) {
                 document.getElementById("bibliotecabtn").style.color = "gray";
                 document.getElementById("span2").style.marginLeft = "0vh"
                 document.getElementById("explorarbtn").style.color = "#fff";
+                document.getElementById('bibliotecah4').classList.remove('off');
+                document.getElementById('bibliotecah4').classList.add('active');
+                document.getElementById('explorarh4').classList.remove('active');
+                document.getElementById('explorarh4').classList.add('off');
             }
 
         });
     </script>
+
     <script>
         var btn = document.querySelector("#bibliotecalado");
         btn.addEventListener("click", function() {
@@ -643,17 +658,26 @@ if (isset($_POST['submit'])) {
                 div.style.display = "block";
                 document.getElementById("#home").style.display = "block";
                 document.getElementById("bibliotecadiv").style.display = "none";
+                document.getElementById('bibliotecah4').classList.remove('active');
+                document.getElementById('bibliotecah4').classList.add('off');
+                document.getElementById('explorarh4').classList.remove('off');
+                document.getElementById('explorarh4').classList.add('active');
             } else {
                 div.style.display = "none";
                 document.getElementById("bibliotecadiv").style.display = "block";
                 document.getElementById("bibliotecabtn").style.color = "#fff";
-                document.getElementById("span2").style.marginLeft = "23vh";
+                document.getElementById("span2").style.marginLeft = "20vh";
                 document.getElementById("explorarbtn").style.color = "gray";
-                document.getElementById("bibliotecalado").style.color = "#fff";
+                document.getElementById("explorarlado").style.color = "white";
+                document.getElementById('bibliotecah4').classList.remove('off');
+                document.getElementById('bibliotecah4').classList.add('active');
+                document.getElementById('explorarh4').classList.remove('active');
+                document.getElementById('explorarh4').classList.add('off');
             }
 
         });
     </script>
+
     <script>
         var btn = document.querySelector("#explorarlado");
         btn.addEventListener("click", function() {
@@ -674,12 +698,21 @@ if (isset($_POST['submit'])) {
                 document.getElementById("bibliotecabtn").style.color = "gray";
                 document.getElementById("span2").style.marginLeft = "0vh"
                 document.getElementById("explorarbtn").style.color = "#fff";
+                document.getElementById('bibliotecah4').classList.remove('active');
+                document.getElementById('bibliotecah4').classList.add('off');
+                document.getElementById('explorarh4').classList.remove('off');
+                document.getElementById('explorarh4').classList.add('active');
+                
             }
             if (div.style.display == "block") {
                 div.style.display = "none";
                 document.getElementById("bibliotecadiv").style.display = "block";
                 document.getElementById("bibliotecabtn").style.color = "#fff";
                 document.getElementById("explorarbtn").style.color = "gray";
+                document.getElementById('bibliotecah4').classList.remove('off');
+                document.getElementById('bibliotecah4').classList.add('active');
+                document.getElementById('explorarh4').classList.remove('active');
+                document.getElementById('explorarh4').classList.add('off');
             }
 
         });

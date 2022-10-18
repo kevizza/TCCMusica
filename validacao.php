@@ -1,25 +1,25 @@
 <?php
     session_start();
 
-	if(isset($_POST['submit']) && !empty($_POST['email'])  && !empty($_POST['pass'])) 
+	if(isset($_POST['submit']) && !empty($_POST['login'])  && !empty($_POST['pass'])) 
     {
         include_once('config.php');
-        $email = $_POST['email'];
+        $login = $_POST['login'];
         $senha = $_POST['pass'];
 
-        $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
+        $sql = "SELECT * from usuarios where username='$login' or email='$login' and senha= '$senha'";
 
         $result = $conexao->query($sql);
 
         $row = mysqli_num_rows($result);
 
         if(mysqli_num_rows($result) < 1){
-            unset($_SESSION['email']); 
+            unset($_SESSION['login']); 
             unset($_SESSION['senha']);
             header('Location: /Views/LoginPage/Login.php');
         }else
         {
-            $_SESSION['email'] = $email;
+            $_SESSION['login'] = $email;
             $_SESSION['senha'] = $senha;
             header('Location: /Views/PaginaApp/AppPrincipal.php');
         }
