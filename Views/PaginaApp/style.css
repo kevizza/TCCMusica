@@ -1,3 +1,12 @@
+/*------------------------------------------------------------------
+[ Responsive ]*/
+
+@media (max-width: 576px) {
+    .wrap-login100 {
+        padding: 77px 15px 33px 15px;
+    }
+}
+
 /*---------------------------------------------*/
 
 @font-face {
@@ -44,6 +53,7 @@ body {
     overflow-x: hidden;
     text-overflow: clip;
     background: #000;
+    max-width: 100%;
 }
 
 /*---------------------------------------------*/
@@ -103,8 +113,8 @@ a:active {
 header {
     background: #0f0113;
     grid-area: header;
-    height: 12vh;
-    width: 168vh;
+    height: 100%;
+    width: 100%;
     border-bottom: 1px solid rgb(65, 4, 83);
     transition: .3s ease;
 }
@@ -186,7 +196,7 @@ header .menu-top #nav1 ul li span {
 }
 
 header .menu-top #nav1 #divBusca {
-    margin-left: 10vh;
+    margin-left: 60%;
     background-color: #5600b928;
     border-radius: 30px;
     width: 60vh;
@@ -215,11 +225,11 @@ header .menu-top #nav1 #divBusca .bi {
 }
 
 header .menu-top #nav1 .user {
-    margin-right: -30px;
-    width: 15px;
-    height: 15px;
+    width: 5vh;
+    height: 5vh;
     border-radius: 10%;
     cursor: pointer;
+    margin-left: 700%;
 }
 
 header .menu-top #nav1 .user img {
@@ -227,6 +237,7 @@ header .menu-top #nav1 .user img {
     height: 5vh;
     border-radius: 50%;
     transition: .7s ease;
+
 }
 
 header .menu-top #nav1 .user img:hover {
@@ -243,8 +254,8 @@ header .menu-top #nav1 .user img:hover {
 #nav-side {
     background: #1c0720;
     grid-area: nav;
-    height: 90vh;
-    width: 40vh;
+    height: 100%;
+    width: 100%;
     color: #fff;
     overflow: hidden;
     text-align: justify;
@@ -364,8 +375,10 @@ header .menu-top #nav1 .user img:hover {
 section {
     background: #0f0113;
     grid-area: section;
-    height: 78vh;
-    overflow: auto;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 section #content {
@@ -388,11 +401,8 @@ section #content p {
 }
 
 section .menu-songs {
-    width: 150vh;
-    height: auto;
-    margin: auto;
-    margin-top: 28px;
-    margin-left: 40px;
+    width: 100%;
+    margin-top: 2%;
 }
 
 section .menu-songs .h4 {
@@ -752,24 +762,13 @@ input:focus {
     height: 9vh;
 }
 
-/*------------------------------------------------------------------
-[ Responsive ]*/
-
-@media (max-width: 576px) {
-    .wrap-login100 {
-        padding: 77px 15px 33px 15px;
-    }
-}
-
-
 /* emBaixo */
 
 footer {
     background: #17011d;
     grid-area: footer;
-    height: 10vh;
-    justify-content: center;
-    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 footer .master-play {
@@ -780,6 +779,7 @@ footer .master-play {
     height: 100%;
     /* border: 1px solid #fff; */
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 footer .master-play img {
@@ -969,4 +969,17 @@ footer .master-play .vol .dot::before {
     left: -5px;
     top: -5px;
     box-shadow: inset 0px 0px 3px #732678;
+}
+
+#bibliotecadiv{
+    display: none;
+    grid-area: section;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    border: 1px solid #fff;
+}
+#bibliotecadiv .biblioteca{
+    width: 100%;
+    height: 100%;
 }

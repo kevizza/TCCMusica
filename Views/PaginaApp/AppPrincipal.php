@@ -4,6 +4,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true
     unset($_SESSION['login']);
     unset($_SESSION['senha']);
     header('Location: Login.php');
+    
 }
 $logado = $_SESSION['login'];
 include_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
@@ -54,9 +55,11 @@ if (isset($_POST['submit'])) {
                             <input type="text" id="txtBusca" placeholder="Buscar..." />
                         </div>
                     </li>
-                    <div class="user">
-                        <img src="/Imgs/Logo_of.png" alt="" title="a">
+                    <li>
+                    <div class="user" id="user">
+                        <img src="/Imgs/pessoaicon.png" alt="" title="Seu perfil">
                     </div>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -94,41 +97,34 @@ if (isset($_POST['submit'])) {
 
             <div class="playlists">
                 <h1>Suas PlayLists:</h1>
-
                 <li class="songItem">
-                <?php
-                        // $sql = "SELECT nome_playlist,descricao,avatar_playlist FROM playlists where id_playlist='1'";
-                        // $result = $conexao->query($sql);
-                        ?>
-                    <img src="<?php echo $imagem_playlist ?>" />
-                    <!-- <h5>
-                    <?php
-                        // $sql = "SELECT nome_playlist,descricao,avatar_playlist FROM playlists where id_playlist='1'";
-                        // $result = $conexao->query($sql);
-                        ?>
-                    <?php
-                        // while ($row = mysqli_fetch_array($result)) {
-                        //     print $row['nome_playlist'];
-                        // }
-                        ?>
-                    </h5> -->
-                </li>
-                <li class="songItem">
-                    <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
+                    <img src="/Imgs/musicas/banner/14.jpg" alt="">
                     <h5>
-
+                        Aqui ficará o nome da playlist
                     </h5>
                 </li>
                 <li class="songItem">
-                    <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
+                    <img src="/Imgs/musicas/banner/14.jpg" alt="">
                     <h5>
-
+                        Aqui ficará o nome da playlist
                     </h5>
                 </li>
                 <li class="songItem">
-                    <img src="/Imgs/musicas/banner/as_it_was_Harry_styles.webp" alt="">
+                    <img src="/Imgs/musicas/banner/14.jpg" alt="">
                     <h5>
-
+                        Aqui ficará o nome da playlist
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <img src="/Imgs/musicas/banner/14.jpg" alt="">
+                    <h5>
+                        Aqui ficará o nome da playlist
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <img src="/Imgs/musicas/banner/14.jpg" alt="">
+                    <h5>
+                        Aqui ficará o nome da playlist
                     </h5>
                 </li>
             </div>
@@ -441,7 +437,6 @@ if (isset($_POST['submit'])) {
                 </div>
             </div>
         </div>
-        </div>
 
         <div id="criarplaylist" style="display: none;">
             <div class="limiter">
@@ -452,10 +447,10 @@ if (isset($_POST['submit'])) {
                                 CRIE UMA PLAYLIST
                             </span>
                             <div class="wrap-input100 validate-input" data-validate="Campo Obrigatorio">
-                                <input class="input100" type="text" name="nome_playlist" id="nome_playlist" placeholder="Nome">
+                                <input class="input100" type="text" name="nome_playlist" id="nome_playlist" placeholder="Nome" maxlength="30">
                             </div>
                             <div class="wrap-input100 validate-input">
-                                <textarea class="input100" type="text" name="descricao" id="descricao" placeholder="Descrição (opcional)"></textarea>
+                                <textarea class="input100" type="text" name="descricao" id="descricao" placeholder="Descrição (opcional)" maxlength="150"></textarea>
                             </div>
                             <div class="file">
                                 <input type="file" id="imagem_playlist" name="imagem_playlist" accept="image/png, image/jpeg">
@@ -474,12 +469,11 @@ if (isset($_POST['submit'])) {
                 </div>
             </div>
         </div>
-
-        <div id="bibliotecadiv" style="display: none;">
-            <div class="limiter">
-                a
+        <div id="bibliotecadiv">
+            <div class="biblioteca">
+                aaaaaaaaaaaaaaaaaaaaaaaaaa
             </div>
-        </div>
+            </div>
     </section>
 
 
@@ -519,7 +513,9 @@ if (isset($_POST['submit'])) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="/Views/PaginaApp/app.js"></script>
-    <script>
+    <script src="/Views/PaginaApp/app2.js"></script>
+</body>
+<script>
         var btn = document.querySelector("#criar_playlist");
         btn.addEventListener("click", function() {
             var div = document.querySelector("#home");
@@ -717,6 +713,4 @@ if (isset($_POST['submit'])) {
 
         });
     </script>
-</body>
-
 </html>

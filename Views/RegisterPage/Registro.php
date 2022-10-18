@@ -8,10 +8,18 @@ if (isset($_POST['submit'])) {
 	$senha = $_POST['senha'];
 	$date = $_POST['date'];
 	$nome_completo = $_POST['nome_completo'];
+	$imagem = $_POST['imagem'];
 
 
 	$result = mysqli_query($conexao, "INSERT INTO usuarios(username,email,senha,data_nasc,nome_completo, is_admin)
 	VALUES ('$username','$email','$senha','$date','$nome_completo', 'N')");
+
+	if(isset($_FILES['imagem'])){
+		$imagem = addslashes(file_get_contents($_FILES["imagem"]["tmp_name"]));	
+	} 
+	else {
+		$imagem = "/Imgs/pessoaicon.png";
+	}
 
 	header('Location: /Views/LoginPage/Login.php');
 }
