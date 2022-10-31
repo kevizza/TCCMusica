@@ -321,7 +321,8 @@ iframe {
   padding: 15px;
   background: black;
   background: url(/Imgs/fundo6.jpg);
-  background-size: 250vh;
+  background-position: -50vh;
+  object-fit: fill;
 }
 
 .wrap-login100 {

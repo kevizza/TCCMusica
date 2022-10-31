@@ -5,23 +5,42 @@ if (isset($_POST['submit'])) {
 
 	$username = $_POST['username'];
 	$email = $_POST['email'];
-	$senha = $_POST['senha'];
+	$senha = MD5($_POST['senha']);
 	$date = $_POST['date'];
 	$nome_completo = $_POST['nome_completo'];
-	$imagem = $_POST['imagem'];
+	$inpFile = $_POST['imagem'];
 
+	$query_select = "SELECT username FROM usuarios WHERE username = '$username'";
+	$select = mysqli_query($conexao, $query_select);
+	$array = mysqli_fetch_array($select);
+	$logarray = $array['username'];
+	
+	if($logarray == $username){
 
-	$result = mysqli_query($conexao, "INSERT INTO usuarios(username,email,senha,data_nasc,nome_completo, is_admin)
-	VALUES ('$username','$email','$senha','$date','$nome_completo', 'N')");
+       
+        echo"<script type='text/javascript'>
+        alert('Esse usuario já está registrado');window.location
+        .href='/Views/RegisterPage/Registro.php'</script>";
 
-	if(isset($_FILES['imagem'])){
-		$imagem = addslashes(file_get_contents($_FILES["imagem"]["tmp_name"]));	
-	} 
-	else {
-		$imagem = "/Imgs/pessoaicon.png";
-	}
+      }else{
+        $query = "INSERT INTO usuarios(username,email,senha,data_nasc,nome_completo, is_admin) VALUES ('$username','$email','$senha','$date','$nome_completo', 'N')";
+        $insert = mysqli_query($conexao, $query);
 
-	header('Location: /Views/LoginPage/Login.php');
+		if(isset($_FILES['inpFile'])){
+			$imagem = addslashes(file_get_contents($_FILES["inpFile"]["imagem"]));	
+		} 
+		else {
+			$imagem = "/Imgs/pessoaicon.png";
+		}
+
+        if($insert){
+          header('Location: /Views/LoginPage/Login.php');
+        }else{
+          echo"<script type='text/javascript'>
+          alert('Esse usuario já está registrado');window.location
+          .href='/Views/RegisterPage/Registro.php'</script>";
+        }
+      }
 }
 ?>
 
@@ -125,6 +144,8 @@ if (isset($_POST['submit'])) {
 						<p hidden>é admin?</p>
 						<input class="hidden" type="radio" name="is_admin" id="is_admin" hidden>
 					</div>
+
+					<input type="file" name="inpFile" id="inpFile" class="inputfile"  />
 
 
 					<div class="container-login100-form-btn">
