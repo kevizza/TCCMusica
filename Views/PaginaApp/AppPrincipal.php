@@ -82,11 +82,10 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($conexao, "INSERT INTO playlists(nome_playlist,descricao,imagem_playlist) 
 	VALUES ('$nome_playlist', '$descricao', '$imagem_playlist')");
 }
-if (isset($_POST['submitdesconectar'])) {
-    unset($_SESSION['login']); 
-    unset($_SESSION['senha']);
-    // header('Location: /Views/LoginPage/Login.php');
-}
+// if (isset($_POST['submit2'])) {
+//     // unset($_SESSION['login']); 
+//     // unset($_SESSION['senha']);
+//     header('Location: /Views/LoginPage/Login.php');
 
 ?>
 
@@ -106,12 +105,12 @@ if (isset($_POST['submitdesconectar'])) {
 </head>
 
 <body>
-    <header id="menu-top2">
+<header id="menu-top2">
         <div class="menu-top">
             <nav id="nav1">
                 <ul>
                     <li class="active">
-                        <a href="#" style="text-decoration:none" id="explorarbtn">HOME <span id="span2"></span> </a>
+                        <a href="#" style="text-decoration:none" id="explorarbtn">EXPLORAR <span id="span2"></span> </a>
                     </li>
                     <li class="off">
                         <a href="#" style="text-decoration:none" id="bibliotecabtn">SUA BIBLIOTECA</a>
@@ -124,23 +123,16 @@ if (isset($_POST['submitdesconectar'])) {
                     </li>
                     <li>
                         <div class="user" id="user">
-                        <?php
-                        $sql = "SELECT imagem from usuarios";
-
-                        $result = $conexao->query($sql);
-
-                        $row = mysqli_num_rows($result);
-                            ?>
-                            <?php echo '<img src="'.$row['imagem'].'">' ?>
+                            <img src="/Imgs/pessoaicon.png" alt="">
                             <script>
                                 var btn = document.querySelector("#user");
                                 btn.addEventListener("click", function() {
 
-                                    if (document.getElementById("menu-lado").style.left === "80vh") {
-                                        document.getElementById("menu-lado").style.left = "0vh";
+                                    if (document.getElementById("menu-lado").style.display === "none") {
+                                        document.getElementById("menu-lado").style.display = "block";
                                     } else {
-                                        document.getElementById("menu-lado").style.left = "0vh";
-                                        document.getElementById("menu-lado").style.left = "80vh";
+                                        document.getElementById("menu-lado").style.display = "block";
+                                        document.getElementById("menu-lado").style.display = "none";
                                     }
 
                                 });
@@ -158,7 +150,7 @@ if (isset($_POST['submitdesconectar'])) {
             <div class="playlist">
                 <a href="#" style="text-decoration: none;" id="explorarlado">
                     <h4 class="active" id="explorarh4">
-                        <span></span><i class="bi bi-house-door-fill"></i> Home
+                        <span></span><i class="bi bi-house-door-fill"></i> Explorar
                     </h4>
                 </a>
                 <a href="#" style="text-decoration: none;" id="bibliotecalado" style="color:white;">
@@ -170,55 +162,76 @@ if (isset($_POST['submitdesconectar'])) {
             <br>
             <hr style="height:1px;width:25vh;color:white;margin-left:6vh;">
             <br>
-            <div class="Mlist">
-                <a href="#" style="text-decoration:none" id="criar_playlist">
-                    <i class=" large material-icons">add_box</i>Criar Playlist
-                </a>
-
-                <h1></h1>
-            </div>
-            <br>
-            <hr style="height:1px;width:25vh;color:white;margin-left:6vh;">
-            <br>
 
 
             <div class="playlists">
                 <h1>Suas PlayLists:</h1>
                 <li class="songItem">
-                    <img src="/Imgs/musicas/banner/14.jpg" alt="">
+                <img src="/Imgs/musicas/banner/1.jpg" alt="">
+                <h5>Rockstar
+                <i class="bi musicPlay bi-play-fill" id="1" style="font-size: 2rem; position: relative;"></i>
+                        </h5>
+                </li>
+                <li class="songItem">
+                    <img src="/Imgs/musicas/banner/2.jpg" alt="">
                     <h5>
-                        Aqui ficará o nome da playlist
+                        Beliver
+                    </h5>
+                    <i class="bi musicPlay bi-play-fill" id="1"></i>
+                </li>
+                <li class="songItem">
+                    <img src="/Imgs/musicas/banner/3.jpg" alt="">
+                    <h5>
+                        Save Yours Tears
                     </h5>
                 </li>
                 <li class="songItem">
-                    <img src="/Imgs/musicas/banner/14.jpg" alt="">
+                    <img src="/Imgs/musicas/banner/4.jpg" alt="">
                     <h5>
-                        Aqui ficará o nome da playlist
+                        As It Was
                     </h5>
                 </li>
                 <li class="songItem">
-                    <img src="/Imgs/musicas/banner/14.jpg" alt="">
+                    <img src="/Imgs/musicas/banner/5.jpg" alt="">
                     <h5>
-                        Aqui ficará o nome da playlist
+                        Paradise
                     </h5>
                 </li>
                 <li class="songItem">
-                    <img src="/Imgs/musicas/banner/14.jpg" alt="">
+                    <img src="/Imgs/musicas/banner/6.jpg" alt="">
                     <h5>
-                        Aqui ficará o nome da playlist
+                        Stay
                     </h5>
                 </li>
                 <li class="songItem">
-                    <img src="/Imgs/musicas/banner/14.jpg" alt="">
+                    <img src="/Imgs/musicas/banner/7.jpg" alt="">
                     <h5>
-                        Aqui ficará o nome da playlist
+                        idfc
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <img src="/Imgs/musicas/banner/8.jpg" alt="">
+                    <h5>
+                        Ride
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <img src="/Imgs/musicas/banner/9.jpg" alt="">
+                    <h5>
+                        Locked Out Of Heaven
+                    </h5>
+                </li>
+                <li class="songItem">
+                    <img src="/Imgs/musicas/banner/10.jpg" alt="">
+                    <h5>
+                    Faded
                     </h5>
                 </li>
             </div>
         </div>
     </nav>
 
-    <section>
+    <section id="section">
         <div id="home">
             <div id="content">
                 <h1>Descubra novos Sons!</h1>
@@ -230,8 +243,6 @@ if (isset($_POST['submitdesconectar'])) {
                 <div class="h4">
                     <h3>Lançamentos</h3>
                     <div class="btn-s">
-                        <i id="left_scroll" class="bi bi-arrow-left-short"></i>
-                        <i id="right_scroll" class="bi bi-arrow-right-short"></i>
                     </div>
                 </div>
                 <div class="pop-songs">
@@ -342,8 +353,6 @@ if (isset($_POST['submitdesconectar'])) {
                 <div class="h4">
                     <h3>Em alta</h3>
                     <div class="btn-s">
-                        <i id="left_scroll" class="bi bi-arrow-left-short"></i>
-                        <i id="right_scroll" class="bi bi-arrow-right-short"></i>
                     </div>
                 </div>
                 <div class="pop-songs">
@@ -455,8 +464,6 @@ if (isset($_POST['submitdesconectar'])) {
                 <div class="h4">
                     <h3>Artistas Populares</h3>
                     <div class="btn-s">
-                        <i id="left_scroll" class="bi bi-arrow-left-short"></i>
-                        <i id="right_scroll" class="bi bi-arrow-right-short"></i>
                     </div>
                 </div>
                 <div class="pop-artistis">
@@ -532,49 +539,38 @@ if (isset($_POST['submitdesconectar'])) {
                 </div>
 
                 <div class="area2">
-                    <h3 id="config-text2">Perfil</h3>
-                    <h3 id="config-text2">Perfil</h3>
+                    <br>
+                    <button id="menu-btn"><h3 id="config-text2"><a href="#" style="text-decoration: none;">Perfil</a></h3></button>
+                    <script>
+                        var btn = document.querySelector("#menu-btn");
+                                btn.addEventListener("click", function() {
+
+                                    if (document.getElementById("home").style.display === "none") {
+                                        document.getElementById("perfildiv").style.display = "block";
+                                        document.getElementById("menu-lado").style.display = "none";
+                                    } else {
+                                        document.getElementById("home").style.display = "block";
+                                        document.getElementById("perfildiv").style.display = "none";
+                                        document.getElementById("menu-lado").style.display = "none";
+                                    }
+
+                                });
+                    </script>
+                    <hr style="color: white;">
                 </div>
-                <form action="AppPrincipal.php" method="POST">
                 <div class="btn-menu">
                 <button type="submit2" class="btn btn-danger" style="width: 10rem; height: 4rem;">Sair</button>
                 <button type="submit3" name="submitdesconectar" id="submitdesconectar" class="btn btn-danger" style="width: 10rem; height: 4rem;">Sair e Desconectar</button>
                 </div>
-                            </form>
             </div>
         </div>
 
-        <div id="criarplaylist" style="display: none;">
-            <div class="limiter">
-                <div class="container-login100">
-                    <div class="wrap-login100">
-                        <form class="login100-form validate-form" action="AppPrincipal.php" method="POST">
-                            <span class="login100-form-title p-b-26">
-                                CRIE UMA PLAYLIST
-                            </span>
-                            <div class="wrap-input100 validate-input" data-validate="Campo Obrigatorio">
-                                <input class="input100" type="text" name="nome_playlist" id="nome_playlist" placeholder="Nome" maxlength="30">
-                            </div>
-                            <div class="wrap-input100 validate-input">
-                                <textarea class="input100" type="text" name="descricao" id="descricao" placeholder="Descrição (opcional)" maxlength="150"></textarea>
-                            </div>
-                            <div class="file">
-                                <input type="file" id="imagem_playlist" name="imagem_playlist" accept="image/png, image/jpeg">
-                            </div>
-
-                            <div id="buttons">
-                                <button class="criar-form-btn" type="submit" name="submit" id="sub">
-                                    Criar
-                                </button>
-                                <button class="voltar-form-btn" id="voltar">
-                                    Voltar
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+        <div id="perfildiv">
+            <div class="perfil">
+                aaaaaaaaaaaaaaaaaaaaaaaaaa
             </div>
         </div>
+
         <div id="bibliotecadiv">
             <div class="biblioteca">
                 aaaaaaaaaaaaaaaaaaaaaaaaaa
@@ -622,53 +618,6 @@ if (isset($_POST['submitdesconectar'])) {
     <script src="/Views/PaginaApp/app2.js"></script>
 </body>
 <script>
-    var btn = document.querySelector("#criar_playlist");
-    btn.addEventListener("click", function() {
-
-        if (document.getElementById("home").style.display === "none") {
-            document.getElementById("home").style.display = "block";
-            document.getElementById("criarplaylist").style.display = "none";
-        } else {
-            document.getElementById("home").style.display = "none";
-            document.getElementById("criarplaylist").style.display = "block";
-            document.getElementById("home").style.width = "130rem";
-            document.getElementById("menu-top2").style.display = "none";
-            document.getElementById("nav-side").style.width = "25rem";
-        }
-    });
-</script>
-<script>
-    var btn = document.querySelector("#explorar");
-    btn.addEventListener("click", function() {
-        var div = document.querySelector("#home");
-        document.getElementById("criarplaylist").style.display = "none";
-
-        if (div.style.display === "none") {
-            div.style.display = "block";
-            document.getElementById("criarplaylist").style.display = "none";
-        } else {
-            div.style.display = "none";
-            document.getElementById("criarplaylist").style.display = "block";
-        }
-    });
-</script>
-<script>
-    var btn = document.querySelector("#voltar");
-    btn.addEventListener("click", function() {
-        var div = document.querySelector("#home");
-        document.getElementById("criarplaylist").style.display = "none";
-
-        if (div.style.display === "none") {
-            div.style.display = "block";
-            document.getElementById("criarplaylist").style.display = "none";
-        } else {
-            div.style.display = "none";
-            document.getElementById("criarplaylist").style.display = "block";
-        }
-
-    });
-</script>
-<script>
     var btn = document.querySelector("#bibliotecabtn");
     btn.addEventListener("click", function() {
         var div = document.querySelector("#home");
@@ -715,11 +664,6 @@ if (isset($_POST['submitdesconectar'])) {
         document.getElementById("bibliotecabtn").style.color = "gray";
         document.getElementById("explorarbtn").style.color = "#fff";
         document.getElementById("span2").style.marginLeft = "0vh";
-
-        // if (div.style.display === "block") {
-        //     div.style.display = "block";
-        //     document.getElementById("bibliotecadiv").style.display = "none";
-        // }
         if (div.style.display === "none") {
             div.style.display = "block";
             document.getElementById("#home").style.display = "block";

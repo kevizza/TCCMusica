@@ -1,3 +1,4 @@
+
 Create database if not exists tccweb;
 use tccweb;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";

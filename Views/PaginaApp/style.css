@@ -434,7 +434,7 @@ section .menu-songs .pop-songs {
 }
 
 section .menu-songs .pop-songs::-webkit-scrollbar {
-    display: none;
+    height: 1vh;
 }
 
 section .menu-songs .pop-songs .songItems {
@@ -548,7 +548,7 @@ section .menu-songs .pop-artistis {
 }
 
 section .menu-songs .pop-artistis::-webkit-scrollbar {
-    display: none;
+    height: 1vh;    
 }
 
 section .menu-songs .pop-artistis .artItems {
@@ -766,12 +766,12 @@ input:focus {
 .menu{
     float: right;
     top: -145.5%;
+    display: NONE;
     background-color: #280430;
     position: relative;
     width: 48%;
     justify-content: center;
     height: 100%;
-    left: 80vh;
     transition: .8s ease;
 }
 .menu .conteudo-menu{
@@ -793,9 +793,21 @@ input:focus {
     background-color: #420950;
     height: 50%;
     width: 100%;
-    display: list-item;
     margin-top: 4%;
     border-radius: 10px;
+}
+.menu #menu-btn{
+    width: 100%;
+    align-items: center;
+    height: 25%;
+    border: none;
+    background: rgba(0, 0, 0, 0);
+    opacity: 0.8;
+    transition: .7s ease;
+}
+.menu #menu-btn:hover{
+    opacity: 1;
+    background: #2e0438;
 }
 .menu #config-text1{
     color: white;
@@ -805,7 +817,6 @@ input:focus {
     color: white;
     font-size: 1.8rem;
     margin-left: 5%;
-    margin-top: 4%;
 }
 .menu .btn-menu{
     margin-top: 4rem;
@@ -813,6 +824,10 @@ input:focus {
     display: flex;
     background-color: #000;
     justify-content: space-between;
+}
+
+#perfildiv{
+    display: none;
 }
 
 /* emBaixo */
