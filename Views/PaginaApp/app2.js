@@ -1,20 +1,19 @@
 class UserNavbar{
-    constructor(userMenu, navList, navLinks){
+    constructor(userMenu, menu){
         this.userMenu = document.querySelector(userMenu);
-        this.navList = document.querySelector(navList);
-        this.navLinks = document.querySelectorAll(navLinks);
+        this.menu = document.querySelector(menu);
         this.activeClass = "active";
 
         this.handleClick = this.handleClick.bind(this);
     }
 
-    animateLinks() {
-        this.navLinks.forEach((link) => {
-            link.style.animation
-            ? (link.style.animation = "")
-            : (link.style.animation = `navLinkFade 0.5s ease forwards 0.3s`);
-        });
-    }
+    // animateLinks() {
+    //     this.menu.forEach((link) => {
+    //         link.style.animation
+    //         ? (link.style.animation = "")
+    //         : (link.style.animation = `navLinkFade 0.5s ease forwards 0.3s`);
+    //     });
+    // }
 
     handleClick() {
         this.navList.classList.toggle(this.activeClass);
@@ -33,11 +32,4 @@ class UserNavbar{
         return this;
     }
 }
-
-const mobileNavbar = new MobileNavbar(
-    ".user",
-    ".nav-list",
-    ".nav-list li",
-
-);
 mobileNavbar.init();

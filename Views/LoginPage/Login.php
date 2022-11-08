@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,6 +32,9 @@
 
   <!-- NavBar -->
   <header>
+    <?php
+  // print_r($_SESSION);
+  ?>
     <nav>
     <div class="logodiv">
 			<a class="logo" href="/index.html" style="text-decoration:none;">
@@ -70,7 +76,7 @@
             <span class="btn-show-pass">
               <i class="zmdi zmdi-eye"></i>
             </span>
-            <input class="input100" type="password" name="pass" id="pass" placeholder="Senha" required>
+            <input class="input100" type="password" name="senha" id="senha" placeholder="Senha" required>
             <!-- <span class="focus-input100" data-placeholder="Senha"></span> -->
           </div>
           <input name="lem_senha" type="checkbox" value="lem_senha"/> 

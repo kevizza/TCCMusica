@@ -1,12 +1,72 @@
 <?php
 session_start();
+// print_r($_SESSION);
 if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {
     unset($_SESSION['login']);
     unset($_SESSION['senha']);
-    header('Location: Login.php');
-    
+    echo '<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body style="justify-content: center; align-items: center; display: flex; background-color: black;">
+        <div style="position: relative; margin-top: -10rem; align-items: center; justify-content: center; height: 40rem; width: 100rem; display: flex; flex-direction: column; ">
+        <img src="/Imgs/Logo_of.png" style="width: 7rem; height: 7rem;">
+        <H1 style="color: white; font-size: 6rem; text-shadow: 0rem 0rem 1rem #000;">Você não está Logado!</H1>
+        <p style="color: white; font-size: 2rem; margin-top: -4rem; text-shadow: 0rem 0rem 1rem #000;">é necessario logar para acessar o website</p>
+            <Button><a href="/Views/LoginPage/Login.php" style="text-decoration: none;">Logar</a></Button>
+            
+        </div>
+        <Style>
+            body{
+                background: url(/Imgs/fundo_semlogin.gif);
+                /* background-size: 200rem; */
+            }
+            img{
+                opacity: 0;
+                animation-name: logo;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            a{
+                color: white;
+            }
+            button{
+                width: 12rem;
+                height: 4rem;
+                text-transform: uppercase;
+                color: black;
+                font-size: 1.5rem;
+                border: none;
+                border-radius: 2rem;
+                background: #42275a; 
+                background: -webkit-linear-gradient(to right, #734b6d, #42275a); 
+                background: linear-gradient(to right, #734b6d, #42275a); 
+                transition: .7s ease;
+                opacity: 0.6;
+                cursor: pointer;
+            }
+            button:hover{
+                width: 10rem;
+                height: 3rem;
+                font-size: 1.3rem;
+                opacity: 1;
+            }
+            @keyframes logo{
+                from{
+                    opacity: 0;
+                }to{
+                    opacity: 1;
+                }
+            }
+        </Style>
+    </body>
+    </html>';
 }
-$logado = $_SESSION['login'];
 include_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
 if (isset($_POST['submit'])) {
@@ -15,12 +75,18 @@ if (isset($_POST['submit'])) {
     $descricao = $_POST['descricao'];
     $imagem_playlist = $_POST['imagem_playlist'];
 
-    if(isset($_FILES['imagem_playlist'])) $imagem_playlist = addslashes(file_get_contents($_FILES["imagem_playlist"]["tmp_name"]));
+    if (isset($_FILES['imagem_playlist'])) $imagem_playlist = addslashes(file_get_contents($_FILES["imagem_playlist"]["tmp_name"]));
     else $imagem_playlist = "/Imgs/playlistdeafult.jpg";
 
     $result = mysqli_query($conexao, "INSERT INTO playlists(nome_playlist,descricao,imagem_playlist) 
 	VALUES ('$nome_playlist', '$descricao', '$imagem_playlist')");
 }
+if (isset($_POST['submitdesconectar'])) {
+    unset($_SESSION['login']); 
+    unset($_SESSION['senha']);
+    // header('Location: /Views/LoginPage/Login.php');
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -56,9 +122,22 @@ if (isset($_POST['submit'])) {
                         </div>
                     </li>
                     <li>
-                    <div class="user" id="user">
-                        <img src="/Imgs/pessoaicon.png" alt="" title="Seu perfil">
-                    </div>
+                        <div class="user" id="user">
+                            <img src="/Imgs/pessoaicon.png" alt="" title="Seu perfil">
+                            <script>
+                                var btn = document.querySelector("#user");
+                                btn.addEventListener("click", function() {
+
+                                    if (document.getElementById("menu-lado").style.left === "80vh") {
+                                        document.getElementById("menu-lado").style.left = "0vh";
+                                    } else {
+                                        document.getElementById("menu-lado").style.left = "0vh";
+                                        document.getElementById("menu-lado").style.left = "80vh";
+                                    }
+
+                                });
+                            </script>
+                        </div>
                     </li>
                 </ul>
             </nav>
@@ -438,6 +517,25 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
 
+        <div class="menu" id="menu-lado">
+            <div class="conteudo-menu">
+                <div class="area1">
+                    <h3 id="config-text1">Configurações</h3>
+                </div>
+
+                <div class="area2">
+                    <h3 id="config-text2">Perfil</h3>
+                    <h3 id="config-text2">Perfil</h3>
+                </div>
+                <form action="AppPrincipal.php" method="POST">
+                <div class="btn-menu">
+                <button type="submit2" class="btn btn-danger" style="width: 10rem; height: 4rem;">Sair</button>
+                <button type="submit3" name="submitdesconectar" id="submitdesconectar" class="btn btn-danger" style="width: 10rem; height: 4rem;">Sair e Desconectar</button>
+                </div>
+                            </form>
+            </div>
+        </div>
+
         <div id="criarplaylist" style="display: none;">
             <div class="limiter">
                 <div class="container-login100">
@@ -473,9 +571,8 @@ if (isset($_POST['submit'])) {
             <div class="biblioteca">
                 aaaaaaaaaaaaaaaaaaaaaaaaaa
             </div>
-            </div>
+        </div>
     </section>
-
 
     <footer>
         <div class="master-play">
@@ -505,10 +602,11 @@ if (isset($_POST['submit'])) {
         </div>
         </div>
     </footer>
-
+                           
 
 
     <!-- Scripts -->
+    <script src="sweetalert2/dist/sweetalert2.min.js">Swal.fire('Any fool can use a computer')</script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -516,201 +614,202 @@ if (isset($_POST['submit'])) {
     <script src="/Views/PaginaApp/app2.js"></script>
 </body>
 <script>
-        var btn = document.querySelector("#criar_playlist");
-        btn.addEventListener("click", function() {
-            var div = document.querySelector("#home");
+    var btn = document.querySelector("#criar_playlist");
+    btn.addEventListener("click", function() {
+        var div = document.querySelector("#home");
+        document.getElementById("criarplaylist").style.display = "none";
+
+        if (div.style.display === "none") {
+            div.style.display = "block";
             document.getElementById("criarplaylist").style.display = "none";
+        } else {
+            div.style.display = "none";
+            document.getElementById("criarplaylist").style.display = "block";
+        }
+    });
+</script>
+<script>
+    var btn = document.querySelector("#explorar");
+    btn.addEventListener("click", function() {
+        var div = document.querySelector("#home");
+        document.getElementById("criarplaylist").style.display = "none";
 
-            if (div.style.display === "none") {
-                div.style.display = "block";
-                document.getElementById("criarplaylist").style.display = "none";
-            } else {
-                div.style.display = "none";
-                document.getElementById("criarplaylist").style.display = "block";
-            }
-        });
-    </script>
-    <script>
-        var btn = document.querySelector("#explorar");
-        btn.addEventListener("click", function() {
-            var div = document.querySelector("#home");
+        if (div.style.display === "none") {
+            div.style.display = "block";
             document.getElementById("criarplaylist").style.display = "none";
+        } else {
+            div.style.display = "none";
+            document.getElementById("criarplaylist").style.display = "block";
+        }
+    });
+</script>
+<script>
+    var btn = document.querySelector("#voltar");
+    btn.addEventListener("click", function() {
+        var div = document.querySelector("#home");
+        document.getElementById("criarplaylist").style.display = "none";
 
-            if (div.style.display === "none") {
-                div.style.display = "block";
-                document.getElementById("criarplaylist").style.display = "none";
-            } else {
-                div.style.display = "none";
-                document.getElementById("criarplaylist").style.display = "block";
-            }
-        });
-    </script>
-    <script>
-        var btn = document.querySelector("#voltar");
-        btn.addEventListener("click", function() {
-            var div = document.querySelector("#home");
+        if (div.style.display === "none") {
+            div.style.display = "block";
             document.getElementById("criarplaylist").style.display = "none";
+        } else {
+            div.style.display = "none";
+            document.getElementById("criarplaylist").style.display = "block";
+        }
 
-            if (div.style.display === "none") {
-                div.style.display = "block";
-                document.getElementById("criarplaylist").style.display = "none";
-            } else {
-                div.style.display = "none";
-                document.getElementById("criarplaylist").style.display = "block";
-            }
+    });
+</script>
+<script>
+    var btn = document.querySelector("#bibliotecabtn");
+    btn.addEventListener("click", function() {
+        var div = document.querySelector("#home");
+        document.getElementById("bibliotecadiv").style.display = "none";
+        document.getElementById("span2").style.marginLeft = "0vh";
+        document.getElementById("bibliotecabtn").style.color = "gray";
+        document.getElementById("explorarbtn").style.color = "#fff";
 
-        });
-    </script>
-    <script>
-        var btn = document.querySelector("#bibliotecabtn");
-        btn.addEventListener("click", function() {
-            var div = document.querySelector("#home");
+        if (document.getElementById("bibliotecadiv").style.display == "block") {
             document.getElementById("bibliotecadiv").style.display = "none";
+            document.getElementById("bibliotecabtn").style.color = "#fff";
             document.getElementById("span2").style.marginLeft = "0vh";
-            document.getElementById("bibliotecabtn").style.color = "gray";
-            document.getElementById("explorarbtn").style.color = "#fff";
+            document.getElementById("explorarbtn").style.color = "gray";
+            document.getElementById('bibliotecah4').classList.remove('active');
+            document.getElementById('bibliotecah4').classList.add('off');
+            document.getElementById('explorarh4').classList.remove('off');
+            document.getElementById('explorarh4').classList.add('active');
+        }
 
-            if (document.getElementById("bibliotecadiv").style.display == "block") {
-                document.getElementById("bibliotecadiv").style.display = "none";
-                document.getElementById("bibliotecabtn").style.color = "#fff";
-                document.getElementById("span2").style.marginLeft = "0vh";
-                document.getElementById("explorarbtn").style.color = "gray";
-                document.getElementById('bibliotecah4').classList.remove('active');
-                document.getElementById('bibliotecah4').classList.add('off');
-                document.getElementById('explorarh4').classList.remove('off');
-                document.getElementById('explorarh4').classList.add('active');
-            }
-
-            if (div.style.display === "none") {
-                div.style.display = "block";
-                document.getElementById("#home").style.display = "block";
-                document.getElementById("span2").style.marginLeft = "0vh";
-                document.getElementById("bibliotecadiv").style.display = "none";
-            } else {
-                div.style.display = "none";
-                document.getElementById("bibliotecadiv").style.display = "block";
-                document.getElementById("bibliotecabtn").style.color = "#fff";
-                document.getElementById("span2").style.marginLeft = "20vh";
-                document.getElementById("explorarbtn").style.color = "gray";
-                document.getElementById('bibliotecah4').classList.remove('off');
-                document.getElementById('bibliotecah4').classList.add('active');
-                document.getElementById('explorarh4').classList.remove('active');
-                document.getElementById('explorarh4').classList.add('off');
-            }
-
-        });
-    </script>
-
-    <script>
-        var btn = document.querySelector("#explorarbtn");
-        btn.addEventListener("click", function() {
-            var div = document.querySelector("#home");
-            document.getElementById("bibliotecabtn").style.color = "gray";
-            document.getElementById("explorarbtn").style.color = "#fff";
+        if (div.style.display === "none") {
+            div.style.display = "block";
+            document.getElementById("#home").style.display = "block";
             document.getElementById("span2").style.marginLeft = "0vh";
-
-            // if (div.style.display === "block") {
-            //     div.style.display = "block";
-            //     document.getElementById("bibliotecadiv").style.display = "none";
-            // }
-            if (div.style.display === "none") {
-                div.style.display = "block";
-                document.getElementById("#home").style.display = "block";
-                document.getElementById("bibliotecadiv").style.display = "none";
-                document.getElementById("criarplaylist").style.display = "none";
-                document.getElementById("bibliotecabtn").style.color = "#fff";
-                document.getElementById("explorarbtn").style.color = "gray";
-                document.getElementById('bibliotecah4').classList.remove('active');
-                document.getElementById('bibliotecah4').classList.add('off');
-                document.getElementById('explorarh4').classList.remove('off');
-                document.getElementById('explorarh4').classList.add('active');
-            }
-            if (div.style.display == "block") {
-                div.style.display = "none";
-                document.getElementById("bibliotecadiv").style.display = "block";
-                document.getElementById("bibliotecabtn").style.color = "gray";
-                document.getElementById("span2").style.marginLeft = "0vh"
-                document.getElementById("explorarbtn").style.color = "#fff";
-                document.getElementById('bibliotecah4').classList.remove('off');
-                document.getElementById('bibliotecah4').classList.add('active');
-                document.getElementById('explorarh4').classList.remove('active');
-                document.getElementById('explorarh4').classList.add('off');
-            }
-
-        });
-    </script>
-
-    <script>
-        var btn = document.querySelector("#bibliotecalado");
-        btn.addEventListener("click", function() {
-            var div = document.querySelector("#home");
             document.getElementById("bibliotecadiv").style.display = "none";
-            document.getElementById("span2").style.marginLeft = "0vh";
+        } else {
+            div.style.display = "none";
+            document.getElementById("bibliotecadiv").style.display = "block";
+            document.getElementById("bibliotecabtn").style.color = "#fff";
+            document.getElementById("span2").style.marginLeft = "20vh";
+            document.getElementById("explorarbtn").style.color = "gray";
+            document.getElementById('bibliotecah4').classList.remove('off');
+            document.getElementById('bibliotecah4').classList.add('active');
+            document.getElementById('explorarh4').classList.remove('active');
+            document.getElementById('explorarh4').classList.add('off');
+        }
+
+    });
+</script>
+
+<script>
+    var btn = document.querySelector("#explorarbtn");
+    btn.addEventListener("click", function() {
+        var div = document.querySelector("#home");
+        document.getElementById("bibliotecabtn").style.color = "gray";
+        document.getElementById("explorarbtn").style.color = "#fff";
+        document.getElementById("span2").style.marginLeft = "0vh";
+
+        // if (div.style.display === "block") {
+        //     div.style.display = "block";
+        //     document.getElementById("bibliotecadiv").style.display = "none";
+        // }
+        if (div.style.display === "none") {
+            div.style.display = "block";
+            document.getElementById("#home").style.display = "block";
+            document.getElementById("bibliotecadiv").style.display = "none";
+            document.getElementById("criarplaylist").style.display = "none";
+            document.getElementById("bibliotecabtn").style.color = "#fff";
+            document.getElementById("explorarbtn").style.color = "gray";
+            document.getElementById('bibliotecah4').classList.remove('active');
+            document.getElementById('bibliotecah4').classList.add('off');
+            document.getElementById('explorarh4').classList.remove('off');
+            document.getElementById('explorarh4').classList.add('active');
+        }
+        if (div.style.display == "block") {
+            div.style.display = "none";
+            document.getElementById("bibliotecadiv").style.display = "block";
             document.getElementById("bibliotecabtn").style.color = "gray";
+            document.getElementById("span2").style.marginLeft = "0vh"
             document.getElementById("explorarbtn").style.color = "#fff";
-            document.getElementById("bibliotecalado").style.color = "gray";
+            document.getElementById('bibliotecah4').classList.remove('off');
+            document.getElementById('bibliotecah4').classList.add('active');
+            document.getElementById('explorarh4').classList.remove('active');
+            document.getElementById('explorarh4').classList.add('off');
+        }
 
-            if (div.style.display === "none") {
-                div.style.display = "block";
-                document.getElementById("#home").style.display = "block";
-                document.getElementById("bibliotecadiv").style.display = "none";
-                document.getElementById('bibliotecah4').classList.remove('active');
-                document.getElementById('bibliotecah4').classList.add('off');
-                document.getElementById('explorarh4').classList.remove('off');
-                document.getElementById('explorarh4').classList.add('active');
-            } else {
-                div.style.display = "none";
-                document.getElementById("bibliotecadiv").style.display = "block";
-                document.getElementById("bibliotecabtn").style.color = "#fff";
-                document.getElementById("span2").style.marginLeft = "20vh";
-                document.getElementById("explorarbtn").style.color = "gray";
-                document.getElementById("explorarlado").style.color = "white";
-                document.getElementById('bibliotecah4').classList.remove('off');
-                document.getElementById('bibliotecah4').classList.add('active');
-                document.getElementById('explorarh4').classList.remove('active');
-                document.getElementById('explorarh4').classList.add('off');
-            }
+    });
+</script>
 
-        });
-    </script>
+<script>
+    var btn = document.querySelector("#bibliotecalado");
+    btn.addEventListener("click", function() {
+        var div = document.querySelector("#home");
+        document.getElementById("bibliotecadiv").style.display = "none";
+        document.getElementById("span2").style.marginLeft = "0vh";
+        document.getElementById("bibliotecabtn").style.color = "gray";
+        document.getElementById("explorarbtn").style.color = "#fff";
+        document.getElementById("bibliotecalado").style.color = "gray";
 
-    <script>
-        var btn = document.querySelector("#explorarlado");
-        btn.addEventListener("click", function() {
-            var div = document.querySelector("#home");
+        if (div.style.display === "none") {
+            div.style.display = "block";
+            document.getElementById("#home").style.display = "block";
+            document.getElementById("bibliotecadiv").style.display = "none";
+            document.getElementById('bibliotecah4').classList.remove('active');
+            document.getElementById('bibliotecah4').classList.add('off');
+            document.getElementById('explorarh4').classList.remove('off');
+            document.getElementById('explorarh4').classList.add('active');
+        } else {
+            div.style.display = "none";
+            document.getElementById("bibliotecadiv").style.display = "block";
+            document.getElementById("bibliotecabtn").style.color = "#fff";
+            document.getElementById("span2").style.marginLeft = "20vh";
+            document.getElementById("explorarbtn").style.color = "gray";
+            document.getElementById("explorarlado").style.color = "white";
+            document.getElementById('bibliotecah4').classList.remove('off');
+            document.getElementById('bibliotecah4').classList.add('active');
+            document.getElementById('explorarh4').classList.remove('active');
+            document.getElementById('explorarh4').classList.add('off');
+        }
+
+    });
+</script>
+
+<script>
+    var btn = document.querySelector("#explorarlado");
+    btn.addEventListener("click", function() {
+        var div = document.querySelector("#home");
+        document.getElementById("bibliotecabtn").style.color = "gray";
+        document.getElementById("explorarbtn").style.color = "#fff";
+        document.getElementById("span2").style.marginLeft = "0vh";
+
+        if (div.style.display === "block") {
+            div.style.display = "block";
+            document.getElementById("bibliotecadiv").style.display = "none";
+        }
+        if (div.style.display === "none") {
+            div.style.display = "block";
+            document.getElementById("#home").style.display = "block";
+            document.getElementById("bibliotecadiv").style.display = "none";
+            document.getElementById("criarplaylist").style.display = "none";
             document.getElementById("bibliotecabtn").style.color = "gray";
+            document.getElementById("span2").style.marginLeft = "0vh"
             document.getElementById("explorarbtn").style.color = "#fff";
-            document.getElementById("span2").style.marginLeft = "0vh";
+            document.getElementById('bibliotecah4').classList.remove('active');
+            document.getElementById('bibliotecah4').classList.add('off');
+            document.getElementById('explorarh4').classList.remove('off');
+            document.getElementById('explorarh4').classList.add('active');
 
-            if (div.style.display === "block") {
-                div.style.display = "block";
-                document.getElementById("bibliotecadiv").style.display = "none";
-            }
-            if (div.style.display === "none") {
-                div.style.display = "block";
-                document.getElementById("#home").style.display = "block";
-                document.getElementById("bibliotecadiv").style.display = "none";
-                document.getElementById("criarplaylist").style.display = "none";
-                document.getElementById("bibliotecabtn").style.color = "gray";
-                document.getElementById("span2").style.marginLeft = "0vh"
-                document.getElementById("explorarbtn").style.color = "#fff";
-                document.getElementById('bibliotecah4').classList.remove('active');
-                document.getElementById('bibliotecah4').classList.add('off');
-                document.getElementById('explorarh4').classList.remove('off');
-                document.getElementById('explorarh4').classList.add('active');
-                
-            }
-            if (div.style.display == "block") {
-                div.style.display = "none";
-                document.getElementById("bibliotecadiv").style.display = "block";
-                document.getElementById("bibliotecabtn").style.color = "#fff";
-                document.getElementById("explorarbtn").style.color = "gray";
-                document.getElementById('bibliotecah4').classList.remove('off');
-                document.getElementById('bibliotecah4').classList.add('active');
-                document.getElementById('explorarh4').classList.remove('active');
-                document.getElementById('explorarh4').classList.add('off');
-            }
+        }
+        if (div.style.display == "block") {
+            div.style.display = "none";
+            document.getElementById("bibliotecadiv").style.display = "block";
+            document.getElementById("bibliotecabtn").style.color = "#fff";
+            document.getElementById("explorarbtn").style.color = "gray";
+            document.getElementById('bibliotecah4').classList.remove('off');
+            document.getElementById('bibliotecah4').classList.add('active');
+            document.getElementById('explorarh4').classList.remove('active');
+            document.getElementById('explorarh4').classList.add('off');
+        }
 
-        });
-    </script>
+    });
+</script>
+
 </html>
