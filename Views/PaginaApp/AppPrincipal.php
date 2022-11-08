@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 // print_r($_SESSION);
 if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {
     unset($_SESSION['login']);
@@ -13,7 +14,7 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true
         <title>Document</title>
     </head>
     <body style="justify-content: center; align-items: center; display: flex; background-color: black;">
-        <div style="position: relative; margin-top: -10rem; align-items: center; justify-content: center; height: 40rem; width: 100rem; display: flex; flex-direction: column; ">
+        <div style="position: relative; margin-top: 2rem; align-items: center; justify-content: center; height: 40rem; width: 100rem; display: flex; flex-direction: column; ">
         <img src="/Imgs/Logo_of.png" style="width: 7rem; height: 7rem;">
         <H1 style="color: white; font-size: 6rem; text-shadow: 0rem 0rem 1rem #000;">Você não está Logado!</H1>
         <p style="color: white; font-size: 2rem; margin-top: -4rem; text-shadow: 0rem 0rem 1rem #000;">é necessario logar para acessar o website</p>
@@ -66,8 +67,8 @@ if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true
         </Style>
     </body>
     </html>';
+    die;
 }
-include_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 
 if (isset($_POST['submit'])) {
 
@@ -105,7 +106,7 @@ if (isset($_POST['submitdesconectar'])) {
 </head>
 
 <body>
-    <header>
+    <header id="menu-top2">
         <div class="menu-top">
             <nav id="nav1">
                 <ul>
@@ -123,7 +124,14 @@ if (isset($_POST['submitdesconectar'])) {
                     </li>
                     <li>
                         <div class="user" id="user">
-                            <img src="/Imgs/pessoaicon.png" alt="" title="Seu perfil">
+                        <?php
+                        $sql = "SELECT imagem from usuarios";
+
+                        $result = $conexao->query($sql);
+
+                        $row = mysqli_num_rows($result);
+                            ?>
+                            <?php echo '<img src="'.$row['imagem'].'">' ?>
                             <script>
                                 var btn = document.querySelector("#user");
                                 btn.addEventListener("click", function() {
@@ -616,15 +624,16 @@ if (isset($_POST['submitdesconectar'])) {
 <script>
     var btn = document.querySelector("#criar_playlist");
     btn.addEventListener("click", function() {
-        var div = document.querySelector("#home");
-        document.getElementById("criarplaylist").style.display = "none";
 
-        if (div.style.display === "none") {
-            div.style.display = "block";
+        if (document.getElementById("home").style.display === "none") {
+            document.getElementById("home").style.display = "block";
             document.getElementById("criarplaylist").style.display = "none";
         } else {
-            div.style.display = "none";
+            document.getElementById("home").style.display = "none";
             document.getElementById("criarplaylist").style.display = "block";
+            document.getElementById("home").style.width = "130rem";
+            document.getElementById("menu-top2").style.display = "none";
+            document.getElementById("nav-side").style.width = "25rem";
         }
     });
 </script>

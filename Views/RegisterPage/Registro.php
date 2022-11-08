@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
 	$senha = MD5($_POST['senha']);
 	$date = $_POST['date'];
 	$nome_completo = $_POST['nome_completo'];
-	$inpFile = $_POST['imagem'];
+	$imagem_user = $_POST['imagem_user'];
 
 	$query_select = "SELECT username FROM usuarios WHERE username = '$username'";
 	$select = mysqli_query($conexao, $query_select);
@@ -23,15 +23,9 @@ if (isset($_POST['submit'])) {
         .href='/Views/RegisterPage/Registro.php'</script>";
 
       }else{
-        $query = "INSERT INTO usuarios(username,email,senha,data_nasc,nome_completo, is_admin) VALUES ('$username','$email','$senha','$date','$nome_completo', 'N')";
-        $insert = mysqli_query($conexao, $query);
 
-		if(isset($_FILES['inpFile'])){
-			$imagem = addslashes(file_get_contents($_FILES["inpFile"]["imagem"]));	
-		} 
-		else {
-			$imagem = "/Imgs/pessoaicon.png";
-		}
+        $query = "INSERT INTO usuarios(username,email,senha,data_nasc,nome_completo, is_admin, imagem) VALUES ('$username','$email','$senha','$date','$nome_completo', 'N', 'pessoaicon.png')";
+        $insert = mysqli_query($conexao, $query);
 
         if($insert){
           header('Location: /Views/LoginPage/Login.php');
@@ -145,7 +139,7 @@ if (isset($_POST['submit'])) {
 						<input class="hidden" type="radio" name="is_admin" id="is_admin" hidden>
 					</div>
 
-					<input type="file" name="inpFile" id="inpFile" class="inputfile"  />
+					<input type="file" name="imagem_user" id="imagem_user" class="inputfile"  hidden/>
 
 
 					<div class="container-login100-form-btn">
