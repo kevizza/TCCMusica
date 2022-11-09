@@ -206,14 +206,14 @@ music.addEventListener('timeupdate',()=>{
     let min = Math.floor(music_dur/60);
     let sec = Math.floor(music_dur%60);
     if (sec<10) {
-        sec = `0${sec}`
+        sec = `0${sec}`;
     }
     currentEnd.innerText = `${min}:${sec}`;
 
     let min1 = Math.floor(music_curr/60);
     let sec1 = Math.floor(music_curr%60);
     if (sec1<10) {
-        sec1 = `0${sec1}`
+        sec1 = `0${sec1}`;
     }
 
     currentStart.innerText = `${min1}:${sec1}`;
@@ -226,7 +226,7 @@ music.addEventListener('timeupdate',()=>{
 })
 
 seek.addEventListener('change', ()=>{
-    music.currentTime = seek.value * music.duration/100;
+    music.currentTime = seek.value * music_durr/100;
 })
 music.addEventListener('ended', ()=> {
     index -= 0;
@@ -279,8 +279,8 @@ vol.addEventListener('change', ()=>{
     music.volume = vol_a/100;
 })
 
-let back = document.getElementById('skip1')
-let next = document.getElementById('skip2')
+let back = document.getElementById('skip1');
+let next = document.getElementById('skip2');
 
 back.addEventListener('click', ()=> {
     index -= 1;

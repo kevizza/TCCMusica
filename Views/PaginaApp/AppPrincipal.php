@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 include_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
 // print_r($_SESSION);
 if ((!isset($_SESSION['login']) == true) and (!isset($_SESSION['senha']) == true)) {
@@ -113,7 +114,6 @@ if (isset($_POST['submit'])) {
                     </li>
                     <li>
                         <div class="user" id="user">
-                            <img src="/Imgs/pessoaicon.png" alt="">
                             <script>
                                 var btn = document.querySelector("#user");
                                 btn.addEventListener("click", function() {
@@ -581,8 +581,9 @@ if (isset($_POST['submit'])) {
                     <hr style="color: white;">
                 </div>
                 <div class="btn-menu">
-                <button type="submit2" class="btn btn-danger" style="width: 10rem; height: 4rem;">Sair</button>
-                <button type="submit3" name="submitdesconectar" id="submitdesconectar" class="btn btn-danger" style="width: 10rem; height: 4rem;">Sair e Desconectar</button>
+                <button type="submit2"
+                 name="sair" id="sair">Sair</button>
+                <button type="submit3" name="desconectar" id="desconectar" >Sair e Desconectar</button>
                 </div>
             </div>
         </div>

@@ -1,43 +1,3 @@
-<?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/config.php';
-
-if (isset($_POST['submit'])) {
-
-	$username = $_POST['username'];
-	$email = $_POST['email'];
-	$senha = MD5($_POST['senha']);
-	$date = $_POST['date'];
-	$nome_completo = $_POST['nome_completo'];
-	$imagem_user = $_POST['imagem_user'];
-
-	$query_select = "SELECT username FROM usuarios WHERE username = '$username'";
-	$select = mysqli_query($conexao, $query_select);
-	$array = mysqli_fetch_array($select);
-	$logarray = $array['username'];
-	
-	if($logarray == $username){
-
-       
-        echo"<script type='text/javascript'>
-        alert('Esse usuario já está registrado');window.location
-        .href='/Views/RegisterPage/Registro.php'</script>";
-
-      }else{
-
-        $query = "INSERT INTO usuarios(username,email,senha,data_nasc,nome_completo, is_admin, imagem) VALUES ('$username','$email','$senha','$date','$nome_completo', 'N', 'pessoaicon.png')";
-        $insert = mysqli_query($conexao, $query);
-
-        if($insert){
-          header('Location: /Views/LoginPage/Login.php');
-        }else{
-          echo"<script type='text/javascript'>
-          alert('Esse usuario já está registrado');window.location
-          .href='/Views/RegisterPage/Registro.php'</script>";
-        }
-      }
-}
-?>
-
 <html>
 
 <head>
@@ -95,7 +55,7 @@ if (isset($_POST['submit'])) {
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form class="login100-form validate-form" action="Registro.php" method="POST">
+				<form class="login100-form validate-form" action="/Views/RegisterPage/regristrar.php" method="POST">
 					<span class="login100-form-title p-b-26">
 						REGISTRO
 					</span>
@@ -139,7 +99,7 @@ if (isset($_POST['submit'])) {
 						<input class="hidden" type="radio" name="is_admin" id="is_admin" hidden>
 					</div>
 
-					<input type="file" name="imagem_user" id="imagem_user" class="inputfile"  hidden/>
+					<input type="file" name="imagem" id="imagem" class="inputfile"/>
 
 
 					<div class="container-login100-form-btn">

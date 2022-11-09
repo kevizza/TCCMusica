@@ -299,27 +299,6 @@ header .menu-top #nav1 .user img:hover {
     color: #b178bd;
 }
 
-#nav-side .menu-side .Mlist {
-    padding-left: 18px;
-    margin: 0px 0px 0px 0px;
-}
-
-#nav-side .menu-side .Mlist a {
-    display: flex;
-    font-size: 3vh;
-    color: white;
-}
-
-#nav-side .menu-side .Mlist a:hover {
-    color: #b178bd;
-    transition: .7s ease;
-}
-
-#nav-side .menu-side .Mlist a i {
-    margin-right: 10px;
-    font-size: 5vh;
-}
-
 #nav-side .playlists {
     width: 100%;
     height: 20%;
@@ -808,6 +787,7 @@ input:focus {
     position: absolute;
     width: 30%;
     justify-content: center;
+    align-items: center;
     height: 60%;
     top: 10.5vh;
     transition: .8s ease;
@@ -858,10 +838,42 @@ input:focus {
 }
 .menu .btn-menu{
     margin-top: 4rem;
-    width: 50%;
+    width: 100%;
     display: flex;
-    background-color: #000;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+}
+#sair{
+    width: 20vh;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: #ab555f;
+    border-radius: 10px;
+    transition: .5s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#desconectar{
+    width: 20vh;
+    height: 5vh;
+    display: flex;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: .5s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#sair:hover{
+    background-color: #f64358;
+}
+#desconectar:hover{
+    background-color: #000000;
+    color: #fff;
 }
 
 #perfildiv{
@@ -979,7 +991,7 @@ footer .master-play .bar .bar2 {
     width: 0%;
     height: 100%;
     top: 0;
-    transition: 0.5s ease;
+    transition: 0s linear;
 }
 
 footer .master-play .bar .dot {
@@ -990,7 +1002,7 @@ footer .master-play .bar .dot {
     border-radius: 50%;
     left: 0%;
     top: -1px;
-    transition: 1s linear;
+    transition: 0s linear;
 }
 
 footer .master-play .bar .dot::before {
@@ -1012,8 +1024,8 @@ footer .master-play .bar input {
     left: 0;
     cursor: pointer;
     z-index: 99999999;
-    transition: 3s linear;
-    opacity: 0;
+    transition: 0s linear;
+    opacity: 1;
 }
 
 footer .master-play .vol {

@@ -7,7 +7,6 @@
 
         $login = $_POST['login'];
         $senha = md5($_POST['senha']);
-
         $sql = "SELECT * from usuarios where username='$login' or email='$login' and senha= '$senha'";
 
         $result = $conexao->query($sql);
