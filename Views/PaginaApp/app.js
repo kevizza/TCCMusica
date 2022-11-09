@@ -67,7 +67,7 @@ const songs = [
         songName: `Faded
         <br>
         <div class="subtitle">Alan Walker</div>`,
-        poster: "/Imgs/10.png"
+        poster: "/Imgs/musicas/banner/10.jpg"
     },
     {
         id: '11',
@@ -325,15 +325,4 @@ next.addEventListener('click', ()=> {
 
         document.getElementById(`${index}`).classList.remove('bi-play-fill');
         document.getElementById(`${index}`).classList.add('bi-pause-fill');
-})
-
-let left_scroll = document.getElementById('left_scroll');
-let right_scroll = document.getElementById('right_scroll');
-let pop_songs = document.getElementsByClassName('pop_songs')[0];
-
-left_scroll.addEventListener('click', ()=>{
-    pop_songs.scrollLeft -= 330;
-})
-right_scroll.addEventListener('click', ()=>{
-    pop_songs.scrollLeft += 330;
 })

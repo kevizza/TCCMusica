@@ -82,10 +82,6 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($conexao, "INSERT INTO playlists(nome_playlist,descricao,imagem_playlist) 
 	VALUES ('$nome_playlist', '$descricao', '$imagem_playlist')");
 }
-// if (isset($_POST['submit2'])) {
-//     // unset($_SESSION['login']); 
-//     // unset($_SESSION['senha']);
-//     header('Location: /Views/LoginPage/Login.php');
 
 ?>
 
@@ -109,12 +105,6 @@ if (isset($_POST['submit'])) {
         <div class="menu-top">
             <nav id="nav1">
                 <ul>
-                    <li class="active">
-                        <a href="#" style="text-decoration:none" id="explorarbtn">EXPLORAR <span id="span2"></span> </a>
-                    </li>
-                    <li class="off">
-                        <a href="#" style="text-decoration:none" id="bibliotecabtn">SUA BIBLIOTECA</a>
-                    </li>
                     <li>
                         <div id="divBusca">
                             <i class="bi bi-search"></i>
@@ -128,11 +118,11 @@ if (isset($_POST['submit'])) {
                                 var btn = document.querySelector("#user");
                                 btn.addEventListener("click", function() {
 
-                                    if (document.getElementById("menu-lado").style.display === "none") {
-                                        document.getElementById("menu-lado").style.display = "block";
+                                    if (document.getElementById("menu-lado").style.left === "138.55vh") {
+                                        document.getElementById("menu-lado").style.left = "200.55vh";
                                     } else {
-                                        document.getElementById("menu-lado").style.display = "block";
-                                        document.getElementById("menu-lado").style.display = "none";
+                                        document.getElementById("menu-lado").style.left = "200.55vh";
+                                        document.getElementById("menu-lado").style.left = "138.55vh";
                                     }
 
                                 });
@@ -143,6 +133,26 @@ if (isset($_POST['submit'])) {
             </nav>
         </div>
     </header>
+
+    <nav id="nav2">
+                <ul>
+                <li>
+                    
+                    </li>
+                    <li>
+                    
+                    </li>
+                    <li>
+                    <i class="bi bi-house-door-fill"></i>
+                    </li>
+                    <li>
+                    <i class="bi bi-collection-fill"></i>
+                    </li>
+                    <li>
+                    <img src="/Imgs/pessoaicon.png" alt="">
+                    </li>
+                </ul>
+            </nav>
 
     <nav id="nav-side">
         <div class="menu-side">
@@ -338,7 +348,7 @@ if (isset($_POST['submit'])) {
                     </li>
                     <li class="songItems">
                         <div class="img-song">
-                            <img src="/Imgs/10jpg" alt="">
+                            <img src="/Imgs/musicas/banner/10.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="10"></i>
                         </div>
                         <h5>Faded
@@ -532,7 +542,19 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
 
-        <div class="menu" id="menu-lado">
+        <div id="perfildiv">
+            <div class="perfil">
+                aaaaaaaaaaaaaaaaaaaaaaaaaa
+            </div>
+        </div>
+
+        <div id="bibliotecadiv">
+            <div class="biblioteca">
+                aaaaaaaaaaaaaaaaaaaaaaaaaa
+            </div>
+        </div>
+    </section>
+    <div class="menu" id="menu-lado">
             <div class="conteudo-menu">
                 <div class="area1">
                     <h3 id="config-text1">Configurações</h3>
@@ -564,19 +586,6 @@ if (isset($_POST['submit'])) {
                 </div>
             </div>
         </div>
-
-        <div id="perfildiv">
-            <div class="perfil">
-                aaaaaaaaaaaaaaaaaaaaaaaaaa
-            </div>
-        </div>
-
-        <div id="bibliotecadiv">
-            <div class="biblioteca">
-                aaaaaaaaaaaaaaaaaaaaaaaaaa
-            </div>
-        </div>
-    </section>
 
     <footer>
         <div class="master-play">

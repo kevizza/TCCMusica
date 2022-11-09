@@ -125,7 +125,6 @@ header:hover {
 
 
 header .menu-top #nav1 {
-
     padding: 15px;
     width: 100%;
     display: flex;
@@ -229,7 +228,7 @@ header .menu-top #nav1 .user {
     height: 5vh;
     border-radius: 10%;
     cursor: pointer;
-    margin-left: 700%;
+    margin-left: 800%;
 }
 
 header .menu-top #nav1 .user img {
@@ -366,6 +365,45 @@ header .menu-top #nav1 .user img:hover {
     font-size: 2vh;
     margin-left: 20px;
     margin-top: 5px;
+}
+#nav2{
+    justify-content: space-between;
+    display: flex;
+    display: none;
+    background-color: #280430;
+    grid: nav;
+    width: 100%;
+    align-items: center;
+}
+#nav2 ul {
+    margin-top: 2%;
+    height: 4vh;
+    display: flex;
+}
+
+#nav2 ul li {
+    position: relative;
+    list-style-type: none;
+    font-size: 3vh;
+    color: #fff;
+    margin-right: 5vh;
+    cursor: pointer;
+    transition: .7s ease;
+}
+#nav2 .bi{
+    width: 3vh;
+    height: 3vh;
+    margin-left: 10px;
+    border-radius: 10px;
+    object-fit: fill;
+}
+
+#nav2 img{
+    width: 4vh;
+    height: 4vh;
+    margin-left: 10px;
+    border-radius: 10px;
+    object-fit: fill;
 }
 
 
@@ -765,13 +803,13 @@ input:focus {
 /* menu */
 .menu{
     float: right;
-    top: -145.5%;
-    display: NONE;
+    left: 200.55vh;
     background-color: #280430;
-    position: relative;
-    width: 48%;
+    position: absolute;
+    width: 30%;
     justify-content: center;
-    height: 100%;
+    height: 60%;
+    top: 10.5vh;
     transition: .8s ease;
 }
 .menu .conteudo-menu{
@@ -1038,6 +1076,125 @@ footer .master-play .vol .dot::before {
     top: -5px;
     box-shadow: inset 0px 0px 3px #732678;
 }
+
+@media (min-width: 400px) and (max-width: 768px) {
+    body {
+        height: 100%;
+        font-family: "Poppins-Regular", sans-serif;
+        display: grid;
+        grid-template-areas:
+            "header "
+            "section"
+            "footer"
+            "nav";
+        height: 100vh;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        text-overflow: clip;
+        background: #000;
+        width: 10vh;
+    }
+    section{
+
+    }
+    #nav-side{
+        display: none;
+    }
+    #nav2{
+        display: block;
+    }
+    header img{
+        display: none;
+    }
+    footer {
+        background: #17011d;
+        grid-area: footer;
+        height: 100%;
+        width: 55vh;
+    }
+    footer .master-play h5 {
+        width: 15vh;
+        font-size: 2vh;
+        margin-left: -5%;
+        margin-right: 3%;
+        margin-top: 1%;
+        color: #fff;
+        line-height: 17px;
+    }
+    
+    footer .master-play h5 .subtitle {
+        font-size: 1.7vh;
+        margin-top: 2%;
+        color: #797373;
+    }
+    
+    footer .master-play {
+        display: flex;
+        align-items: center;
+        width: 55vh;
+        justify-content: center;
+        height: 100%;
+        /* border: 1px solid #fff; */
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    footer .master-play img {
+        display: none;
+    }
+    footer .master-play .icon {
+        font-size: 4.3vh;
+        margin-left: -16vh;
+        color: #fff;
+        transition: .7s ease;
+    }
+    footer .master-play span {
+        display: none;
+    }
+    
+    footer .master-play .bar {
+        display: none;
+    }
+    
+    footer .master-play .bar .bar2 {
+        display: none;
+    }
+    
+    footer .master-play .bar .dot {
+        display: none;
+    }
+    
+    footer .master-play .bar .dot::before {
+        display: none;
+    }
+    
+    footer .master-play .bar input {
+        display: none;
+    }
+    
+    footer .master-play .vol {
+        display: none;
+    }
+    
+    footer .master-play .vol .bi {
+        display: none;
+    }
+    
+    footer .master-play .vol input {
+        display: none;
+    }
+    
+    footer .master-play .vol .vol_bar {
+        display: none;
+    }
+    
+    footer .master-play .vol .dot {
+        display: none;
+    }
+    
+    footer .master-play .vol .dot::before {
+        display: none;
+    }
+  }
 
 #bibliotecadiv{
     display: none;
