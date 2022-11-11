@@ -114,6 +114,7 @@ if (isset($_POST['submit'])) {
                     </li>
                     <li>
                         <div class="user" id="user">
+                            <img src="/Imgs/pessoaicon.png" alt="">
                             <script>
                                 var btn = document.querySelector("#user");
                                 btn.addEventListener("click", function() {
@@ -581,8 +582,7 @@ if (isset($_POST['submit'])) {
                     <hr style="color: white;">
                 </div>
                 <div class="btn-menu">
-                <button type="submit2"
-                 name="sair" id="sair">Sair</button>
+                <a href="/index.html" style="text-decoration: none;"><button type="submit2" name="sair" id="sair">Sair</button></a>
                 <button type="submit3" name="desconectar" id="desconectar" >Sair e Desconectar</button>
                 </div>
             </div>

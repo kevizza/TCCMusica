@@ -79,15 +79,13 @@
             <input class="input100" type="password" name="senha" id="senha" placeholder="Senha" required>
             <!-- <span class="focus-input100" data-placeholder="Senha"></span> -->
           </div>
-          <input name="lem_senha" type="checkbox" value="lem_senha"/> 
-          <a style="color: white;font-size: 1.8vh;margin-left:1vh;"> Lembrar de mim </a>
-          <div class="login_google" style="margin-top: 2vh;">
+          <!-- <div class="login_google" style="margin-top: 2vh;">
             <script src="https://accounts.google.com/gsi/client" async defer></script>
             <div class="logingoogle" id="g_id_onload" data-client_id="534870765324-hhopjp4hk2i4thcn9v6fog8dgm0ceuke.apps.googleusercontent.com" data-login_uri="http://localhost:8000/Views/PaginaApp/AppPrincipal.php" data-auto_prompt="false">
             </div>
             <div class="g_id_signin" data-type="standard" data-size="large" data-theme="dark" data-text="sign_in_with" data-shape="rectangular"data-logo_alignment="left">
             </div>
-          </div>
+          </div> -->
           <br>
           <div class="container-login100-form-btn">
             <div class="wrap-login100-form-btn">

@@ -252,14 +252,15 @@ div#container-2 p#p-foot{
   font-size: calc(1vh + 0.7vw); 
   color: blueviolet;
 }
-.container {
+#container-3 {
   width: 100%;
   margin-top: 10%;
+  border: 1px solid #000;
 }
 
 .packages {
   margin: 2%;
-  width: 50vh;
+  width: 30vh;
   padding-bottom: 1.5em;
   height: 800px;
   background-color: #1e2321;
@@ -274,7 +275,7 @@ div#container-2 p#p-foot{
 }
 
 .h1_plano{
-  font-size: 8vh;
+  font-size: 5vh;
 }
 
 .list li {
@@ -432,6 +433,7 @@ input:checked + .slider:before {
   flex-wrap: wrap;
   margin-top: 13px;
   font-size: 1.9vh;
+  width: 100%;
   font-family: sans-serif;
 }
 

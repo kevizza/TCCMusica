@@ -66,7 +66,7 @@
   </div>
   </div>
   </div>
-  <div class="container">
+  <div class="container" id="container-3">
     <div class="top">
       <h1 class="h1_plano">ESCOLHA SEU PLANO PREMIUM</h1>
       <div class="toggle-btn">

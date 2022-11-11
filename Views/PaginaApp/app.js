@@ -199,6 +199,8 @@ let seek = document.getElementById('seek');
 let bar2 = document.getElementById('bar2');
 let dot = document.getElementsByClassName('dot')[0];
 
+let progressbar = parseInt((music.currentTime/music.duration)*100);
+
 music.addEventListener('timeupdate',()=>{
     let music_curr = music.currentTime;
     let music_dur = music.duration;
@@ -218,15 +220,24 @@ music.addEventListener('timeupdate',()=>{
 
     currentStart.innerText = `${min1}:${sec1}`;
 
-    let progressbar = parseInt((music.currentTime/music.duration)*100);
+    
     seek.value = progressbar;
     let seekbar = seek.value;
     bar2.style.width = `${seekbar}%`;
     dot.style.left = `${seekbar}%`;
 })
 
-seek.addEventListener('change', ()=>{
-    music.currentTime = seek.value * music_durr/100;
+seek.addEventListener('change', ()=> {
+    
+   
+
+    let teste = (seek.value * music.duration)/100;
+
+    music.currentTime = teste;
+
+    //music.currentTime = (seek.value * music_durr/100;
+    console.log("Avanço para = " + teste);
+    console.log("Seek value = " + seek.value);
 })
 music.addEventListener('ended', ()=> {
     index -= 0;
