@@ -1025,7 +1025,7 @@ footer .master-play .bar input {
     cursor: pointer;
     z-index: 99999999;
     transition: 0s linear;
-    opacity: 1;
+    opacity: 0.5;
 }
 
 footer .master-play .vol {
