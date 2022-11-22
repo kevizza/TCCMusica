@@ -99,33 +99,45 @@ const songs = [
     },
     {
         id: '15',
-        songName: ``,
-        poster: ""
+        songName: `Ultima Chance
+        <br>
+        <div class="subtitle">VMZ</div>`,
+        poster: "/Imgs/musicas/banner/15.jpg"
     },
     {
         id: '16',
-        songName: ``,
-        poster: ""
+        songName: `The Calling
+        <br>
+        <div class="subtitle">The Fat Rat</div>`,
+        poster: "/Imgs/musicas/banner/16.jpg"
     },
     {
         id: '17',
-        songName: ``,
-        poster: ""
+        songName: `I Fell Like I'm Drowning
+        <br>
+        <div class="subtitle">Two Feet</div>`,
+        poster: "/Imgs/musicas/banner/17.jpg"
     },
     {
         id: '18',
-        songName: ``,
-        poster: ""
+        songName: `I Was Never There
+        <br>
+        <div class="subtitle">The Weeknd</div>`,
+        poster: "/Imgs/musicas/banner/18.jpg"
     },
     {
         id: '19',
-        songName: ``,
-        poster: ""
+        songName: `Die For You
+        <br>
+        <div class="subtitle">VALORANT</div>`,
+        poster: "/Imgs/musicas/banner/19.jpg"
     },
     {
         id: '20',
-        songName: ``,
-        poster: ""
+        songName: `FEEL NOTHING
+        <br>
+        <div class="subtitle">THEPLOTINYOU</div>`,
+        poster: "/Imgs/musicas/banner/20.jpg"
     },
 
 ]
@@ -195,7 +207,7 @@ Array.from(document.getElementsByClassName('musicPlay')).forEach((element)=>{
 
 let currentStart = document.getElementById('currentStart');
 let currentEnd = document.getElementById('currentEnd');
-var seek = document.getElementById('seek');
+let seek = document.getElementById('seek');
 let bar2 = document.getElementById('bar2');
 let dot = document.getElementsByClassName('dot')[0];
 
@@ -203,38 +215,31 @@ music.addEventListener('timeupdate',()=>{
     let music_curr = music.currentTime;
     let music_dur = music.duration;
 
-    let min1 = Math.floor(music_dur / 60);
-    let sec1 = Math.floor(music_dur % 60);
+    let min = Math.floor(music_dur/60);
+    let sec = Math.floor(music_dur%60);
+    if (sec<10) {
+        sec = `0${sec}`;
+    }
+    currentEnd.innerText = `${min}:${sec}`;
 
-    // console.log(min1);
-    if (sec1 < 10){
+    let min1 = Math.floor(music_curr/60);
+    let sec1 = Math.floor(music_curr%60);
+    if (sec1<10) {
         sec1 = `0${sec1}`;
     }
 
-    currentEnd.innerText = `${min1}:${sec1}`;
-    
+    currentStart.innerText = `${min1}:${sec1}`;
 
-    let min2 = Math.floor(music_curr / 60);
-    let sec2 = Math.floor(music_curr % 60);
-    if (sec2 < 10){
-        sec2 = `0${sec2}`;
-    }
-    
-    currentStart.innerText = `${min2}:${sec2}`;
-
-
-    var progressBar = parseInt((music_curr / music_dur) * 100);
-    seek.value = progressBar;
-    console.log(seek.value);
-    var seekbar = seek.value;
+    let progressbar = parseInt((music.currentTime/music.duration)*100);
+    seek.value = progressbar;
+    let seekbar = seek.value;
     bar2.style.width = `${seekbar}%`;
     dot.style.left = `${seekbar}%`;
 })
 
 seek.addEventListener('change', ()=>{
-    music.currentTime = seek.value / (music.duration * 100);
+    music.currentTime = seek.value * music_durr/100;
 })
-
 music.addEventListener('ended', ()=> {
     index -= 0;
     index += 1;

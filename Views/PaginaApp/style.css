@@ -111,12 +111,13 @@ a:active {
 
 /* menu  */
 header {
-    background: #0f0113;
+    background-color: #0f0113;
     grid-area: header;
     height: 100%;
     width: 100%;
     border-bottom: 1px solid rgb(65, 4, 83);
     transition: .3s ease;
+    z-index: 99999999;
 }
 
 header:hover {
@@ -344,6 +345,11 @@ header .menu-top #nav1 .user img:hover {
     font-size: 2vh;
     margin-left: 20px;
     margin-top: 5px;
+    width: 190px;
+}
+.musicPlay{
+    font-size: 4vh;
+    display: flex;
 }
 #nav2{
     justify-content: space-between;
@@ -400,12 +406,17 @@ section {
 
 section #content {
     width: 90%;
-    height: 30%;
+    height: 30vh;
     margin: auto;
     padding-top: 28px;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    /* border: 1px solid #fff; */
 }
 
 section #content h1 {
+    margin-top: 6vh;
     font-size: 6vh;
     color: #fff;
     font-weight: 600;
@@ -416,6 +427,15 @@ section #content p {
     color: rgb(204, 204, 204);
     font-weight: 600;
 }
+section #content img {
+    width: 60vh;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    left: 90vh;
+    top: -35vh;
+}
+
 
 section .menu-songs {
     width: 100%;
@@ -923,10 +943,32 @@ footer .master-play h5 .subtitle {
 }
 
 footer .master-play .icon {
-    font-size: 4.3vh;
+    font-size: 3.5vh;
     color: #fff;
-    margin: 0px 90px 0px 20px;
+    margin: 0px 90px 0px 0px;
     transition: .7s ease;
+    outline: none;
+    display: flex;
+    align-items: center;
+}
+footer .master-play .bi {
+    cursor: pointer;
+    padding: 5px;
+    outline: none;
+}
+footer .master-play .shuffle {
+font-size: 2.5vh;
+margin-right: 10px;
+overflow: hidden;
+display: flex;
+align-items: center;
+}
+footer .master-play .down {
+font-size: 2.5vh;
+margin-left: 10px;
+overflow: hidden;
+display: flex;
+align-items: center;
 }
 
 footer .master-play .icon #masterPlay {
@@ -1001,7 +1043,7 @@ footer .master-play .bar .dot {
     background: #9d69b8;
     border-radius: 50%;
     left: 0%;
-    top: -1px;
+    top: -1.4px;
     transition: 0s linear;
 }
 
@@ -1012,8 +1054,8 @@ footer .master-play .bar .dot::before {
     height: 2vh;
     border: 1px solid #9d69b8;
     border-radius: 50%;
-    left: -0.7vh;
-    top: -0.7vh;
+    left: -0.73vh;
+    top: -0.72vh;
     box-shadow: inset 0px 0px 3px #732678;
 }
 
@@ -1025,7 +1067,7 @@ footer .master-play .bar input {
     cursor: pointer;
     z-index: 99999999;
     transition: 0s linear;
-    opacity: 0.5;
+    opacity: 0;
 }
 
 footer .master-play .vol {
@@ -1040,8 +1082,8 @@ footer .master-play .vol .bi {
     position: absolute;
     display: flex;
     color: #fff;
-    font-size: 4.2vh;
-    top: -1.8vh;
+    font-size: 3.5vh;
+    top: -2vh;
     left: -40px;
     margin-left: -1vh;
 }

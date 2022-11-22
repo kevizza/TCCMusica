@@ -97,7 +97,7 @@
 						<input class="hidden" type="radio" name="is_admin" id="is_admin" hidden>
 					</div>
 
-					<input type="file" name="imagem" id="imagem" class="inputfile"/>
+					<input type="file" name="imagem" id="imagem" class="inputfile" hidden/>
 
 
 					<div class="container-login100-form-btn">

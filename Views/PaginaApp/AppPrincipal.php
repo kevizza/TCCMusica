@@ -83,7 +83,11 @@ if (isset($_POST['submit'])) {
     $result = mysqli_query($conexao, "INSERT INTO playlists(nome_playlist,descricao,imagem_playlist) 
 	VALUES ('$nome_playlist', '$descricao', '$imagem_playlist')");
 }
-
+if (isset($_POST['desconectar'])) {
+    unset($_SESSION['login']);
+    unset($_SESSION['senha']);
+    header('Location: /index.html');
+}
 ?>
 
 <!DOCTYPE html>
@@ -102,7 +106,7 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-<header id="menu-top2">
+    <header id="menu-top2">
         <div class="menu-top">
             <nav id="nav1">
                 <ul>
@@ -136,24 +140,24 @@ if (isset($_POST['submit'])) {
     </header>
 
     <nav id="nav2">
-                <ul>
-                <li>
-                    
-                    </li>
-                    <li>
-                    
-                    </li>
-                    <li>
-                    <i class="bi bi-house-door-fill"></i>
-                    </li>
-                    <li>
-                    <i class="bi bi-collection-fill"></i>
-                    </li>
-                    <li>
-                    <img src="/Imgs/pessoaicon.png" alt="">
-                    </li>
-                </ul>
-            </nav>
+        <ul>
+            <li>
+
+            </li>
+            <li>
+
+            </li>
+            <li>
+                <i class="bi bi-house-door-fill"></i>
+            </li>
+            <li>
+                <i class="bi bi-collection-fill"></i>
+            </li>
+            <li>
+                <img src="/Imgs/pessoaicon.png" alt="">
+            </li>
+        </ul>
+    </nav>
 
     <nav id="nav-side">
         <div class="menu-side">
@@ -164,11 +168,11 @@ if (isset($_POST['submit'])) {
                         <span></span><i class="bi bi-house-door-fill"></i> Explorar
                     </h4>
                 </a>
-                <a href="#" style="text-decoration: none;" id="bibliotecalado" style="color:white;">
+                <!-- <a href="#" style="text-decoration: none;" id="bibliotecalado" style="color:white;">
                     <h4 class="off" id="bibliotecah4">
                         <span></span><i class="bi bi-music-note-list"></i> Sua Biblioteca
                     </h4>
-                </a>
+                </a> -->
             </div>
             <br>
             <hr style="height:1px;width:25vh;color:white;margin-left:6vh;">
@@ -178,65 +182,84 @@ if (isset($_POST['submit'])) {
             <div class="playlists">
                 <h1>Suas PlayLists:</h1>
                 <li class="songItem">
-                <img src="/Imgs/musicas/banner/1.jpg" alt="">
-                <h5>Rockstar
-                <i class="bi musicPlay bi-play-fill" id="1" style="font-size: 2rem; position: relative;"></i>
-                        </h5>
+                    <img src="/Imgs/musicas/banner/1.jpg" alt="">
+                    <h5>Rockstar
+                        <div class="subtitle" style="color: gray; font-size: 1.5vh;">Post Malone</div>
+                    </h5>
+
+                    <i class="bi musicPlay bi-play-fill" id="1"></i>
                 </li>
                 <li class="songItem">
                     <img src="/Imgs/musicas/banner/2.jpg" alt="">
                     <h5>
                         Beliver
+                        <div class="subtitle" style="color: gray; font-size: 1.5vh;">Imagine Dragons</div>
                     </h5>
-                    <i class="bi musicPlay bi-play-fill" id="1"></i>
+                    <i class="bi musicPlay bi-play-fill" id="2"></i>
                 </li>
                 <li class="songItem">
                     <img src="/Imgs/musicas/banner/3.jpg" alt="">
                     <h5>
                         Save Yours Tears
+                        <div class="subtitle" style="color: gray; font-size: 1.5vh;">The Weekend</div>
                     </h5>
+                    <i class="bi musicPlay bi-play-fill" id="3"></i>
                 </li>
                 <li class="songItem">
                     <img src="/Imgs/musicas/banner/4.jpg" alt="">
                     <h5>
                         As It Was
+                        <div class="subtitle" style="color: gray; font-size: 1.5vh;">Harry Styles</div>
                     </h5>
+                    <i class="bi musicPlay bi-play-fill" id="4"></i>
                 </li>
                 <li class="songItem">
                     <img src="/Imgs/musicas/banner/5.jpg" alt="">
                     <h5>
                         Paradise
+                        <div class="subtitle" style="color: gray; font-size: 1.5vh;">Cold Play</div>
                     </h5>
+                    <i class="bi musicPlay bi-play-fill" id="5"></i>
                 </li>
                 <li class="songItem">
                     <img src="/Imgs/musicas/banner/6.jpg" alt="">
                     <h5>
                         Stay
+                        <div class="subtitle" style="color: gray; font-size: 1.5vh;">The Score</div>
                     </h5>
+                    <i class="bi musicPlay bi-play-fill" id="6"></i>
                 </li>
                 <li class="songItem">
                     <img src="/Imgs/musicas/banner/7.jpg" alt="">
                     <h5>
                         idfc
+                        <div class="subtitle" style="color: gray; font-size: 1.5vh;">blackbear</div>
                     </h5>
+                    <i class="bi musicPlay bi-play-fill" id="7"></i>
                 </li>
                 <li class="songItem">
                     <img src="/Imgs/musicas/banner/8.jpg" alt="">
                     <h5>
                         Ride
+                        <div class="subtitle" style="color: gray; font-size: 1.5vh;">Twenty One Pilots</div>
                     </h5>
+                    <i class="bi musicPlay bi-play-fill" id="8"></i>
                 </li>
                 <li class="songItem">
-                    <img src="/Imgs/musicas/banner/9.jpg" alt="">
+                    <img src="/Imgs/musicas/banner/12.jpg" alt="">
                     <h5>
-                        Locked Out Of Heaven
+                        i Aint Worried
+                        <div class="subtitle" style="color: gray; font-size: 1.5vh;">One Republic</div>
                     </h5>
+                    <i class="bi musicPlay bi-play-fill" id="12"></i>
                 </li>
                 <li class="songItem">
                     <img src="/Imgs/musicas/banner/10.jpg" alt="">
                     <h5>
-                    Faded
+                        Faded
+                        <div class="subtitle" style="color: gray; font-size: 1.5vh;">Alan Walker</div>
                     </h5>
+                    <i class="bi musicPlay bi-play-fill" id="10"></i>
                 </li>
             </div>
         </div>
@@ -249,6 +272,7 @@ if (isset($_POST['submit'])) {
                 <p>
                     Com um pouco de curiosidade você poderá encontrar diversas musicas!
                 </p>
+                <img src="/Imgs/imgfund.png">
             </div>
             <div class="menu-songs">
                 <div class="h4">
@@ -409,62 +433,62 @@ if (isset($_POST['submit'])) {
                     </li>
                     <li class="songItems">
                         <div class="img-song">
-                            <img src="/Imgs/15.jpg" alt="">
+                            <img src="/Imgs/musicas/banner/15.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="15"></i>
                         </div>
-                        <h5>Faded
+                        <h5>Última Chance
                             <br>
-                            <div class="subtitle">Alan Walker</div>
+                            <div class="subtitle">VMZ</div>
                         </h5>
                     </li>
                     <li class="songItems">
                         <div class="img-song">
-                            <img src="/Imgs/capa_faded.png" alt="">
+                            <img src="/Imgs/musicas/banner/16.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="16"></i>
                         </div>
-                        <h5>Faded
+                        <h5>The Calling
                             <br>
-                            <div class="subtitle">Alan Walker</div>
+                            <div class="subtitle">The Fat Rat</div>
                         </h5>
                     </li>
                     <li class="songItems">
                         <div class="img-song">
-                            <img src="/Imgs/capa_faded.png" alt="">
+                            <img src="/Imgs/musicas/banner/17.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="17"></i>
                         </div>
-                        <h5>Faded
+                        <h5>I Feel Like I'm Drowning
                             <br>
-                            <div class="subtitle">Alan Walker</div>
+                            <div class="subtitle">Two Feet</div>
                         </h5>
                     </li>
                     <li class="songItems">
                         <div class="img-song">
-                            <img src="/Imgs/capa_faded.png" alt="">
+                            <img src="/Imgs/musicas/banner/18.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="18"></i>
                         </div>
-                        <h5>Faded
+                        <h5>I Was Never There
                             <br>
-                            <div class="subtitle">Alan Walker</div>
+                            <div class="subtitle">The Weeknd</div>
                         </h5>
                     </li>
                     <li class="songItems">
                         <div class="img-song">
-                            <img src="/Imgs/capa_faded.png" alt="">
+                            <img src="/Imgs/musicas/banner/19.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="19"></i>
                         </div>
-                        <h5>Faded
+                        <h5>Die For You
                             <br>
-                            <div class="subtitle">Alan Walker</div>
+                            <div class="subtitle">VALORANT</div>
                         </h5>
                     </li>
                     <li class="songItems">
                         <div class="img-song">
-                            <img src="/Imgs/capa_faded.png" alt="">
+                            <img src="/Imgs/musicas/banner/20.jpg" alt="">
                             <i class="bi musicPlay bi-play-fill" id="20"></i>
                         </div>
-                        <h5>Faded
+                        <h5>FEEL NOTHING
                             <br>
-                            <div class="subtitle">Alan Walker</div>
+                            <div class="subtitle">THEPLOTINYOU</div>
                         </h5>
                     </li>
 
@@ -555,37 +579,41 @@ if (isset($_POST['submit'])) {
         </div>
     </section>
     <div class="menu" id="menu-lado">
-            <div class="conteudo-menu">
-                <div class="area1">
-                    <h3 id="config-text1">Configurações</h3>
-                </div>
+        <div class="conteudo-menu">
+            <div class="area1">
+                <h3 id="config-text1">Configurações</h3>
+            </div>
 
-                <div class="area2">
-                    <br>
-                    <button id="menu-btn"><h3 id="config-text2"><a href="#" style="text-decoration: none;">Perfil</a></h3></button>
-                    <script>
-                        var btn = document.querySelector("#menu-btn");
-                                btn.addEventListener("click", function() {
+            <div class="area2">
+                <br>
+                <button id="menu-btn">
+                    <h3 id="config-text2"><a href="#" style="text-decoration: none;">Perfil</a></h3>
+                </button>
+                <script>
+                    var btn = document.querySelector("#menu-btn");
+                    btn.addEventListener("click", function() {
 
-                                    if (document.getElementById("home").style.display === "none") {
-                                        document.getElementById("perfildiv").style.display = "block";
-                                        document.getElementById("menu-lado").style.display = "none";
-                                    } else {
-                                        document.getElementById("home").style.display = "block";
-                                        document.getElementById("perfildiv").style.display = "none";
-                                        document.getElementById("menu-lado").style.display = "none";
-                                    }
+                        if (document.getElementById("home").style.display === "none") {
+                            document.getElementById("perfildiv").style.display = "block";
+                            document.getElementById("menu-lado").style.display = "none";
+                        } else {
+                            document.getElementById("home").style.display = "block";
+                            document.getElementById("perfildiv").style.display = "none";
+                            document.getElementById("menu-lado").style.display = "none";
+                        }
 
-                                });
-                    </script>
-                    <hr style="color: white;">
-                </div>
-                <div class="btn-menu">
+                    });
+                </script>
+                <hr style="color: white;">
+            </div>
+            <div class="btn-menu">
                 <a href="/index.html" style="text-decoration: none;"><button type="submit2" name="sair" id="sair">Sair</button></a>
-                <button type="submit3" name="desconectar" id="desconectar" >Sair e Desconectar</button>
-                </div>
+                <Form action="./AppPrincipal.php" method="POST">
+                    <button type="submit3" name="desconectar" id="desconectar">Sair e Desconectar</button>
+                </Form>
             </div>
         </div>
+    </div>
 
     <footer>
         <div class="master-play">
@@ -594,9 +622,11 @@ if (isset($_POST['submit'])) {
                 <div class="subtitle"></div>
             </h5>
             <div class="icon">
+                <i class="bi shuffle bi-music-note-beamed"></i>
                 <i class="bi bi-skip-start-fill" id="skip1"></i>
                 <i class="bi bi-play-fill" id="masterPlay"></i>
                 <i class="bi bi-skip-end-fill" id="skip2"></i>
+                <i class="bi  down bi-download"></i>
             </div>
             <span id="currentStart">0:00</span>
             <div class="bar">
@@ -615,7 +645,7 @@ if (isset($_POST['submit'])) {
         </div>
         </div>
     </footer>
-                           
+
 
 
     <!-- Scripts -->
@@ -623,7 +653,6 @@ if (isset($_POST['submit'])) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="/Views/PaginaApp/app.js"></script>
-    <script src="/Views/PaginaApp/app2.js"></script>
 </body>
 <!-- <script>
     var btn = document.querySelector("#bibliotecabtn");
